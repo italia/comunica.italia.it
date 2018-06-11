@@ -1,0 +1,18 @@
+#!/bin/bash
+
+###### README ######
+# Use 'source .alias' for active this short-key.
+
+# Drupal
+alias drush="bin/e bin/drush -r /var/www/html/web"
+alias drupal="vendor/bin/drupal --root=\"/var/www/html/web\""
+alias compile-theme="./compile-theme.sh"
+
+# Tools
+alias cli="bin/e"
+alias build="bin/e ./build.sh"
+alias dsqlc="bin/e bin/drush sql-cli --extra=-A"
+alias robo="bin/e bin/robo"
+alias drupalcs="bin/e bin/phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'"
+alias drupalcsp="bin/e bin/phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'"
+alias drupalcbf="bin/e bin/phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'"

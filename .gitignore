@@ -1,0 +1,8 @@
+.idea
+.env.example
+html/vendor
+html/web/core
+html/web/libraries
+html/web/modules/contrib
+html/web/themes/contrib
+html/web/sites/default/files
