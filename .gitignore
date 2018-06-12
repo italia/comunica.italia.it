@@ -1,8 +1,9 @@
 .idea
-.env.example
+.env
 html/vendor
 html/web/core
 html/web/libraries
 html/web/modules/contrib
 html/web/themes/contrib
 html/web/sites/default/files
+docker-compose.yml
