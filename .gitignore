@@ -1,5 +1,10 @@
 .idea
-.env.example
+
+.env
+docker-compose.yml
+html/build/build.local.default.yml
+
+html/build/backups/*.sql
 html/vendor
 html/web/core
 html/web/libraries

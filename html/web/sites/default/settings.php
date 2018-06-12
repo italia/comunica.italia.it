@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'OXTlkj43sXlvXyPkE0q8ymJhPAywtSwXQMLwZG_OFqPXTVKIinYKAYBXiJiWInUdOBvK1ZrXsQ';
+$settings['hash_salt'] = 'nPtFBWgiMbKjfepuEDFfKES4BRvJcoWbBeyK5MTOn136W0fyoe00Y7n8t2eRZAVH3fkJ_xN7vw';
 
 /**
  * Deployment identifier.
@@ -782,9 +782,9 @@ $settings['entity_update_batch_size'] = 50;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }
 $databases['default']['default'] = array (
   'database' => 'drupal',
   'username' => 'drupal',
@@ -795,11 +795,61 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_WyyrDcURGSD9mGm6NPpZMUF2CUpnA9KbEG21AR_1qB7j3EuxbH48CDkyepxg6Wooq3DtFZYt7A/sync';
+$settings['install_profile'] = 'comunica_italia';
+$config_directories['sync'] = 'sites/default/files/config_x-OT2-qysgThJZ1l8wywzWuaarut9aOyZzZuoK7CXAd8CaUkqXPM3FrqwwATrJG_8xIGXceheg/sync';
+/**
+ * Environment Indicator.
+ */
+$config['environment_indicator.indicator']['bg_color'] = '#9A2617';
+$config['environment_indicator.indicator']['fg_color'] = '#FFFFFF';
+$config['environment_indicator.indicator']['name'] = 'local';
 
-$class_loader->addPsr4('Drupal\\webprofiler\\', [ __DIR__ . '/../../modules/contrib/devel/webprofiler/src']);
-$settings['container_base_class'] = '\Drupal\webprofiler\DependencyInjection\TraceableContainer';
+/**
+ * Setup Redis.
+ */
+$settings['redis.connection']['interface'] = 'PhpRedis';
+$settings['redis.connection']['host'] = 'redis';
+$settings['cache']['default'] = 'cache.backend.redis';
+$settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
+$settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
+$settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
 
-$settings['container_yamls'][] = 'sites/default/monolog.services.yml';
+/**
+ * config sync directory.
+ */
+$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/default';
+
+/**
+ * The active installation profile.
+ */
+$settings['install_profile'] = 'comunica_italia';
+
+/**
+ * config_split config.
+ */
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = TRUE;
+
+/**
+ * Trusted host configuration.
+ *
+ * Drupal core can use the Symfony trusted host mechanism to prevent HTTP Host
+ * header spoofing.
+ */
+$settings['trusted_host_patterns'] = array(
+  '^web.comunicaitalia.loc$',
+);
+
+/**
+ * Override config_split config.
+ */
+$config['config_split.config_split.dev']['status'] = TRUE;
+$config['config_split.config_split.prod']['status'] = FALSE;
+
+$config['webprofiler.config']['ide_link_remote'] = '/var/www/html/web';
+$config['webprofiler.config']['ide_link_local'] = '/Users/lussoluca/Sites/AGID/comunica.italia.it/html/web';
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
 

@@ -1,0 +1,23 @@
+uuid: 85f19ac2-ea94-4237-b8ba-15dbc8d9f240
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gLJ6J9J4KzNnd70UxsK0zdXVOFhGaGS2NRUItMGqtjo
+id: dev
+label: dev
+folder: ../config/split/dev
+module:
+  default_content: 0
+  default_content_deploy: 0
+  devel: 0
+  field_ui: 0
+  menu_ui: 0
+  views_ui: 0
+  webprofiler: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

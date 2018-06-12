@@ -1,0 +1,44 @@
+/**
+ * Environment Indicator.
+ */
+$config['environment_indicator.indicator']['bg_color'] = '#9A2617';
+$config['environment_indicator.indicator']['fg_color'] = '#FFFFFF';
+$config['environment_indicator.indicator']['name'] = '{{ environment }}';
+
+/**
+ * Setup Redis.
+ */
+{% if redis.enabled %}
+$settings['redis.connection']['interface'] = 'PhpRedis';
+$settings['redis.connection']['host'] = '{{ redis.host }}';
+$settings['cache']['default'] = 'cache.backend.redis';
+$settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
+$settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
+$settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
+{% endif %}
+
+/**
+ * config sync directory.
+ */
+$config_directories[CONFIG_SYNC_DIRECTORY] = '{{ site_configuration.config_dir }}';
+
+/**
+ * The active installation profile.
+ */
+$settings['install_profile'] = '{{ site_configuration.profile }}';
+
+/**
+ * config_split config.
+ */
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = TRUE;
+
+/**
+ * Trusted host configuration.
+ *
+ * Drupal core can use the Symfony trusted host mechanism to prevent HTTP Host
+ * header spoofing.
+ */
+$settings['trusted_host_patterns'] = array(
+  '^{{ site_configuration.trusted_host }}$',
+);

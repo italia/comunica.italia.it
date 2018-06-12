@@ -1,0 +1,14 @@
+uuid: 3493c453-f61d-4929-9a9b-8f9eb538a3a8
+name: 'Comunica Italia'
+mail: info@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

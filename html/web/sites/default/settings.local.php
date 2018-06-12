@@ -129,3 +129,10 @@ $settings['rebuild_access'] = TRUE;
  * directory.
  */
 $settings['skip_permissions_hardening'] = TRUE;
+
+/**
+ * Webprofiler settings.
+ */
+$class_loader->addPsr4('Drupal\\webprofiler\\', [ __DIR__ . '/../../modules/contrib/devel/webprofiler/src']);
+$settings['container_base_class'] = '\Drupal\webprofiler\DependencyInjection\TraceableContainer';
+$config['webprofiler.config']['ide_link'] = 'phpstorm://open?file=@file&line=@line';
