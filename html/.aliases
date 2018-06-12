@@ -4,8 +4,8 @@
 # Use 'source .alias' for active this short-key.
 
 # Drupal
-alias drush="bin/e bin/drush -r /var/www/html/web"
-alias drupal="vendor/bin/drupal --root=\"/var/www/html/web\""
+alias drush="bin/e bin/drush"
+alias drupal="bin/e bin/drupal"
 alias compile-theme="./compile-theme.sh"
 
 # Tools

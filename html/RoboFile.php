@@ -173,6 +173,20 @@ class RoboFile extends \Robo\Tasks {
     $this->defaultContentImport();
   }
 
+  /**
+   * Export content/fixtures.
+   *
+   * @param array $opts
+   *
+   * @throws \Robo\Exception\TaskException
+   */
+  public function contentExport($opts = self::OPTS) {
+    // Init parameters.
+    $this->init($opts['environment'], $opts['site']);
+
+    $this->defaultContentExport();
+  }
+
   /*
    * == PRIVATE FUNCTIONS ==.
    */
@@ -471,7 +485,19 @@ class RoboFile extends \Robo\Tasks {
   private function defaultContentImport() {
     $this->say('Default content deploy: import');
     $this->getDrushWithUri()
-      ->drush('default-content-deploy-import')
+      ->drush('default-content-deploy:import')
+      ->run();
+  }
+
+  /**
+   * Default content deploy export.
+   *
+   * @throws \Robo\Exception\TaskException
+   */
+  private function defaultContentExport() {
+    $this->say('Default content deploy: export');
+    $this->getDrushWithUri()
+      ->drush('default-content-deploy:export-with-references node')
       ->run();
   }
 

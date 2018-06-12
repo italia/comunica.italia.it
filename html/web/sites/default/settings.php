@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'nPtFBWgiMbKjfepuEDFfKES4BRvJcoWbBeyK5MTOn136W0fyoe00Y7n8t2eRZAVH3fkJ_xN7vw';
+$settings['hash_salt'] = 'bhWv7r6GUJqQT3wmGqyAcadYhWxcOK1TCnnNKja5B73CT65JeRF0vbV9Am61669yBB09v_BCRQ';
 
 /**
  * Deployment identifier.
@@ -796,7 +796,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'comunica_italia';
-$config_directories['sync'] = 'sites/default/files/config_x-OT2-qysgThJZ1l8wywzWuaarut9aOyZzZuoK7CXAd8CaUkqXPM3FrqwwATrJG_8xIGXceheg/sync';
+$config_directories['sync'] = 'sites/default/files/config_2wPtD_H8Enf9Pu-FvX4nBQqAdLO4rGe2dhaniBMehB_tm7jntHICetSy-8KzZQly9SdlBhe-Tw/sync';
 /**
  * Environment Indicator.
  */
@@ -848,6 +848,11 @@ $config['config_split.config_split.prod']['status'] = FALSE;
 
 $config['webprofiler.config']['ide_link_remote'] = '/var/www/html/web';
 $config['webprofiler.config']['ide_link_local'] = '/Users/lussoluca/Sites/AGID/comunica.italia.it/html/web';
+
+/**
+ * default_content_deploy config.
+ */
+$config['content_directory'] = '../default-content';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
