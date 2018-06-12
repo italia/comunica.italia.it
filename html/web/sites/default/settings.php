@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'bhWv7r6GUJqQT3wmGqyAcadYhWxcOK1TCnnNKja5B73CT65JeRF0vbV9Am61669yBB09v_BCRQ';
+$settings['hash_salt'] = 'X2guGRuzjE5InLa2c_MaLnOrd36V3vhjZQc9eYbcmWdicBloybfMAznofTQ-c20sn7xdHc49oQ';
 
 /**
  * Deployment identifier.
@@ -796,7 +796,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'comunica_italia';
-$config_directories['sync'] = 'sites/default/files/config_2wPtD_H8Enf9Pu-FvX4nBQqAdLO4rGe2dhaniBMehB_tm7jntHICetSy-8KzZQly9SdlBhe-Tw/sync';
+$config_directories['sync'] = 'sites/default/files/config_ZHdC_J05A3FJlKJHoOyUlvw_vbt_AQJKUUtwOSYOG8HbVn2bdIuOsNrgl_gKEWkrCFfnLbAeow/sync';
 /**
  * Environment Indicator.
  */

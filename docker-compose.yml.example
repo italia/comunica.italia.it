@@ -11,8 +11,10 @@ services:
       APACHE_BACKEND_HOST: php
       APACHE_SERVER_ROOT: "${CONTAINER_DIR}/web"
     volumes:
-      - "data:${CONTAINER_DIR}"
+      - "${SOURCE_DIR}:${CONTAINER_DIR}"
+#      - "data:${CONTAINER_DIR}" # MacOs nfs version
     labels:
+      - 'traefik.enable=true'
       - 'traefik.backend=apache'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:web.${PROJECT_BASE_URL}'
@@ -37,6 +39,7 @@ services:
     image: mailhog/mailhog
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
+      - 'traefik.enable=true'
       - 'traefik.backend=mailhog'
       - 'traefik.port=8025'
       - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
@@ -51,10 +54,11 @@ services:
       PHP_FPM_CLEAR_ENV: "no"
 #      PHP_XDEBUG: 1
 #      PHP_BLACKFIRE: 1
-    volumes:
-      - "data:${CONTAINER_DIR}"
     networks:
       - web
+    volumes:
+      - "${SOURCE_DIR}:${CONTAINER_DIR}"
+#      - "data:${CONTAINER_DIR}" # MacOs nfs version
 
   redis:
     container_name: "${PROJECT_NAME}_redis"
@@ -62,16 +66,25 @@ services:
     networks:
       - web
 
-volumes:
-  data:
-    driver: local
-#    Enable this on MacOs after executing file-setup_native_nfs_docker_osx.sh
+#  traefik:
+#    image: traefik:1.6.3-alpine
+#    restart: unless-stopped
+#    command: '-c /dev/null --web --docker --docker.exposedByDefault=false --logLevel=DEBUG --defaultEntryPoints=''http'',''https'' --entryPoints="Name:https Address::443 TLS:/certs/traefik.cert,/certs/traefik.key" --entryPoints="Name:http Address::80"'
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#      - '8000:8080'
+#    networks:
+#      - web
+#    volumes:
+#      - '/var/run/docker.sock:/var/run/docker.sock'
+#      - './certs:/certs'
+
+# Enable this on MacOs after executing file-setup_native_nfs_docker_osx.sh
+#volumes:
+#  data:
+#    driver: local
 #    driver_opts:
 #      type: nfs
 #      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
 #      device: ":${SOURCE_DIR}"
-
-networks:
-  web:
-    external:
-      name: traefik_webgateway
