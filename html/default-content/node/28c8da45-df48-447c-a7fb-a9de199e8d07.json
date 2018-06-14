@@ -1,17 +1,17 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/www\/node\/4?_format=hal_json"
+            "href": "http:\/\/www\/node\/12?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/kit"
         },
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/revision_uid": [
             {
                 "href": "http:\/\/www\/user\/1?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/uid": [
             {
                 "href": "http:\/\/www\/user\/1?_format=hal_json",
                 "lang": "en"
@@ -20,17 +20,17 @@
     },
     "nid": [
         {
-            "value": 4
+            "value": 12
         }
     ],
     "uuid": [
         {
-            "value": "4a6e0abb-0dc6-49d9-9887-d0ea1ebec6b5"
+            "value": "28c8da45-df48-447c-a7fb-a9de199e8d07"
         }
     ],
     "vid": [
         {
-            "value": 4
+            "value": 22
         }
     ],
     "langcode": [
@@ -41,17 +41,17 @@
     ],
     "type": [
         {
-            "target_id": "page"
+            "target_id": "kit"
         }
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-12T10:10:03+00:00",
+            "value": "2018-06-14T09:39:41+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/revision_uid": [
             {
                 "_links": {
                     "self": {
@@ -63,12 +63,12 @@
                 },
                 "uuid": [
                     {
-                        "value": "7d0ad2b3-8aa1-471a-8ad8-27baf9270762"
+                        "value": "b16d2281-9715-4cfe-a499-4e0a75145fd8"
                     }
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/uid": [
             {
                 "_links": {
                     "self": {
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "7d0ad2b3-8aa1-471a-8ad8-27baf9270762"
+                        "value": "b16d2281-9715-4cfe-a499-4e0a75145fd8"
                     }
                 ],
                 "lang": "en"
@@ -95,27 +95,28 @@
     ],
     "title": [
         {
-            "value": "Storytelling",
+            "value": "PagoPa",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2018-06-12T10:09:55+00:00",
+            "value": "2018-06-13T13:32:43+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-12T10:10:03+00:00",
+            "value": "2018-06-14T09:39:41+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "promote": [
         {
-            "value": false
+            "value": true,
+            "lang": "en"
         }
     ],
     "sticky": [

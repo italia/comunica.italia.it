@@ -24,6 +24,7 @@ module:
   history: 0
   image: 0
   link: 0
+  menus_attribute: 0
   monolog: 0
   node: 0
   options: 0
@@ -32,7 +33,6 @@ module:
   quickedit: 0
   rdf: 0
   redis: 0
-  search: 0
   serialization: 0
   shortcut: 0
   system: 0
@@ -41,8 +41,6 @@ module:
   toolbar: 0
   tour: 0
   user: 0
-  webform: 0
-  webform_ui: 0
   menu_link_content: 1
   views: 10
   comunica_italia: 1000

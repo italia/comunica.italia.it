@@ -12,3 +12,5 @@ html/web/modules/contrib
 html/web/themes/contrib
 html/web/sites/default/files
 html/web/sites/default/settings.php
+
+certs/*

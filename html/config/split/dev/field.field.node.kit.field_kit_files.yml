@@ -1,0 +1,27 @@
+uuid: 3d833bb8-5e3d-4aed-937f-438de9a3b29f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kit_files
+    - node.type.kit
+  module:
+    - file
+id: node.kit.field_kit_files
+field_name: field_kit_files
+entity_type: node
+bundle: kit
+label: 'Kit Files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: zip
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

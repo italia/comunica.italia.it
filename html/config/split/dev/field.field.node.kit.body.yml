@@ -1,0 +1,22 @@
+uuid: ec77ea4d-4002-4d13-a548-6081efa960da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.kit
+  module:
+    - text
+id: node.kit.body
+field_name: body
+entity_type: node
+bundle: kit
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

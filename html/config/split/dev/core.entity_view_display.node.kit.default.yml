@@ -1,0 +1,36 @@
+uuid: e907dc8a-c116-4c05-a9c5-9b2a34a8f457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.kit.body
+    - field.field.node.kit.field_kit_files
+    - node.type.kit
+  module:
+    - file
+    - text
+    - user
+id: node.kit.default
+targetEntityType: node
+bundle: kit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_kit_files:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

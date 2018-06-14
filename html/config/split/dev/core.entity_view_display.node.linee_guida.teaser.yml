@@ -1,0 +1,29 @@
+uuid: 60379ece-8753-4c69-b19f-d05d6e9537bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.linee_guida.body
+    - node.type.linee_guida
+  module:
+    - text
+    - user
+id: node.linee_guida.teaser
+targetEntityType: node
+bundle: linee_guida
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_icona: true

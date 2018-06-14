@@ -1,0 +1,37 @@
+uuid: 638e5007-fb88-4a00-ab3a-0d17615ec267
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.linee_guida.body
+    - field.field.node.linee_guida.field_icona
+    - node.type.linee_guida
+  module:
+    - image
+    - text
+    - user
+id: node.linee_guida.default
+targetEntityType: node
+bundle: linee_guida
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_icona:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

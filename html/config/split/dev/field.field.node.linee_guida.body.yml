@@ -1,0 +1,22 @@
+uuid: 30be0d9a-2f2a-44b1-bba2-87c98b04c790
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.linee_guida
+  module:
+    - text
+id: node.linee_guida.body
+field_name: body
+entity_type: node
+bundle: linee_guida
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
