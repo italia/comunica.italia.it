@@ -63,7 +63,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "7d0ad2b3-8aa1-471a-8ad8-27baf9270762"
+                        "value": "e21c92e4-1131-47d8-bba9-5f132ccc5b80"
                     }
                 ]
             }
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "7d0ad2b3-8aa1-471a-8ad8-27baf9270762"
+                        "value": "e21c92e4-1131-47d8-bba9-5f132ccc5b80"
                     }
                 ],
                 "lang": "en"
@@ -89,7 +89,7 @@
     },
     "status": [
         {
-            "value": true,
+            "value": false,
             "lang": "en"
         }
     ],
@@ -133,6 +133,12 @@
     "revision_translation_affected": [
         {
             "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "draft",
             "lang": "en"
         }
     ],

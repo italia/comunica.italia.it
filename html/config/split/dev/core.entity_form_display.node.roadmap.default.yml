@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.roadmap.body
+    - field.field.node.roadmap.field_files
     - node.type.roadmap
   module:
+    - file
     - path
     - text
 id: node.roadmap.default
@@ -27,6 +29,19 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_files:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
     third_party_settings: {  }
   path:
     type: path

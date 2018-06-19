@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.roadmap.body
+    - field.field.node.roadmap.field_files
     - node.type.roadmap
   module:
+    - file
     - text
     - user
 id: node.roadmap.default
@@ -19,6 +21,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_files:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   links:
     weight: 100

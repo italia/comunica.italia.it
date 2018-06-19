@@ -1,17 +1,17 @@
-uuid: 3d833bb8-5e3d-4aed-937f-438de9a3b29f
+uuid: 7b7b53b2-c58b-4a58-8220-493664ff65a8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_kit_files
-    - node.type.kit
+    - field.storage.node.field_files
+    - node.type.roadmap
   module:
     - file
-id: node.kit.field_kit_files
-field_name: field_kit_files
+id: node.roadmap.field_files
+field_name: field_files
 entity_type: node
-bundle: kit
-label: 'Kit Files'
+bundle: roadmap
+label: Files
 description: ''
 required: false
 translatable: false

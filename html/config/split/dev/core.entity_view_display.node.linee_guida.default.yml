@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.linee_guida.body
+    - field.field.node.linee_guida.field_files
     - field.field.node.linee_guida.field_icona
     - node.type.linee_guida
   module:
+    - file
     - image
     - text
     - user
@@ -21,6 +23,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_files:
+    weight: 103
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_icona:
     weight: 102

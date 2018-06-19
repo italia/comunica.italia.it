@@ -11,7 +11,7 @@ id: node.linee_guida.field_icona
 field_name: field_icona
 entity_type: node
 bundle: linee_guida
-label: Icona
+label: Icon
 description: ''
 required: false
 translatable: false

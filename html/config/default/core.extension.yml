@@ -11,11 +11,13 @@ module:
   config_filter: 0
   config_split: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  eu_cookie_compliance: 0
   field: 0
   file: 0
   filter: 0
@@ -41,6 +43,7 @@ module:
   toolbar: 0
   tour: 0
   user: 0
+  workflows: 0
   menu_link_content: 1
   views: 10
   comunica_italia: 1000

@@ -1,17 +1,17 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/www\/node\/13?_format=hal_json"
+            "href": "http:\/\/www\/node\/19?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/node\/roadmap"
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
         },
-        "http:\/\/drupal.org\/rest\/relation\/node\/roadmap\/revision_uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
             {
                 "href": "http:\/\/www\/user\/1?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/roadmap\/uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
             {
                 "href": "http:\/\/www\/user\/1?_format=hal_json",
                 "lang": "en"
@@ -20,17 +20,17 @@
     },
     "nid": [
         {
-            "value": 13
+            "value": 19
         }
     ],
     "uuid": [
         {
-            "value": "a2792712-dccf-40fa-926e-2252c531bcc0"
+            "value": "56a18765-f900-447e-8c4c-b1df280a8ca5"
         }
     ],
     "vid": [
         {
-            "value": 15
+            "value": 25
         }
     ],
     "langcode": [
@@ -41,17 +41,17 @@
     ],
     "type": [
         {
-            "target_id": "roadmap"
+            "target_id": "page"
         }
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-13T13:40:47+00:00",
+            "value": "2018-06-15T07:14:07+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/node\/roadmap\/revision_uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
             {
                 "_links": {
                     "self": {
@@ -68,7 +68,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/roadmap\/uid": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
             {
                 "_links": {
                     "self": {
@@ -95,28 +95,27 @@
     ],
     "title": [
         {
-            "value": "28 Maggio 2018",
+            "value": "Contatti",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2018-06-13T13:38:42+00:00",
+            "value": "2018-06-15T07:13:58+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-13T13:40:47+00:00",
+            "value": "2018-06-15T07:14:07+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "promote": [
         {
-            "value": true,
-            "lang": "en"
+            "value": false
         }
     ],
     "sticky": [
@@ -148,15 +147,6 @@
             "alias": null,
             "pid": null,
             "langcode": "en",
-            "lang": "en"
-        }
-    ],
-    "body": [
-        {
-            "value": "<p>pubblicazione LG Marketing e Storytelling e online comunica italia.it<\/p>\r\n",
-            "format": "basic_html",
-            "processed": "<p>pubblicazione LG Marketing e Storytelling e online comunica italia.it<\/p>",
-            "summary": "",
             "lang": "en"
         }
     ]
