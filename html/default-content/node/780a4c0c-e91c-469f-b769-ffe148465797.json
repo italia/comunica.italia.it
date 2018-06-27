@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 24
+            "value": 35
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-14T09:42:27+00:00",
+            "value": "2018-06-27T12:23:40+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -63,7 +63,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e21c92e4-1131-47d8-bba9-5f132ccc5b80"
+                        "value": "9fdfb074-733e-4af0-b7a6-e209457b2496"
                     }
                 ]
             }
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e21c92e4-1131-47d8-bba9-5f132ccc5b80"
+                        "value": "9fdfb074-733e-4af0-b7a6-e209457b2496"
                     }
                 ],
                 "lang": "en"
@@ -89,7 +89,7 @@
     },
     "status": [
         {
-            "value": false,
+            "value": true,
             "lang": "en"
         }
     ],
@@ -108,7 +108,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-14T09:42:27+00:00",
+            "value": "2018-06-27T12:23:40+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -139,7 +139,7 @@
     ],
     "moderation_state": [
         {
-            "value": "draft",
+            "value": "published",
             "lang": "en"
         }
     ],
@@ -158,6 +158,11 @@
             "processed": "<p>presentazione delle LG Comunicazione al ForumPA e apertura consultazioni<\/p>",
             "summary": "",
             "lang": "en"
+        }
+    ],
+    "field_peso": [
+        {
+            "value": 3
         }
     ]
 }

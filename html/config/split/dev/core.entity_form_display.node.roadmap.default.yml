@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.roadmap.body
     - field.field.node.roadmap.field_files
+    - field.field.node.roadmap.field_peso
     - node.type.roadmap
   module:
+    - content_moderation
     - file
     - path
     - text
@@ -36,6 +38,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_peso:
+    weight: 123
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   moderation_state:
     type: moderation_state_default

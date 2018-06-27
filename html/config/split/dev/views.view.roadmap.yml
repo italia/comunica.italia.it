@@ -50,9 +50,8 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 3
           offset: 0
       style:
         type: default
@@ -200,28 +199,56 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
             roadmap: roadmap
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
       sorts:
-        changed:
-          id: changed
-          table: node_field_revision
-          field: changed
+        field_peso_value:
+          id: field_peso_value
+          table: node__field_peso
+          field: field_peso_value
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
-      title: 'Roadmap List'
+          plugin_id: standard
+      title: 'Roadmap Page'
       header: {  }
       footer: {  }
       empty: {  }
@@ -237,15 +264,41 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Roadmap Page'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: roadmap
+      title: 'Roadmap Page'
+      defaults:
+        title: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
   roadmap_block:
     display_plugin: block
     id: roadmap_block
-    display_title: 'Roadmap Block'
+    display_title: 'Roadmap HP Block'
     position: 1
     display_options:
       display_extenders: {  }
       display_description: ''
       block_description: 'Roadmap List'
+      allow:
+        items_per_page: true
+      title: 'Roadmap HP Block'
+      defaults:
+        title: false
     cache_metadata:
       max-age: -1
       contexts:

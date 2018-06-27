@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.roadmap.body
     - field.field.node.roadmap.field_files
+    - field.field.node.roadmap.field_peso
     - node.type.roadmap
   module:
     - file
@@ -22,6 +23,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    region: content
   field_files:
     weight: 102
     label: above
@@ -29,6 +33,15 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_peso:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   links:
     weight: 100
