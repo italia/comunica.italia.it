@@ -32,5 +32,6 @@ hidden:
   field_call_to_action_pagine: true
   field_files: true
   field_icona: true
+  field_link: true
   field_link_guide: true
   field_link_linee_guida: true

@@ -12,7 +12,7 @@ dependencies:
 id: views_block__linee_guida_list_block_2
 theme: bartik
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: 'views_block:linee_guida_list-block_2'
 settings:

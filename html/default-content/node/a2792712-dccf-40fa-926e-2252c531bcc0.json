@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 33
+            "value": 94
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-27T12:23:19+00:00",
+            "value": "2018-07-02T09:59:10+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -63,7 +63,8 @@
                 },
                 "uuid": [
                     {
-                        "value": "99eb2c10-9cd8-4f3a-9f19-474676f42e51"
+
+                        "value": "58dfddc4-17f5-45d8-83fa-136a93b71876"
                     }
                 ]
             }
@@ -80,7 +81,8 @@
                 },
                 "uuid": [
                     {
-                        "value": "99eb2c10-9cd8-4f3a-9f19-474676f42e51"
+
+                        "value": "58dfddc4-17f5-45d8-83fa-136a93b71876"
                     }
                 ],
                 "lang": "en"
@@ -89,7 +91,7 @@
     },
     "status": [
         {
-            "value": false,
+            "value": true,
             "lang": "en"
         }
     ],
@@ -108,7 +110,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-27T12:23:19+00:00",
+            "value": "2018-07-02T09:59:10+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -139,7 +141,7 @@
     ],
     "moderation_state": [
         {
-            "value": "draft",
+            "value": "published",
             "lang": "en"
         }
     ],
