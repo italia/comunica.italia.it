@@ -1,0 +1,30 @@
+uuid: 7e9626c0-27b3-49f6-b69c-c5c90db7625b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.kit_list
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__kit_list_kit_block
+theme: bartik
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:kit_list-kit_block'
+settings:
+  id: 'views_block:kit_list-kit_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/8
+    negate: false
+    context_mapping: {  }

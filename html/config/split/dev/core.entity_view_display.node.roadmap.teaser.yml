@@ -27,3 +27,4 @@ content:
     region: content
 hidden:
   field_files: true
+  field_peso: true
