@@ -1,26 +1,26 @@
-uuid: 6ac2e91e-c0ef-45b5-88e1-848b9c0f6cb1
+uuid: 34773eaf-68f7-4b19-85c8-1fb135f08732
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.linee_guida_list
+    - views.view.roadmap
   module:
     - system
     - views
   theme:
     - bartik
-id: views_block__linee_guida_list_block_1
+id: views_block__roadmap_roadmap_block
 theme: bartik
 region: content
-weight: -1
+weight: 0
 provider: null
-plugin: 'views_block:linee_guida_list-block_1'
+plugin: 'views_block:roadmap-roadmap_block'
 settings:
-  id: 'views_block:linee_guida_list-block_1'
-  label: 'Linee guida'
+  id: 'views_block:roadmap-roadmap_block'
+  label: Roadmap
   provider: views
   label_display: visible
-  views_label: 'Linee guida'
+  views_label: Roadmap
   items_per_page: none
 visibility:
   request_path:
