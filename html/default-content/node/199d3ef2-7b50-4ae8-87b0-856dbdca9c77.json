@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/www\/node\/17?_format=hal_json"
+            "href": "http:\/\/www\/node\/16?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/linee_guida"
@@ -20,17 +20,17 @@
     },
     "nid": [
         {
-            "value": 17
+            "value": 16
         }
     ],
     "uuid": [
         {
-            "value": "66ce23fe-a7b7-45c9-8b84-dfd88ec5f8b5"
+            "value": "199d3ef2-7b50-4ae8-87b0-856dbdca9c77"
         }
     ],
     "vid": [
         {
-            "value": 87
+            "value": 21
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-07-02T09:37:41+00:00",
+            "value": "2018-06-14T09:38:57+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -89,26 +89,26 @@
     },
     "status": [
         {
-            "value": true,
+            "value": false,
             "lang": "en"
         }
     ],
     "title": [
         {
-            "value": "Storytelling",
+            "value": "Comunicazione",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2018-06-13T14:08:22+00:00",
+            "value": "2018-06-13T14:01:17+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-07-02T09:37:41+00:00",
+            "value": "2018-06-14T09:38:57+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -139,7 +139,7 @@
     ],
     "moderation_state": [
         {
-            "value": "published",
+            "value": "draft",
             "lang": "en"
         }
     ],

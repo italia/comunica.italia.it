@@ -1,0 +1,21 @@
+uuid: 2c393749-76cc-4fb8-917f-0f7f5f217687
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perche_utilizzare_il_kit
+    - node.type.kit
+  module:
+    - text
+id: node.kit.field_perche_utilizzare_il_kit
+field_name: field_perche_utilizzare_il_kit
+entity_type: node
+bundle: kit
+label: 'Perchè utilizzare il kit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

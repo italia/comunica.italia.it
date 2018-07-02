@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/www\/\/mnt\/files\/2018-07\/spid.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/www\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7ae9143f-f5ee-4316-ac0b-585a53eb530b"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/www\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "99eb2c10-9cd8-4f3a-9f19-474676f42e51"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "spid.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2018-07\/spid.png",
+            "url": "\/\/mnt\/files\/2018-07\/spid.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 18432
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-02T08:01:47+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-02T08:01:56+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}
