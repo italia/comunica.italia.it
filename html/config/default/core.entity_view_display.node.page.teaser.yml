@@ -27,4 +27,6 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  field_call_to_action_page: true
+  field_link: true

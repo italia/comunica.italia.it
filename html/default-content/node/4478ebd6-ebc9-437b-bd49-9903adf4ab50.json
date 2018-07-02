@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/www\/node\/2?_format=hal_json"
+            "href": "http:\/\/www\/node\/1?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
@@ -20,17 +20,17 @@
     },
     "nid": [
         {
-            "value": 2
+            "value": 1
         }
     ],
     "uuid": [
         {
-            "value": "5f5f40f5-4a7c-4648-8cad-de06a678a782"
+            "value": "4478ebd6-ebc9-437b-bd49-9903adf4ab50"
         }
     ],
     "vid": [
         {
-            "value": 2
+            "value": 1
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-12T10:09:39+00:00",
+            "value": "2018-06-12T10:09:26+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -95,20 +95,20 @@
     ],
     "title": [
         {
-            "value": "Marketing",
+            "value": "Chi siamo",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2018-06-12T10:09:31+00:00",
+            "value": "2018-06-12T10:08:56+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-12T10:09:39+00:00",
+            "value": "2018-06-12T10:09:26+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

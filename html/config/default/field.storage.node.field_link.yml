@@ -1,12 +1,12 @@
-uuid: d1611676-7c42-4b4d-be82-eadd019d67e6
+uuid: f3714845-b251-49d4-b1c8-37af15a2c131
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_link_linee_guida
-field_name: field_link_linee_guida
+id: node.field_link
+field_name: field_link
 entity_type: node
 type: link
 settings: {  }

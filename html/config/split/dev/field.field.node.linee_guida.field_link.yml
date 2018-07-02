@@ -1,17 +1,17 @@
-uuid: 695a47d4-8af6-4534-bc3f-f707d6f006e4
+uuid: e265b4bf-26cf-4e6d-a8ef-155f64017272
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link_linee_guida
+    - field.storage.node.field_link
     - node.type.linee_guida
   module:
     - link
-id: node.linee_guida.field_link_linee_guida
-field_name: field_link_linee_guida
+id: node.linee_guida.field_link
+field_name: field_link
 entity_type: node
 bundle: linee_guida
-label: 'Link linee guida'
+label: Link
 description: ''
 required: false
 translatable: false

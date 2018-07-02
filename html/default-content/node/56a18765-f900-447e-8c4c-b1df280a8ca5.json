@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 25
+            "value": 90
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-15T07:14:07+00:00",
+            "value": "2018-07-02T09:46:45+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -63,7 +63,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
                     }
                 ]
             }
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
                     }
                 ],
                 "lang": "en"
@@ -89,7 +89,7 @@
     },
     "status": [
         {
-            "value": false,
+            "value": true,
             "lang": "en"
         }
     ],
@@ -108,7 +108,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-15T07:14:07+00:00",
+            "value": "2018-07-02T09:46:45+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -138,7 +138,7 @@
     ],
     "moderation_state": [
         {
-            "value": "draft",
+            "value": "published",
             "lang": "en"
         }
     ],
@@ -147,6 +147,36 @@
             "alias": null,
             "pid": null,
             "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<h2>Vuoi proporre idee o dare un feedback sul piano Triennale?<\/h2>\r\n\r\n<p>Per questo puoi andare sul forum apposito: puoi partecipare alle discussioni esistenti o proporre la tua.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<h2>Vuoi proporre idee o dare un feedback sul piano Triennale?<\/h2>\n\n<p>Per questo puoi andare sul forum apposito: puoi partecipare alle discussioni esistenti o proporre la tua.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_call_to_action_page": [
+        {
+            "uri": "internal:\/",
+            "title": "Partecipa",
+            "options": []
+        }
+    ],
+    "field_link": [
+        {
+            "uri": "internal:\/",
+            "title": "Tweet di AgID",
+            "options": [],
+            "lang": "en"
+        },
+        {
+            "uri": "internal:\/",
+            "title": "Post di Facebook",
+            "options": [],
             "lang": "en"
         }
     ]

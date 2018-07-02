@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 79
+            "value": 89
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-07-02T07:25:28+00:00",
+            "value": "2018-07-02T09:44:17+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -63,7 +63,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
                     }
                 ]
             }
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
                     }
                 ],
                 "lang": "en"
@@ -108,7 +108,7 @@
     ],
     "changed": [
         {
-            "value": "2018-07-02T07:25:28+00:00",
+            "value": "2018-07-02T09:44:17+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -174,7 +174,7 @@
             "options": []
         }
     ],
-    "field_link_linee_guida": [
+    "field_link": [
         {
             "uri": "internal:\/",
             "title": "Dove ti trovi?",
@@ -192,7 +192,7 @@
         },
         {
             "uri": "internal:\/",
-            "title": "Quanto vuoi spendere?",
+            "title": "Quanto puoi spendere?",
             "options": []
         },
         {

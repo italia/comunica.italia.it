@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_call_to_action_home
     - field.storage.node.field_call_to_action_pagina
     - field.storage.node.field_icona
-    - field.storage.node.field_link_linee_guida
+    - field.storage.node.field_link
     - node.type.linee_guida
   module:
     - image
@@ -695,10 +695,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_link_linee_guida:
-          id: field_link_linee_guida
-          table: node__field_link_linee_guida
-          field: field_link_linee_guida
+        field_link:
+          id: field_link
+          table: node__field_link
+          field: field_link
           relationship: none
           group_type: group
           admin_label: ''
@@ -774,4 +774,4 @@ display:
       tags:
         - 'config:field.storage.node.field_call_to_action_pagina'
         - 'config:field.storage.node.field_icona'
-        - 'config:field.storage.node.field_link_linee_guida'
+        - 'config:field.storage.node.field_link'

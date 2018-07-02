@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.linee_guida.field_call_to_action_pagina
     - field.field.node.linee_guida.field_files
     - field.field.node.linee_guida.field_icona
-    - field.field.node.linee_guida.field_link_linee_guida
+    - field.field.node.linee_guida.field_link
     - node.type.linee_guida
   module:
     - file
@@ -74,9 +74,9 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_link_linee_guida:
-    weight: 8
-    label: above
+  field_link:
+    weight: 7
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
