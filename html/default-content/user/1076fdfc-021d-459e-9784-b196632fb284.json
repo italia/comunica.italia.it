@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/user\/0?_format=hal_json"
+            "href": "http:\/\/default\/user\/1?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -9,12 +9,12 @@
     },
     "uid": [
         {
-            "value": 0
+            "value": 1
         }
     ],
     "uuid": [
         {
-            "value": "331961ac-8e24-47a3-b7db-c0c292c8bb58"
+            "value": "1076fdfc-021d-459e-9784-b196632fb284"
         }
     ],
     "langcode": [
@@ -23,25 +23,20 @@
             "lang": "en"
         }
     ],
-    "preferred_langcode": [
-        {
-            "value": "en"
-        }
-    ],
     "name": [
         {
-            "value": ""
+            "value": "admin"
         }
     ],
     "created": [
         {
-            "value": "2018-06-18T14:10:14+00:00",
+            "value": "2018-06-27T15:50:46+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-18T14:10:14+00:00",
+            "value": "2018-06-27T15:50:46+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

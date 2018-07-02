@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.linee_guida.body
+    - field.field.node.linee_guida.field_call_to_action_home
+    - field.field.node.linee_guida.field_call_to_action_pagina
     - field.field.node.linee_guida.field_files
     - field.field.node.linee_guida.field_icona
+    - field.field.node.linee_guida.field_link_linee_guida
     - node.type.linee_guida
   module:
     - file
     - image
+    - link
     - text
     - user
 id: node.linee_guida.default
@@ -20,28 +24,71 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_call_to_action_home:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_call_to_action_pagina:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_files:
-    weight: 103
-    label: above
+    weight: 4
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
   field_icona:
-    weight: 102
-    label: above
+    weight: 3
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
-  links:
-    weight: 100
+  field_link_linee_guida:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

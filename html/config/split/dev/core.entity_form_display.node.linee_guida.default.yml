@@ -4,13 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.linee_guida.body
+    - field.field.node.linee_guida.field_call_to_action_home
+    - field.field.node.linee_guida.field_call_to_action_pagina
     - field.field.node.linee_guida.field_files
     - field.field.node.linee_guida.field_icona
+    - field.field.node.linee_guida.field_link_linee_guida
     - image.style.thumbnail
     - node.type.linee_guida
   module:
+    - content_moderation
     - file
     - image
+    - link
     - path
     - text
 id: node.linee_guida.default
@@ -33,6 +38,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_call_to_action_home:
+    weight: 127
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_call_to_action_pagina:
+    weight: 128
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_files:
     weight: 123
     settings:
@@ -47,6 +68,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_link_linee_guida:
+    weight: 129
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   moderation_state:
     type: moderation_state_default

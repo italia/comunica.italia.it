@@ -26,5 +26,11 @@ content:
     weight: 100
     region: content
 hidden:
+  field_call_to_action: true
+  field_call_to_action_home: true
+  field_call_to_action_pagina: true
+  field_call_to_action_pagine: true
   field_files: true
   field_icona: true
+  field_link_guide: true
+  field_link_linee_guida: true

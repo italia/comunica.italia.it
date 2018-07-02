@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/2\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/7\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 2
+            "value": 7
         }
     ],
     "uuid": [
         {
-            "value": "6a64a79e-bc3a-4b09-88e9-27bb6fa13b73"
+            "value": "3ca16b7a-d2b2-4041-9387-4155d580f256"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "Linee guida",
+            "value": "Linee Guida",
             "lang": "en"
         }
     ],
@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "internal:#",
+            "uri": "internal:\/linee-guida",
             "title": "",
             "options": []
         }
@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": -47
+            "value": -48
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-14T09:40:50+00:00",
+            "value": "2018-06-29T15:51:03+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

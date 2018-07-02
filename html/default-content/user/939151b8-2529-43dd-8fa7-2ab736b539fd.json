@@ -47,6 +47,12 @@
             "lang": "en"
         }
     ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "roles": [
         {
             "target_id": "content_manager"

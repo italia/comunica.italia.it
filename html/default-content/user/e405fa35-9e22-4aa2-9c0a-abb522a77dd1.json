@@ -14,7 +14,7 @@
     ],
     "uuid": [
         {
-            "value": "e21c92e4-1131-47d8-bba9-5f132ccc5b80"
+            "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
         }
     ],
     "langcode": [
@@ -30,13 +30,13 @@
     ],
     "created": [
         {
-            "value": "2018-06-19T07:11:48+00:00",
+            "value": "2018-07-02T07:24:23+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-19T07:11:48+00:00",
+            "value": "2018-07-02T07:24:23+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": 0
+            "value": -45
         }
     ],
     "expanded": [
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-15T07:14:07+00:00",
+            "value": "2018-06-27T13:41:38+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

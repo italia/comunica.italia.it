@@ -1,0 +1,23 @@
+uuid: 6b5bd3f3-2c81-416f-9437-59768a8e07eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_to_action_pagina
+    - node.type.linee_guida
+  module:
+    - link
+id: node.linee_guida.field_call_to_action_pagina
+field_name: field_call_to_action_pagina
+entity_type: node
+bundle: linee_guida
+label: 'Call to action Pagina interna'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

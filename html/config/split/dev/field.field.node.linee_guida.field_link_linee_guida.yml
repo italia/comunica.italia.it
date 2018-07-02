@@ -1,0 +1,23 @@
+uuid: 695a47d4-8af6-4534-bc3f-f707d6f006e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_linee_guida
+    - node.type.linee_guida
+  module:
+    - link
+id: node.linee_guida.field_link_linee_guida
+field_name: field_link_linee_guida
+entity_type: node
+bundle: linee_guida
+label: 'Link linee guida'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/www\/node\/15?_format=hal_json"
+            "href": "http:\/\/www\/node\/22?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/linee_guida"
@@ -20,17 +20,17 @@
     },
     "nid": [
         {
-            "value": 15
+            "value": 22
         }
     ],
     "uuid": [
         {
-            "value": "b61b610e-c94a-4c52-bce3-06f858cfd787"
+            "value": "986c4cd9-0ba0-4011-9b71-5ef6af80dbaa"
         }
     ],
     "vid": [
         {
-            "value": 17
+            "value": 81
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-06-13T14:01:05+00:00",
+            "value": "2018-07-02T07:25:43+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -63,7 +63,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "9fdfb074-733e-4af0-b7a6-e209457b2496"
+                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
                     }
                 ]
             }
@@ -80,7 +80,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "9fdfb074-733e-4af0-b7a6-e209457b2496"
+                        "value": "e405fa35-9e22-4aa2-9c0a-abb522a77dd1"
                     }
                 ],
                 "lang": "en"
@@ -89,7 +89,7 @@
     },
     "status": [
         {
-            "value": false,
+            "value": true,
             "lang": "en"
         }
     ],
@@ -101,14 +101,14 @@
     ],
     "created": [
         {
-            "value": "2018-06-13T14:00:48+00:00",
+            "value": "2018-07-02T07:04:41+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-13T14:01:05+00:00",
+            "value": "2018-07-02T07:25:43+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -139,7 +139,7 @@
     ],
     "moderation_state": [
         {
-            "value": "draft",
+            "value": "published",
             "lang": "en"
         }
     ],
@@ -149,6 +149,29 @@
             "pid": null,
             "langcode": "en",
             "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_call_to_action_home": [
+        {
+            "uri": "internal:\/",
+            "title": "Partecipa",
+            "options": []
+        }
+    ],
+    "field_call_to_action_pagina": [
+        {
+            "uri": "internal:\/",
+            "title": "In arrivo",
+            "options": []
         }
     ]
 }
