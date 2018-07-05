@@ -1,0 +1,21 @@
+.region-header {
+  padding: 2em;
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-wrapper {
+    margin-top: 1em;
+    text-align: center;
+    .title {
+      color: $color-green;
+      font-size: $font-xxlarge;
+      font-weight: 700;
+      margin: .35em 0;
+    }
+    .subtitle {
+      color: $color-blue-dark;
+      font-size: $font-large;
+    }
+  }
+}

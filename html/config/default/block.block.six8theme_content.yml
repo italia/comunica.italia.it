@@ -1,0 +1,22 @@
+uuid: 8a4d944b-a209-4366-86dc-79e640a54c6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - six8theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: six8theme_content
+theme: six8theme
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

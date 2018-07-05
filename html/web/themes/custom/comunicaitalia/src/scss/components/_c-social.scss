@@ -1,0 +1,24 @@
+.social-list {
+  display: flex;
+  list-style: none;
+  .social-elem {
+    background-color: $color-blue-light;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 .25em;
+    padding: .5em;
+    transition: background-color 250ms ease-out;
+    &:hover {
+      background-color: $color-blue;
+    }
+    .social-link {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      img {
+        display: block;
+        height: 22px;
+      }
+    }
+  }
+}
