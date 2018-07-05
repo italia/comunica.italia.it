@@ -71,21 +71,34 @@
 
   {{ page.navigation }}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {% if page.primary_menu%}
+    {{ page.primary_menu }}
+  {% endif %}
 
-  {{ page.breadcrumb }}
+  {% if page.secondary_menu%}
+    {{ page.secondary_menu }}
+  {% endif %}
 
-  {{ page.highlighted }}
+  {% if page.breadcrumb%}
+    {{ page.breadcrumb }}
+  {% endif %}
 
-  {{ page.help }}
+  {% if page.highlighted%}
+    {{ page.highlighted }}
+  {% endif %}
+
+  {% if page.help%}
+    {{ page.help }}
+  {% endif %}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-before-content">
-      {{ page.before_content }}
-    </div>{# /.layout-before-content #}
+    {% if page.before_content%}
+      <div class="layout-before-content">
+        {{ page.before_content }}
+      </div>{# /.layout-before-content #}
+    {% endif %}
 
     <div class="layout-content">
       {{ page.content }}
@@ -111,10 +124,14 @@
     </div>
   {% endif %}
 
-  {% if page.footer %}
+  {% if page.footer%}
     <footer role="contentinfo">
       {{ page.footer }}
     </footer>
   {% endif %}
+
+  <footer role="footer" class="footer">
+
+  </footer>
 
 </div>{# /.layout-container #}

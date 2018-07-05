@@ -8,9 +8,60 @@
   }
   .view-linee-guida-list {
     background-color: $color-blue-lightest;
+    padding: 1em;
     .view-content {
       @include maxWidth;
+      display: flex;
+      justify-content: space-between;
       padding: 1.5em;
+      .views-row {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 20em;
+        .views-field-field-icona {
+          .field-content {
+            img {
+
+            }
+          }
+        }
+        .views-field-title {
+          .field-content {
+            color: $color-white;
+            font-size: $font-xlarge;
+            font-weight: 700;
+          }
+        }
+        .views-field-body {
+          margin-bottom: 1.5em;
+          .field-content {
+            p {
+              color: $color-white;
+              font-size: $font-medium;
+              text-align: center;
+            }
+          }
+        }
+        .views-field-field-call-to-action-home {
+          margin-top: auto;
+          .field-content {
+            a {
+              background-color: $color-white;
+              color: $color-blue-light;
+              display: block;
+              font-size: $font-discrete;
+              font-weight: 700;
+              padding: 1em 1.5em;
+              text-decoration: none;
+              transition: color 220ms ease-out;
+              &:hover {
+                color: $color-blue-dark;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
