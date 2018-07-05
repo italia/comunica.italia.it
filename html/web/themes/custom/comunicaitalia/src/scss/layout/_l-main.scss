@@ -1,7 +1,12 @@
 main {
+  background-image: url('../images/backgrounds/bg-menu-gray.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -$menu-margin;
   .layout-content {
     .region-content {
-      padding-top: 3em;
+      padding-top: $menu-margin;
     }
   }
 }

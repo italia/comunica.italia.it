@@ -21,17 +21,21 @@ $maxwidth: 1280px;
 // Headers and elements heights.
 // =============================================================================
 
-$header-height: 3.5em;
-$menu-height: 18em;
+$header-height:   3.5em;
+$menu-height:     14em;
+$menu-margin:     4em;
+$roadmap-height:  40em;
 
 // =============================================================================
 // Colors.
 // =============================================================================
 
 // Brand colors.
-$color-blue:        #1C68CA;
-$color-blue-dark:   #093D68;
-$color-blue-light:  #127AE2;
+$color-blue:          #1C68CA;
+$color-blue-dark:     #093D68;
+$color-blue-light:    #127AE2;
+$color-blue-lightest: lighten(#127AE2, 15%);
+
 $color-cyan:        #91F0F0;
 $color-green:       #91C044;
 
