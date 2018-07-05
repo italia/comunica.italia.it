@@ -1,0 +1,54 @@
+.top-menu {
+  align-items: center;
+  background-color: $color-blue;
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  .left-section {
+    align-items: center;
+    background-color: lighten($color-blue, 5%);
+    display: flex;
+    height: 100%;
+    padding: 0 1.75em;
+    .text-wrapper {
+      align-items: center;
+      display: flex;
+      .link-agid,
+      .link-teamdigitale,
+      .link-separator {
+        color: $color-white;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .link-separator {
+        margin: 0 .5em;
+      }
+    }
+  }
+  .right-section {
+    height: 100%;
+    .link-list {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      list-style: none;
+      .link-elem {
+        background-color: lighten($color-blue, 5%);
+        height: 100%;
+        padding: 0 1em;
+        a {
+          color: $color-white;
+          font-weight: 700;
+          line-height: $header-height;
+          text-decoration: none;
+        }
+        &.active {
+          background-color: $color-blue;
+          a {
+
+          }
+        }
+      }
+    }
+  }
+}

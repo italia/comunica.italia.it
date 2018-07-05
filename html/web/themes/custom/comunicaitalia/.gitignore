@@ -20,3 +20,5 @@ Thumbs.db
 *nbproject*
 .vscode
 .vscode/*
+src/._*
+dist/._*
