@@ -1,0 +1,61 @@
+// =============================================================================
+// Breakpoints.
+// =============================================================================
+
+$xxsmall: 376px;
+$xsmall:  461px;
+$small:   641px;
+$medium:  769px;
+$normal:  1025px;
+$large:   1201px;
+$full:    1441px;
+$full2k:  2561px;
+
+// =============================================================================
+// Dimensions.
+// =============================================================================
+
+$maxwidth: 1280px;
+
+// =============================================================================
+// Headers and elements heights.
+// =============================================================================
+
+$header-height: pxtoem(75px);
+
+// =============================================================================
+// Colors.
+// =============================================================================
+
+// Brand colors.
+$color-blue:        #1B68CA;
+$color-blue-dark:   #1B68CA;
+$color-cyan:        #91F0F0;
+$color-green:       #91C044;
+
+
+// Shades of grey.
+$color-white:       #FFFFFF;
+$color-gray-dark:   #1D1D1B;
+$color-black:       #000000;
+
+
+// =============================================================================
+// Typography.
+// =============================================================================
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+$font-titillium: 'Titillium Web', sans-serif;
+
+$fonts: (
+  titillium: $font-titillium
+);
+
+$font-xxsmall:    pxrem(11);
+$font-xsmall:     pxrem(12);
+$font-small:      pxrem(14);
+$font-normal:     pxrem(16);
+$font-medium:     pxrem(18);
+$font-discrete:   pxrem(20);
+$font-large:      pxrem(26);
+$font-xlarge:     pxrem(30);
+$font-xxlarge:    pxrem(37);

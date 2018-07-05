@@ -1,0 +1,47 @@
+{
+  "assets": {
+    "src": "src/",
+    "dest": "dist/"
+  },
+  "scripts": {
+    "src"  : "src/js/",
+    "files" : [
+      "src/js/**/*.js"
+    ],
+    "dest"  : "dist/js/"
+  },
+  "utils": {
+    "src"  : "src/utils/",
+    "files" : [
+      "src/utils/**/*.js"
+    ],
+    "dest"  : "dist/utils/"
+  },
+  "scss": {
+    "src" : "src/scss/",
+    "files": [
+      "src/scss/**/*.scss",
+      "!src/scss/utils/sprite-template.scss"
+    ],
+    "dest" : "dist/css/"
+  },
+  "images": {
+    "src" : "src/images/",
+    "files": [
+      "src/images/**",
+      "!src/images/sprite",
+      "!src/images/sprite/**"
+    ],
+    "dest" : "dist/images/"
+  },
+  "sprite": {
+    "src" : "src/images/sprite/",
+    "css" : "../src/scss/_globals/_sprite.scss",
+    "tpl" : "src/scss/utils/sprite-template.scss",
+    "name" : "images/sprite.svg",
+    "files": [
+      "src/images/sprite/**/*"
+    ],
+    "dest" : "dist/"
+  }
+}

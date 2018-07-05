@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the six8theme theme.
+ */
+
+include __DIR__ . '/preprocess/six8theme.preprocess.inc';

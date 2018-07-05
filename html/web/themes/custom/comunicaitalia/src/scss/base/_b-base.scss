@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+*:focus,
+*:active {
+  outline: 0;
+}
+body, html {
+  height: 100%;
+  position: relative;
+}
+body {
+  @include fontSmoothing;
+  @include font(titillium, 400);
+  background-color: $color-white;
+  color: $color-gray-dark;
+  font-size: 1em;
+  line-height: 1.25;
+  overflow-x: hidden;
+}
+img, media {
+  height: auto;
+  max-width: 100%;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:visited {
+
+}
+a:active,
+a:hover {
+
+}
+.clearfix:after {
+  display: none;
+}
+.clearboth {
+  clear: both;
+}
