@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_call_to_action_pagina
     - field.storage.node.field_icona
     - field.storage.node.field_link
+    - image.style.guidelines_teaser
     - node.type.linee_guida
   module:
     - image
@@ -258,7 +259,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: guidelines_teaser
             image_link: ''
           group_column: ''
           group_columns: {  }
