@@ -1,0 +1,22 @@
+.page-node-8 {
+  .node--type-page {
+    .main-wrapper {
+      background-color: $color-green;
+      margin-bottom: 3em;
+      padding: 1.5em;
+      .main-content {
+        @include maxWidth;
+        .field--name-body {
+          padding: 1em 8em;
+          p {
+            color: $color-white;
+            font-size: $font-medium;
+            font-weight: 700;
+            line-height: 1.4em;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
