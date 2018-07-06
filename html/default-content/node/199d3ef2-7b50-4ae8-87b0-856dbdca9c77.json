@@ -1,0 +1,163 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/www\/node\/16?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/linee_guida"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/linee_guida\/revision_uid": [
+            {
+                "href": "http:\/\/www\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/linee_guida\/uid": [
+            {
+                "href": "http:\/\/www\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "199d3ef2-7b50-4ae8-87b0-856dbdca9c77"
+        }
+    ],
+    "vid": [
+        {
+            "value": 21
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "linee_guida"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-06-14T09:38:57+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/linee_guida\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/www\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "99eb2c10-9cd8-4f3a-9f19-474676f42e51"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/linee_guida\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/www\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "99eb2c10-9cd8-4f3a-9f19-474676f42e51"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Comunicazione",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-13T14:01:17+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-14T09:38:57+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "draft",
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sem quis augue tempus scelerisque ac et quam. Etiam ullamcorper ut lorem sit amet pretium. In ac turpis odio. Sed lacinia neque nulla, non auctor purus mattis nec. Aenean convallis est eget mollis consequat. Donec placerat orci quis diam placerat ornare. Mauris nec vehicula dui. Aenean sagittis erat lacus, sit amet ultrices velit sodales et. Proin lobortis egestas nisl, sed iaculis lacus. Suspendisse porttitor consectetur magna, et fermentum lacus pulvinar et. Phasellus lacus ligula, maximus sit amet mauris eget, pretium blandit leo. Fusce ut tristique lorem, vitae varius arcu. Proin imperdiet sapien sollicitudin diam lobortis pulvinar.<\/p>\r\n\r\n<p>Praesent nec mi id lorem feugiat lacinia. Morbi aliquet eros ut sem ultrices, vitae aliquam lectus auctor. Phasellus scelerisque turpis et cursus vestibulum. Vestibulum aliquet congue accumsan. Curabitur mattis faucibus orci faucibus laoreet. Nunc orci ante, euismod vel lectus non, placerat egestas felis. Quisque sodales sit amet erat molestie accumsan. Etiam fermentum tellus aliquam consequat mollis. Duis vitae eros ex. Nam vel nulla eu nibh ullamcorper rutrum. Nullam varius rhoncus ligula, eget posuere lectus lobortis id.<\/p>\r\n\r\n<p>Aliquam in neque vel orci mattis rutrum in ut lacus. Nunc et felis dictum, rhoncus urna in, euismod est. Nullam dignissim, ex ut sollicitudin venenatis, diam augue faucibus metus, in semper lacus lorem vitae felis. Donec mattis ligula eget molestie sagittis. Phasellus hendrerit sit amet quam non dapibus. Phasellus consequat commodo iaculis. Pellentesque ultrices, risus non varius bibendum, ipsum nisl fringilla lectus, in imperdiet nibh nunc vel ante. Etiam eu fringilla tellus, at viverra odio. Quisque condimentum lacinia libero, at molestie ex feugiat vel. Donec sit amet massa at tellus aliquam lacinia ut sed eros.<\/p>\r\n\r\n<p>Etiam in lacus et tellus accumsan auctor a in leo. Fusce eget aliquet erat. In hac habitasse platea dictumst. Duis hendrerit pharetra nunc nec interdum. Ut porta molestie risus accumsan fermentum. Quisque et dapibus elit, ac posuere ipsum. Vestibulum et felis porta, tempor nulla et, ultrices lectus. In laoreet feugiat suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque volutpat, lectus id blandit tempor, dui nisi mollis metus, at facilisis odio nisl eu felis. Cras non vestibulum eros, quis dictum metus.<\/p>\r\n\r\n<p>Suspendisse in massa vel velit sollicitudin sollicitudin. Fusce viverra pellentesque fringilla. Curabitur tristique nec sapien nec fermentum. Nulla commodo vulputate velit, vel laoreet ligula rutrum sed. Praesent laoreet posuere convallis. Donec porttitor fermentum ipsum. Sed tristique, dolor sit amet egestas euismod, leo eros placerat dui, a efficitur nunc magna ac est. Fusce vitae nisi eget quam convallis vehicula a id nibh.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis sem quis augue tempus scelerisque ac et quam. Etiam ullamcorper ut lorem sit amet pretium. In ac turpis odio. Sed lacinia neque nulla, non auctor purus mattis nec. Aenean convallis est eget mollis consequat. Donec placerat orci quis diam placerat ornare. Mauris nec vehicula dui. Aenean sagittis erat lacus, sit amet ultrices velit sodales et. Proin lobortis egestas nisl, sed iaculis lacus. Suspendisse porttitor consectetur magna, et fermentum lacus pulvinar et. Phasellus lacus ligula, maximus sit amet mauris eget, pretium blandit leo. Fusce ut tristique lorem, vitae varius arcu. Proin imperdiet sapien sollicitudin diam lobortis pulvinar.<\/p>\n\n<p>Praesent nec mi id lorem feugiat lacinia. Morbi aliquet eros ut sem ultrices, vitae aliquam lectus auctor. Phasellus scelerisque turpis et cursus vestibulum. Vestibulum aliquet congue accumsan. Curabitur mattis faucibus orci faucibus laoreet. Nunc orci ante, euismod vel lectus non, placerat egestas felis. Quisque sodales sit amet erat molestie accumsan. Etiam fermentum tellus aliquam consequat mollis. Duis vitae eros ex. Nam vel nulla eu nibh ullamcorper rutrum. Nullam varius rhoncus ligula, eget posuere lectus lobortis id.<\/p>\n\n<p>Aliquam in neque vel orci mattis rutrum in ut lacus. Nunc et felis dictum, rhoncus urna in, euismod est. Nullam dignissim, ex ut sollicitudin venenatis, diam augue faucibus metus, in semper lacus lorem vitae felis. Donec mattis ligula eget molestie sagittis. Phasellus hendrerit sit amet quam non dapibus. Phasellus consequat commodo iaculis. Pellentesque ultrices, risus non varius bibendum, ipsum nisl fringilla lectus, in imperdiet nibh nunc vel ante. Etiam eu fringilla tellus, at viverra odio. Quisque condimentum lacinia libero, at molestie ex feugiat vel. Donec sit amet massa at tellus aliquam lacinia ut sed eros.<\/p>\n\n<p>Etiam in lacus et tellus accumsan auctor a in leo. Fusce eget aliquet erat. In hac habitasse platea dictumst. Duis hendrerit pharetra nunc nec interdum. Ut porta molestie risus accumsan fermentum. Quisque et dapibus elit, ac posuere ipsum. Vestibulum et felis porta, tempor nulla et, ultrices lectus. In laoreet feugiat suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque volutpat, lectus id blandit tempor, dui nisi mollis metus, at facilisis odio nisl eu felis. Cras non vestibulum eros, quis dictum metus.<\/p>\n\n<p>Suspendisse in massa vel velit sollicitudin sollicitudin. Fusce viverra pellentesque fringilla. Curabitur tristique nec sapien nec fermentum. Nulla commodo vulputate velit, vel laoreet ligula rutrum sed. Praesent laoreet posuere convallis. Donec porttitor fermentum ipsum. Sed tristique, dolor sit amet egestas euismod, leo eros placerat dui, a efficitur nunc magna ac est. Fusce vitae nisi eget quam convallis vehicula a id nibh.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

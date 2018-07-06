@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the ddd installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function comunica_italia_install() {
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('uuid', '3493c453-f61d-4929-9a9b-8f9eb538a3a8')
+    ->save(TRUE);
+}

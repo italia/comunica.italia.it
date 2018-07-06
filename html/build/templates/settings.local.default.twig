@@ -1,0 +1,26 @@
+{% include 'settings.prod.default.twig' %}
+
+/**
+ * Override config_split config.
+ */
+$config['config_split.config_split.dev']['status'] = TRUE;
+$config['config_split.config_split.prod']['status'] = FALSE;
+
+$config['webprofiler.config']['ide_link_remote'] = '{{ webprofiler.ide_link_remote }}';
+$config['webprofiler.config']['ide_link_local'] = '{{ webprofiler.ide_link_local }}';
+
+
+/**
+* Override Path File public
+*/
+
+$settings['file_public_path'] = '/mnt/files';
+
+/**
+ * default_content_deploy config.
+ */
+$config['content_directory'] = '../default-content';
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}

@@ -1,0 +1,27 @@
+uuid: 7b7b53b2-c58b-4a58-8220-493664ff65a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.roadmap
+  module:
+    - file
+id: node.roadmap.field_files
+field_name: field_files
+entity_type: node
+bundle: roadmap
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpg jpeg gif png doc xls pdf odt zip'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

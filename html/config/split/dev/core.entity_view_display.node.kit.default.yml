@@ -1,0 +1,62 @@
+uuid: e907dc8a-c116-4c05-a9c5-9b2a34a8f457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.kit.body
+    - field.field.node.kit.field_icona_kit
+    - field.field.node.kit.field_kit_files
+    - field.field.node.kit.field_perche_utilizzare_il_kit
+    - node.type.kit
+  module:
+    - file
+    - image
+    - text
+    - user
+id: node.kit.default
+targetEntityType: node
+bundle: kit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icona_kit:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_kit_files:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_perche_utilizzare_il_kit:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: ed32b936-2a76-4ec2-8425-011d85f38cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_call_to_action_home
+    - node.type.linee_guida
+  module:
+    - link
+id: node.linee_guida.field_call_to_action_home
+field_name: field_call_to_action_home
+entity_type: node
+bundle: linee_guida
+label: 'Call to action Home'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

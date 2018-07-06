@@ -1,0 +1,162 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/www\/node\/20?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/www\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "href": "http:\/\/www\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "27de221e-0cec-415f-b35c-dff03c774fab"
+        }
+    ],
+    "vid": [
+        {
+            "value": 29
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-06-27T12:20:55+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/www\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/www\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca96cbaf-3fe9-4283-bc7b-25c61ff6b649"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Privacy Policy",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-15T07:23:23+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-27T12:20:55+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "draft",
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at erat. Scelerisque mauris pellentesque pulvinar pellentesque. In metus vulputate eu scelerisque felis imperdiet. Orci phasellus egestas tellus rutrum. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Iaculis nunc sed augue lacus viverra vitae congue. Feugiat nisl pretium fusce id velit ut tortor. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Cras adipiscing enim eu turpis egestas pretium aenean. Non pulvinar neque laoreet suspendisse interdum. Blandit massa enim nec dui. Fusce id velit ut tortor.<\/p>\r\n\r\n<p>Suscipit adipiscing bibendum est ultricies integer quis auctor. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Eget mi proin sed libero enim sed faucibus turpis. Est lorem ipsum dolor sit amet consectetur adipiscing. Nisi lacus sed viverra tellus. Duis ultricies lacus sed turpis tincidunt id. Metus dictum at tempor commodo ullamcorper a. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Orci porta non pulvinar neque. Sit amet nulla facilisi morbi tempus iaculis urna id. Lobortis mattis aliquam faucibus purus in massa tempor nec. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Leo a diam sollicitudin tempor id eu.<\/p>\r\n\r\n<p>Duis at consectetur lorem donec massa sapien. Ornare suspendisse sed nisi lacus. Ut eu sem integer vitae. Vitae purus faucibus ornare suspendisse sed nisi lacus. Diam sit amet nisl suscipit. Eget nulla facilisi etiam dignissim diam quis enim. Turpis massa sed elementum tempus. Praesent elementum facilisis leo vel fringilla est ullamcorper. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Vitae tempus quam pellentesque nec nam aliquam sem. Cursus metus aliquam eleifend mi. Mollis aliquam ut porttitor leo a diam sollicitudin tempor. Tempor orci eu lobortis elementum nibh. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Enim facilisis gravida neque convallis a cras semper. Ut sem nulla pharetra diam sit amet.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus mattis molestie a iaculis at erat. Scelerisque mauris pellentesque pulvinar pellentesque. In metus vulputate eu scelerisque felis imperdiet. Orci phasellus egestas tellus rutrum. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Iaculis nunc sed augue lacus viverra vitae congue. Feugiat nisl pretium fusce id velit ut tortor. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Cras adipiscing enim eu turpis egestas pretium aenean. Non pulvinar neque laoreet suspendisse interdum. Blandit massa enim nec dui. Fusce id velit ut tortor.<\/p>\n\n<p>Suscipit adipiscing bibendum est ultricies integer quis auctor. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Eget mi proin sed libero enim sed faucibus turpis. Est lorem ipsum dolor sit amet consectetur adipiscing. Nisi lacus sed viverra tellus. Duis ultricies lacus sed turpis tincidunt id. Metus dictum at tempor commodo ullamcorper a. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Orci porta non pulvinar neque. Sit amet nulla facilisi morbi tempus iaculis urna id. Lobortis mattis aliquam faucibus purus in massa tempor nec. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Leo a diam sollicitudin tempor id eu.<\/p>\n\n<p>Duis at consectetur lorem donec massa sapien. Ornare suspendisse sed nisi lacus. Ut eu sem integer vitae. Vitae purus faucibus ornare suspendisse sed nisi lacus. Diam sit amet nisl suscipit. Eget nulla facilisi etiam dignissim diam quis enim. Turpis massa sed elementum tempus. Praesent elementum facilisis leo vel fringilla est ullamcorper. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Vitae tempus quam pellentesque nec nam aliquam sem. Cursus metus aliquam eleifend mi. Mollis aliquam ut porttitor leo a diam sollicitudin tempor. Tempor orci eu lobortis elementum nibh. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Enim facilisis gravida neque convallis a cras semper. Ut sem nulla pharetra diam sit amet.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

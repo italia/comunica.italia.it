@@ -1,0 +1,13 @@
+name: Comunica Italia
+type: profile
+description: 'Comunica Italia installation profile'
+version: VERSION
+core: 8.x
+themes:
+  - bartik
+  - seven
+dependencies:
+  - config
+  - config_split
+  - monolog
+  - redis

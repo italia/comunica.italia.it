@@ -1,0 +1,30 @@
+uuid: bc2fe7c3-a386-4b60-8702-493a6890605a
+langcode: en
+status: true
+dependencies: {  }
+id: content_manager
+label: 'Content manager'
+weight: 5
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'create kit content'
+  - 'create linee_guida content'
+  - 'create page content'
+  - 'create roadmap content'
+  - 'delete own kit content'
+  - 'delete own linee_guida content'
+  - 'delete own page content'
+  - 'delete own roadmap content'
+  - 'display eu cookie compliance popup'
+  - 'edit own kit content'
+  - 'edit own linee_guida content'
+  - 'edit own page content'
+  - 'edit own roadmap content'
+  - 'use editorial transition create_new_draft'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view any unpublished content'

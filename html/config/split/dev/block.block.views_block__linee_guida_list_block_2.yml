@@ -1,0 +1,30 @@
+uuid: bfcc5940-e88f-4f15-aebb-8cc623e68a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.linee_guida_list
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__linee_guida_list_block_2
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:linee_guida_list-block_2'
+settings:
+  id: 'views_block:linee_guida_list-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /linee-guida
+    negate: false
+    context_mapping: {  }

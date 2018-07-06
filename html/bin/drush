@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd web
+$echo pwd
+../vendor/bin/drush $@

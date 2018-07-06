@@ -1,0 +1,30 @@
+uuid: 34773eaf-68f7-4b19-85c8-1fb135f08732
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.roadmap
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__roadmap_roadmap_block
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:roadmap-roadmap_block'
+settings:
+  id: 'views_block:roadmap-roadmap_block'
+  label: Roadmap
+  provider: views
+  label_display: visible
+  views_label: Roadmap
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
