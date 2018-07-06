@@ -11,6 +11,12 @@
     &:hover {
       background-color: $color-blue;
     }
+    &.light-color {
+      background-color: $color-cyan;
+      &:hover {
+        background-color: darken($color-cyan, 30%);
+      }
+    }
     .social-link {
       align-items: center;
       display: flex;
