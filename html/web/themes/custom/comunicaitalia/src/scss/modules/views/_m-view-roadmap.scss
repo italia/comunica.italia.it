@@ -1,0 +1,49 @@
+.view-roadmap.view-display-page_1 {
+  background-color: $color-blue-lightest;
+  margin-bottom: 2em;
+  .view-content {
+    @include maxWidth($maxwidth-small);
+    background-color: $color-white;
+    padding: 2em 0;
+    .views-row {
+      border-bottom: 1px solid $color-blue-dark;
+      margin: 0 4em;
+      padding: 1em;
+      text-align: center;
+      .views-field-title {
+        .field-content {
+          a {
+            color: $color-blue-dark;
+            font-size: $font-discrete;
+            font-weight: 700;
+            line-height: 2em;
+            padding-left: 2.35em;
+            position: relative;
+            text-decoration: none;
+            &::before {
+              background-image: url('../images/icons/icon-list.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: '';
+              display: block;
+              height: 2em;
+              left: 0;
+              position: absolute;
+              top: -.2em;
+              width: 2em;
+            }
+          }
+        }
+      }
+      .views-field-body {
+        margin: 0 auto;
+        max-width: 20em;
+        p {
+          font-size: $font-normal;
+          margin-top: .35em;
+        }
+      }
+    }
+  }
+}
