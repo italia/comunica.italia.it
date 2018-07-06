@@ -5,12 +5,35 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_call_to_action_page
+    - field.field.node.page.field_image
     - field.field.node.page.field_link
+    - image.style.basic_page_image
     - node.type.page
   module:
+    - field_group
+    - image
     - link
     - text
     - user
+third_party_settings:
+  field_group:
+    group_main_wrapper:
+      children:
+        - body
+        - field_image
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: main-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main wrapper'
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -21,17 +44,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   content_moderation_control:
-    weight: -20
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_call_to_action_page:
-    weight: 103
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -42,8 +65,17 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: basic_page_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_link:
-    weight: 104
+    weight: 6
     label: hidden
     settings:
       trim_length: 80
@@ -55,7 +87,7 @@ content:
     type: link
     region: content
   links:
-    weight: 101
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
