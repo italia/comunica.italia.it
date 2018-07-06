@@ -1,0 +1,66 @@
+.view-linee-guida-list.view-display-block_2 {
+  background-color: $color-green;
+  padding: 2em;
+  .view-content {
+    @include maxWidth;
+    .views-row {
+      padding: 1em;
+      .views-field-title {
+        /* TO BE SHOWN IN MOBILE DEVICES */
+        display: none;
+      }
+      .views-field-field-icona {
+        /* TO BE SHOWN IN MOBILE DEVICES */
+        display: none;
+      }
+      .views-field-field-link {
+        margin-bottom: 3.5em;
+        ul {
+          list-style: none;
+          li {
+            margin: .75em 0;
+            a {
+              align-items: center;
+              display: flex;
+              color: $color-white;
+              font-size: $font-medium;
+              font-weight: 700;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+              &::before {
+                background-image: url('../images/icons/icon-plus.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                display: block;
+                height: .85em;
+                margin-right: .25em;
+                width: .85em;
+              }
+            }
+          }
+        }
+      }
+      .views-field-field-call-to-action-pagina {
+        .field-content {
+          a {
+            background-color: $color-blue-lightest;
+            color: $color-white;
+            display: inline-block;
+            font-size: $font-medium;
+            font-weight: 700;
+            padding: .5em 1.75em;
+            text-decoration: none;
+            transition: background-color 220ms ease-out;
+            &:hover {
+              background-color: $color-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

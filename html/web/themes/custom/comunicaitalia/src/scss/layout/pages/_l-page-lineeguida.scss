@@ -1,0 +1,19 @@
+.page-node-21 {
+  .node--type-page {
+    .main-wrapper {
+      margin-bottom: 3em;
+      padding: 1em;
+      .main-content {
+        @include maxWidth;
+        .field--name-body {
+          p {
+            color: $color-blue-dark;
+            font-size: $font-medium;
+            line-height: 1.4em;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
