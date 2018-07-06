@@ -3,6 +3,8 @@
   padding: 2em;
   .view-content {
     @include maxWidth;
+    display: flex;
+    justify-content: space-between;
     .views-row {
       padding: 1em;
       .views-field-title {
