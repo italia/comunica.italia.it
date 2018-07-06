@@ -8,19 +8,6 @@
 * [Docker compose](https://docs.docker.com/compose)
 * [Træfik](https://traefik.io)
 
-#### Taefik
-
-Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.
-Se si ha già un'istanza di Træfik in esecuzione è possibile utilizzarla direttamente, è sufficiente impostare il nome
-corretto della network esterna nel file docker-compose.yml.
-Altrimenti è possibile lanciare una nuova copia di Træfik decommentando il container `traefik` nel file
-`docker-compose.yml`. In questo caso è necessario prima creare un certificato HTTPS:
-
-1. `cd certs`
-2. `openssl genrsa 1024 > traefik.key`
-3. `chmod 400 traefik.key`
-4. `openssl req -new -x509 -nodes -sha1 -days 365 -key traefik.key -out traefik.cert`
-
 #### Volume applicazione MacOs
 
 Per velocizzare l'accesso su MacOs ai file nel volume dell'applicazione montato sui container `php` e `apache` si può
@@ -46,6 +33,19 @@ Il sistema viene ricostruito a partire dai soli file del repository GIT mediante
 
 1. spostarsi nella cartella `html` ed eseguire il comando `source .aliases`
 2. eseguire il comando `build` e attendere il completamento della procedura
+
+#### Træfik
+
+Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.
+Se si ha già un'istanza di Træfik in esecuzione è possibile utilizzarla direttamente impostando il nome corretto della
+network esterna nel file docker-compose.yml.
+Altrimenti è possibile lanciare una nuova copia di Træfik decommentando il container `traefik` nel file
+`docker-compose.yml`. In questo caso è necessario prima creare un certificato HTTPS:
+
+1. `cd certs`
+2. `openssl genrsa 1024 > traefik.key`
+3. `chmod 400 traefik.key`
+4. `openssl req -new -x509 -nodes -sha1 -days 365 -key traefik.key -out traefik.cert`
 
 #### Tools
 
