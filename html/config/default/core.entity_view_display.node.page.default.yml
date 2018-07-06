@@ -19,8 +19,7 @@ third_party_settings:
   field_group:
     group_main_wrapper:
       children:
-        - body
-        - field_image
+        - group_main_content
       parent_name: ''
       weight: 1
       format_type: html_element
@@ -34,6 +33,23 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Main wrapper'
+    group_main_content:
+      children:
+        - body
+        - field_image
+      parent_name: group_main_wrapper
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: main-content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Main content'
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -44,7 +60,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -66,7 +82,7 @@ content:
     type: link
     region: content
   field_image:
-    weight: 3
+    weight: 22
     label: hidden
     settings:
       image_style: basic_page_image

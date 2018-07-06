@@ -6,6 +6,10 @@
         $("html, body").animate({scrollTop: $('#block-six8theme-views-block-linee-guida-list-block-1 h2').offset().top}, 450, 'swing');
       });
 
+      $('.scroll-down-basic-wrapper').click(function() {
+        $("html, body").animate({scrollTop: $('.main-wrapper').offset().top}, 450, 'swing');
+      });
+
       $('.scroll-top-wrapper').click(function() {
         $("html, body").animate({scrollTop: 0}, 600, 'swing');
       });
