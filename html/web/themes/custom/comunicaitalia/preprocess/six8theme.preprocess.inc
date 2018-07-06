@@ -9,11 +9,9 @@
  * Implements template_preprocess_html().
  */
 function six8theme_preprocess_html(&$variables) {
-
   if (isset($variables["node_type"])) {
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node instanceof NodeInterface) {
-      $variables["attributes"]['class'][] = 'page-node-' . $node->id();
+    if ($node = \Drupal::request()->attributes->get('node')) {
+      $variables['attributes']['class'][] = 'page-node-' . $node->id();
     }
   }
 }
