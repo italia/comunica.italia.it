@@ -26,6 +26,7 @@ module:
   help: 0
   history: 0
   image: 0
+  layout_discovery: 0
   link: 0
   menus_attribute: 0
   monolog: 0
@@ -45,6 +46,7 @@ module:
   tour: 0
   user: 0
   workflows: 0
+  ds: 1
   menu_link_content: 1
   views: 10
   comunica_italia: 1000
