@@ -1,0 +1,10 @@
+.view-kit-list.view-display-kit_block {
+  background-color: $color-blue-lightest;
+  padding: 2em;
+  .view-content {
+    @include maxWidth;
+    .views-row {
+
+    }
+  }
+}
