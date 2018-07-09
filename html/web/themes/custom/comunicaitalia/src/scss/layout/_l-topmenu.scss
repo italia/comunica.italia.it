@@ -36,8 +36,13 @@
       list-style: none;
       .link-elem {
         background-color: lighten($color-blue, 5%);
+        display: block;
         height: 100%;
         padding: 0 1em;
+        transition: background-color 220ms ease-out;
+        &:hover {
+          background-color: $color-blue;
+        }
         a {
           color: $color-white;
           font-weight: 700;
