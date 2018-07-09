@@ -1,9 +1,11 @@
 .page-node-1 {
   .node--type-page {
     .main-wrapper {
-      background-color: $color-green;
+      background-color: rgba($color-green, .9);
       margin-bottom: 12em;
       padding: 1.5em;
+      position: relative;
+      z-index: 2;
       .main-content {
         @include maxWidth;
         display: flex;

@@ -1,6 +1,8 @@
 .view-roadmap.view-display-page_1 {
-  background-color: $color-blue-lightest;
+  background-color: rgba($color-blue-lightest, .9);
   margin-bottom: 2em;
+  position: relative;
+  z-index: 2;
   .view-content {
     @include maxWidth($maxwidth-small);
     background-color: $color-white;

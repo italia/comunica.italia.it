@@ -1,6 +1,8 @@
 .footer {
   background-color: $color-blue-darkest;
   padding: 4em 3em 3em;
+  position: relative;
+  z-index: 2;
   .footer-top {
     .agid-logo {
       max-width: 22em;

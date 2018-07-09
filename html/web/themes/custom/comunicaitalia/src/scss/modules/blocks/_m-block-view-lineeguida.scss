@@ -16,7 +16,7 @@
     text-align: center;
   }
   .view-linee-guida-list {
-    background-color: $color-blue-lightest;
+    background-color: rgba($color-blue-lightest, .9);
     padding: 1em;
     .view-content {
       @include maxWidth;

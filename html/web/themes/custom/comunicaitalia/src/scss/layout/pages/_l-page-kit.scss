@@ -1,9 +1,11 @@
 .page-node-8 {
   .node--type-page {
     .main-wrapper {
-      background-color: $color-green;
+      background-color: rgba($color-green, .9);
       margin-bottom: 3em;
       padding: 1.5em;
+      position: relative;
+      z-index: 2;
       .main-content {
         @include maxWidth;
         .field--name-body {

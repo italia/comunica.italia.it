@@ -1,6 +1,8 @@
 .view-linee-guida-list.view-display-block_2 {
-  background-color: $color-green;
+  background-color: rgba($color-green, .9);
   padding: 2em;
+  position: relative;
+  z-index: 2;
   .view-content {
     @include maxWidth;
     display: flex;

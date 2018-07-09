@@ -1,5 +1,7 @@
 #block-kitblock {
   margin: 7em 0 8em;
+  position: relative;
+  z-index: 2;
   h2 {
     color: $color-blue-dark;
     font-size: $font-xxlarge;
@@ -8,7 +10,7 @@
   }
   .field-name-field_link {
     align-items: center;
-    background-color: $color-green;
+    background-color: rgba($color-green, .9);
     display: flex;
     justify-content: center;
     height: $kit-height;

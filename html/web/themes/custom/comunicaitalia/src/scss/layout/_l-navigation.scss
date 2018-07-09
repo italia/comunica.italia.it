@@ -1,6 +1,7 @@
 .region-navigation {
   height: $menu-height;
   position: relative;
+  z-index: 2;
   nav {
     left: 0;
     position: absolute;

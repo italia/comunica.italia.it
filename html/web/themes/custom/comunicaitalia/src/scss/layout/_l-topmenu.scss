@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   height: $header-height;
+  position: relative;
+  z-index: 2;
   .left-section {
     align-items: center;
     background-color: lighten($color-blue, 5%);
