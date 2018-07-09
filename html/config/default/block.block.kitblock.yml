@@ -1,0 +1,31 @@
+uuid: ccdbe803-5dcc-4517-9927-9a7b0f1b1363
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7765d162-12c6-4e05-becf-3d22abfb762b'
+  module:
+    - block_content
+    - system
+  theme:
+    - six8theme
+id: kitblock
+theme: six8theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:7765d162-12c6-4e05-becf-3d22abfb762b'
+settings:
+  id: 'block_content:7765d162-12c6-4e05-becf-3d22abfb762b'
+  label: Kit
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

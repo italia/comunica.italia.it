@@ -1,0 +1,31 @@
+#block-kitblock {
+  margin: 7em 0 8em;
+  h2 {
+    color: $color-blue-dark;
+    font-size: $font-xxlarge;
+    font-weight: 700;
+    text-align: center;
+  }
+  .field-name-field_link {
+    align-items: center;
+    background-color: $color-green;
+    display: flex;
+    justify-content: center;
+    height: $kit-height;
+    padding: 2em;
+    a {
+      background-image: url('../images/toolkit.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      height: 15em;
+      text-indent: -9999px;
+      transition: background-image 220ms ease-out;
+      width: 15em;
+      &:hover {
+        background-image: url('../images/toolkit-blue.svg');
+      }
+    }
+  }
+}
