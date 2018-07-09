@@ -12,27 +12,25 @@
       text-align: center;
       .views-field-title {
         .field-content {
-          a {
-            color: $color-blue-dark;
-            font-size: $font-discrete;
-            font-weight: 700;
-            line-height: 2em;
-            padding-left: 2.35em;
-            position: relative;
-            text-decoration: none;
-            &::before {
-              background-image: url('../images/icons/icon-list.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-              content: '';
-              display: block;
-              height: 2em;
-              left: 0;
-              position: absolute;
-              top: -.2em;
-              width: 2em;
-            }
+          color: $color-blue-dark;
+          font-size: $font-discrete;
+          font-weight: 700;
+          line-height: 2em;
+          padding-left: 2.35em;
+          position: relative;
+          text-decoration: none;
+          &::before {
+            background-image: url('../images/icons/icon-list.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            display: block;
+            height: 2em;
+            left: 0;
+            position: absolute;
+            top: -.2em;
+            width: 2em;
           }
         }
       }
