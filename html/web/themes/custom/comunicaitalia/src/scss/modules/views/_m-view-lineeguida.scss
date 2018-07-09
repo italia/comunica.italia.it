@@ -4,9 +4,45 @@
   .view-content {
     @include maxWidth;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     .views-row {
-      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5em;
+      &:nth-child(1) {
+        flex: 1 0 0;
+        order: 1;
+        .views-field-field-link,
+        .views-field-field-call-to-action-pagina {
+          justify-content: flex-end;
+        }
+      }
+      &:nth-child(2) {
+        flex: 1 0 0;
+        order: 3;
+        .views-field-field-link,
+        .views-field-field-call-to-action-pagina {
+          justify-content: flex-start;
+        }
+      }
+      &:nth-child(3) {
+        order: 4;
+        width: 100%;
+        .views-field-field-link,
+        .views-field-field-call-to-action-pagina {
+          justify-content: center;
+        }
+      }
+      &.bg-image {
+        background-image: url('../images/guidelines.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        flex: 1 0 0;
+        order: 2;
+        width: 33%;
+      }
       .views-field-title {
         /* TO BE SHOWN IN MOBILE DEVICES */
         display: none;
@@ -16,6 +52,7 @@
         display: none;
       }
       .views-field-field-link {
+        display: flex;
         margin-bottom: 3.5em;
         ul {
           list-style: none;
@@ -47,6 +84,8 @@
         }
       }
       .views-field-field-call-to-action-pagina {
+        display: flex;
+        margin-top: auto;
         .field-content {
           a {
             background-color: $color-blue-lightest;
