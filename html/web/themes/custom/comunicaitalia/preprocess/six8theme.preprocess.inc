@@ -20,7 +20,16 @@ function six8theme_preprocess_html(&$variables) {
  * Implements template_preprocess_page.
  */
 function six8theme_preprocess_page(&$variables) {
+  global $base_url;
+  $variables['base_url'] = $base_url;
+}
 
+/**
+ * Implements template_preprocess_region.
+ */
+function six8theme_preprocess_region(&$variables) {
+  global $base_url;
+  $variables['base_url'] = $base_url;
 }
 
 /**
@@ -35,9 +44,11 @@ function six8theme_preprocess_views_view(&$variables) {
  * Implements template_preprocess_block().
  */
 function six8theme_preprocess_block(&$variables) {
+  global $base_url;
   if (isset($variables['elements']['#id'])) {
     $variables['attributes']['class'][] = 'block-id-' . $variables['elements']['#id'];
   }
+  $variables['base_url'] = $base_url;
 }
 
 /**
