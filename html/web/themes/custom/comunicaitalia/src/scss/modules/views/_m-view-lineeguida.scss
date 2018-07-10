@@ -6,30 +6,48 @@
   .view-content {
     @include maxWidth;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    @include breakpoint($normal - 1) {
+      flex-direction: row;
+    }
     .views-row {
       display: flex;
       flex-direction: column;
       padding: 1.5em;
       &:nth-child(1) {
-        flex: 1 0 0;
-        order: 1;
+        @include breakpoint($normal - 1) {
+          flex: 1 0 0;
+          order: 1;
+        }
         li a {
-          justify-content: flex-end;
-          &::after {
+          &::before {
             @include plusicon;
-            margin-left: .35em;
+          }
+          @include breakpoint($normal - 1) {
+            justify-content: flex-end;
+            &::after {
+              @include plusicon;
+              margin-left: .35em;
+            }
+            &::before {
+              display: none;
+            }
           }
         }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
-          justify-content: flex-end;
+          @include breakpoint($normal - 1) {
+            justify-content: flex-end;
+          }
         }
       }
       &:nth-child(2) {
-        flex: 1 0 0;
-        order: 3;
+        @include breakpoint($normal - 1) {
+          flex: 1 0 0;
+          order: 3;
+        }
         li a {
           &::before {
             @include plusicon;
@@ -37,12 +55,16 @@
         }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
-          justify-content: flex-start;
+          @include breakpoint($normal - 1) {
+            justify-content: flex-start;
+          }
         }
       }
       &:nth-child(3) {
-        order: 4;
-        width: 100%;
+        @include breakpoint($normal - 1) {
+          order: 4;
+          width: 100%;
+        }
         li a {
           &::before {
             @include plusicon;
@@ -50,25 +72,37 @@
         }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
-          justify-content: center;
+          @include breakpoint($normal - 1) {
+            justify-content: center;
+          }
         }
       }
       &.bg-image {
-        background-image: url('../images/guidelines.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        flex: 1 0 0;
-        order: 2;
-        width: 33%;
+        display: none;
+        @include breakpoint($normal - 1) {
+          background-image: url('../images/guidelines.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          flex: 1 0 0;
+          order: 2;
+          width: 33%;
+        }
       }
       .views-field-title {
-        /* TO BE SHOWN IN MOBILE DEVICES */
-        display: none;
+        @include breakpoint($normal - 1) {
+          display: none;
+        }
       }
       .views-field-field-icona {
-        /* TO BE SHOWN IN MOBILE DEVICES */
-        display: none;
+        @include breakpoint($normal - 1) {
+          display: none;
+        }
+        img {
+          background-color: rgba($color-blue-dark, .75);
+          padding: 1em;
+        }
       }
       .views-field-field-link {
         display: flex;
@@ -87,17 +121,6 @@
               &:hover {
                 text-decoration: underline;
               }
-              // &::before {
-              //   background-image: url('../images/icons/icon-plus.svg');
-              //   background-position: center;
-              //   background-repeat: no-repeat;
-              //   background-size: contain;
-              //   content: '';
-              //   display: block;
-              //   height: .85em;
-              //   margin-right: .25em;
-              //   width: .85em;
-              // }
             }
           }
         }
