@@ -51,7 +51,7 @@
 }
 
 // =============================================================================
-// Helpers.
+// Components.
 // =============================================================================
 
 // Hide from both screenreaders and browsers.
@@ -83,4 +83,20 @@
   &:after {
     clear: both;
   }
+}
+
+// =============================================================================
+// Components.
+// =============================================================================
+
+@mixin plusicon {
+  background-image: url('../images/icons/icon-plus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: .85em;
+  margin-right: .25em;
+  width: .85em;
 }

@@ -37,10 +37,12 @@ function six8theme_preprocess_region(&$variables) {
 /**
  * Implements template_preprocess_views_view.
  */
-function six8theme_preprocess_views_view(&$variables) {
+function six8theme_preprocess_views_view(&$variables, &$suggestions) {
   $variables['attributes']['class'][] = 'view-id-' . $variables['view']->id();
   $variables['attributes']['class'][] = 'view-display-' . $variables['view']->current_display;
 }
+
+
 
 /**
  * Implements template_preprocess_block().

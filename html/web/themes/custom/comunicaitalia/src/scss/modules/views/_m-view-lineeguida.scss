@@ -15,6 +15,13 @@
       &:nth-child(1) {
         flex: 1 0 0;
         order: 1;
+        li a {
+          justify-content: flex-end;
+          &::after {
+            @include plusicon;
+            margin-left: .35em;
+          }
+        }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
           justify-content: flex-end;
@@ -23,6 +30,11 @@
       &:nth-child(2) {
         flex: 1 0 0;
         order: 3;
+        li a {
+          &::before {
+            @include plusicon;
+          }
+        }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
           justify-content: flex-start;
@@ -31,6 +43,11 @@
       &:nth-child(3) {
         order: 4;
         width: 100%;
+        li a {
+          &::before {
+            @include plusicon;
+          }
+        }
         .views-field-field-link,
         .views-field-field-call-to-action-pagina {
           justify-content: center;
@@ -70,17 +87,17 @@
               &:hover {
                 text-decoration: underline;
               }
-              &::before {
-                background-image: url('../images/icons/icon-plus.svg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                content: '';
-                display: block;
-                height: .85em;
-                margin-right: .25em;
-                width: .85em;
-              }
+              // &::before {
+              //   background-image: url('../images/icons/icon-plus.svg');
+              //   background-position: center;
+              //   background-repeat: no-repeat;
+              //   background-size: contain;
+              //   content: '';
+              //   display: block;
+              //   height: .85em;
+              //   margin-right: .25em;
+              //   width: .85em;
+              // }
             }
           }
         }
