@@ -20,9 +20,15 @@
     padding: 1em;
     .view-content {
       @include maxWidth;
+      align-items: center;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       padding: 1.5em;
+      @include breakpoint($medium) {
+        align-items: flex-start;
+        flex-direction: row;
+      }
       .views-row {
         align-items: center;
         display: flex;
