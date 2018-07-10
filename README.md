@@ -34,6 +34,7 @@ Il sistema viene ricostruito a partire dai soli file del repository GIT mediante
 1. spostarsi nella cartella `html` ed eseguire il comando `source .aliases`
 2. eseguire il comando `build` e attendere il completamento della procedura
 
+
 #### Træfik
 
 Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.

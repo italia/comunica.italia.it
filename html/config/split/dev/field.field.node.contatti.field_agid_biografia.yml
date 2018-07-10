@@ -1,18 +1,18 @@
-uuid: 88eae5d1-a8a4-462c-b568-277ff2f28a95
+uuid: ee2a6874-1c9d-4a73-905b-0866ebea22b7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_agid_biografia
-    - node.type.page
+    - node.type.contatti
   module:
     - text
-id: node.page.field_agid_biografia
+id: node.contatti.field_agid_biografia
 field_name: field_agid_biografia
 entity_type: node
-bundle: page
+bundle: contatti
 label: 'AgID Biografia'
-description: 'Campo da utilizzare nella pagina Contatti'
+description: ''
 required: false
 translatable: false
 default_value: {  }

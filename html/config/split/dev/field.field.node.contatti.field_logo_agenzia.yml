@@ -1,18 +1,18 @@
-uuid: 13e1ba87-a5e5-4936-943b-bb585317defd
+uuid: 7c79250e-dbeb-4721-85e6-1116ae1d67a4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_logo_agenzia
-    - node.type.page
+    - node.type.contatti
   module:
     - image
-id: node.page.field_logo_agenzia
+id: node.contatti.field_logo_agenzia
 field_name: field_logo_agenzia
 entity_type: node
-bundle: page
+bundle: contatti
 label: 'Logo Agenzia per l''Italia Digitale'
-description: 'Campo da utilizzare per la pagina Contatti'
+description: ''
 required: false
 translatable: false
 default_value: {  }

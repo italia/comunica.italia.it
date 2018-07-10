@@ -1,37 +1,40 @@
-uuid: 946ef539-27b3-45f0-b24a-9c718a389984
+uuid: 847f0aa2-15a0-42c4-9b1c-9c7e069ded3a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_call_to_action_page
-    - field.field.node.page.field_link
-    - node.type.page
+    - field.field.node.contatti.body
+    - field.field.node.contatti.field_agid_biografia
+    - field.field.node.contatti.field_call_to_action_pagina
+    - field.field.node.contatti.field_link
+    - field.field.node.contatti.field_logo_agenzia
+    - node.type.contatti
   module:
+    - image
     - link
     - text
     - user
-_core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
-id: node.page.default
+id: node.contatti.default
 targetEntityType: node
-bundle: page
+bundle: contatti
 mode: default
 content:
   body:
     label: hidden
     type: text_default
-    weight: 100
-    region: content
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-  content_moderation_control:
-    weight: -20
     region: content
+  field_agid_biografia:
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_call_to_action_page:
-    weight: 103
+    type: text_default
+    region: content
+  field_call_to_action_pagina:
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -43,7 +46,7 @@ content:
     type: link
     region: content
   field_link:
-    weight: 104
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -54,8 +57,17 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_logo_agenzia:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   links:
-    weight: 101
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
