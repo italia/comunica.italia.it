@@ -8,8 +8,14 @@
       z-index: 2;
       .main-content {
         @include maxWidth;
+        align-items: center;
         display: flex;
+        flex-direction: column-reverse;
         justify-content: center;
+        @include breakpoint($medium) {
+          align-items: flex-start;
+          flex-direction: row;
+        }
         .field--name-body {
           flex: 1;
           max-width: 30em;

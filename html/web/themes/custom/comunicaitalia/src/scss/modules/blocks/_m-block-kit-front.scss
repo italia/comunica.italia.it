@@ -13,18 +13,25 @@
     background-color: rgba($color-green, .9);
     display: flex;
     justify-content: center;
-    height: $kit-height;
+    height: $kit-height-small;
     padding: 2em;
+    @include breakpoint($medium) {
+      height: $kit-height;
+    }
     a {
       background-image: url('../images/toolkit.svg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       display: block;
-      height: 15em;
+      height: 12em;
       text-indent: -9999px;
       transition: background-image 220ms ease-out;
-      width: 15em;
+      width: 12em;
+      @include breakpoint($medium) {
+        height: 15em;
+        width: 15em;
+      }
       &:hover {
         background-image: url('../images/toolkit-blue.svg');
       }
