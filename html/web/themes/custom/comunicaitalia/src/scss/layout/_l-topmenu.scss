@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: $header-height;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   .left-section {
     align-items: center;
     background-color: lighten($color-blue, 5%);
@@ -30,10 +30,13 @@
   .right-section {
     height: 100%;
     .link-list {
-      align-items: center;
-      display: flex;
-      height: 100%;
-      list-style: none;
+      display: none;
+      @include breakpoint($medium) {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        list-style: none;
+      }
       .link-elem {
         background-color: lighten($color-blue, 5%);
         display: block;
@@ -52,6 +55,12 @@
         &.active {
           background-color: $color-blue;
         }
+      }
+    }
+    .social-list {
+      display: flex;
+      @include breakpoint($medium) {
+        display: none;
       }
     }
   }
