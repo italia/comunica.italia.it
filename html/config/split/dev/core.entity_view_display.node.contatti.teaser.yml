@@ -1,17 +1,17 @@
-uuid: 4a195ea4-51fe-4894-908e-44737920f03e
+uuid: 3376b965-9bdb-4753-a5c2-6332582396d1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.roadmap.body
-    - node.type.roadmap
+    - field.field.node.contatti.body
+    - node.type.contatti
   module:
     - text
     - user
-id: node.roadmap.teaser
+id: node.contatti.teaser
 targetEntityType: node
-bundle: roadmap
+bundle: contatti
 mode: teaser
 content:
   body:
@@ -22,12 +22,7 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  content_moderation_control:
-    weight: -20
-    region: content
   links:
     weight: 100
     region: content
-hidden:
-  field_files: true
-  field_peso: true
+hidden: {  }

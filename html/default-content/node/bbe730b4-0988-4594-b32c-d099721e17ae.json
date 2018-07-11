@@ -86,8 +86,7 @@
                 },
                 "uuid": [
                     {
-
-                        "value": "58dfddc4-17f5-45d8-83fa-136a93b71876"
+                        "value": "bb71492a-c2ce-4910-a88d-eeb88da4ef27"
                     }
                 ]
             }
@@ -104,124 +103,16 @@
                 },
                 "uuid": [
                     {
-
-                        "value": "58dfddc4-17f5-45d8-83fa-136a93b71876"
+                        "value": "bb71492a-c2ce-4910-a88d-eeb88da4ef27"
                     }
                 ],
                 "lang": "en"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/field_kit_files": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_1.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "e25f4805-748c-42df-9ed5-589ce9302771"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_2.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "d3687616-ad59-4ed0-a3c7-05f1ba79f291"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_3.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "7ce24213-e896-46f4-ba67-db053f0a84f6"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_4.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "ab63213f-15c2-439a-be64-1b8e47ef69f4"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_5.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "09697ce2-6128-4c3c-b7e7-68a81c7e13be"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_6.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "0d27aecc-2639-45e2-a2f4-176e074c7906"
-                    }
-                ]
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_7.pdf"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "62e0d0d2-3a49-4f6c-b4e6-bb20b4f3eb5f"
-                    }
-                ]
             }
         ]
     },
     "status": [
         {
-            "value": true,
+            "value": false,
             "lang": "en"
         }
     ],
@@ -271,7 +162,7 @@
     ],
     "moderation_state": [
         {
-            "value": "published",
+            "value": "draft",
             "lang": "en"
         }
     ],

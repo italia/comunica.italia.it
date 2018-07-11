@@ -1,43 +1,58 @@
-uuid: 653e9646-c587-4a61-847c-2587193fa667
+uuid: 04079054-d067-45e8-9870-283a07c50b40
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_call_to_action_page
-    - field.field.node.page.field_image
-    - field.field.node.page.field_link
+    - field.field.node.contatti.body
+    - field.field.node.contatti.field_agid_biografia
+    - field.field.node.contatti.field_call_to_action_pagina
+    - field.field.node.contatti.field_link
+    - field.field.node.contatti.field_logo_agenzia
     - image.style.thumbnail
-    - node.type.page
+    - node.type.contatti
   module:
     - content_moderation
     - image
     - link
     - path
     - text
-_core:
-  default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
-id: node.page.default
+id: node.contatti.default
 targetEntityType: node
-bundle: page
+bundle: contatti
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 6
-    region: content
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_call_to_action_page:
+  field_agid_biografia:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_call_to_action_pagina:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link:
     weight: 10
     settings:
       placeholder_url: ''
@@ -45,25 +60,17 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_image:
-    weight: 7
+  field_logo_agenzia:
+    weight: 11
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_link:
-    weight: 11
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 6
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -84,7 +91,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
@@ -105,10 +112,10 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    region: content
     third_party_settings: {  }
 hidden: {  }

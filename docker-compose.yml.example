@@ -18,8 +18,8 @@ services:
       - 'traefik.backend=apache'
       - 'traefik.port=80'
       - 'traefik.frontend.rule=Host:web.${PROJECT_BASE_URL}'
-    networks:
-      - web
+#    networks:
+#      - web
 
   db:
     image: wodby/mariadb:$MARIADB_TAG
@@ -32,8 +32,8 @@ services:
       MYSQL_DATABASE: $DB_NAME
       MYSQL_USER: $DB_USER
       MYSQL_PASSWORD: $DB_PASSWORD
-    networks:
-      - web
+#   networks:
+#      - web
 
   mailhog:
     image: mailhog/mailhog
@@ -43,8 +43,8 @@ services:
       - 'traefik.backend=mailhog'
       - 'traefik.port=8025'
       - 'traefik.frontend.rule=Host:mailhog.${PROJECT_BASE_URL}'
-    networks:
-      - web
+#   networks:
+#      - web
 
   php:
     image: wodby/drupal-php:$PHP_TAG
@@ -54,8 +54,8 @@ services:
       PHP_FPM_CLEAR_ENV: "no"
 #      PHP_XDEBUG: 1
 #      PHP_BLACKFIRE: 1
-    networks:
-      - web
+#   networks:
+#      - web
     volumes:
       - "${SOURCE_DIR}:${CONTAINER_DIR}"
 #      - "data:${CONTAINER_DIR}" # MacOs nfs version
@@ -63,8 +63,9 @@ services:
   redis:
     container_name: "${PROJECT_NAME}_redis"
     image: wodby/redis:$REDIS_TAG
-    networks:
-      - web
+# networks:
+#   - web
+
 
 #  traefik:
 #    image: traefik:1.6.3-alpine
@@ -88,3 +89,9 @@ services:
 #      type: nfs
 #      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
 #      device: ":${SOURCE_DIR}"
+
+#networks:
+#  web:
+#    external:
+#      name: traefik_webgateway
+

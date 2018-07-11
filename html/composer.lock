@@ -1966,6 +1966,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Dynamically provide action plugins for every moderation state change - https://www.drupal.org/project/drupal/issues/2797583 ": "patches/publish_unpublish-2797583-62.patch"
                 }
             },
             "autoload": {

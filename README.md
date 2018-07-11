@@ -1,3 +1,4 @@
+
 ## Comunica.italia.it
 
 ### Setup locale
@@ -72,4 +73,4 @@ Sono stati definiti una serie di task Robo per automatizzare alcune operazioni:
 Su alcuni sistemi Linux il primo utente non root non è 1000 ma 1001. Le immagini di Wodby utilizzate in questo progetto
 prevedono che l'utente sul sistema host abbia UID e GUID impostati a 1000 (lo puoi scoprire con i comandi `id -u` e
 `id -g`). In questo caso è necessario sostituire l'immagine di default `wodby/drupal-php` con una custom
-`wellnetimages/wodby-drupal-php:7.1-dev` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host. 
+`wellnetimages/wodby-drupal-php:7.1-dev` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host.
