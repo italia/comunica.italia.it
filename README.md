@@ -1,3 +1,4 @@
+
 ## Comunica.italia.it
 
 ### Setup locale
@@ -7,6 +8,19 @@
 * [Docker](https://www.docker.com)
 * [Docker compose](https://docs.docker.com/compose)
 * [Træfik](https://traefik.io)
+
+#### Taefik
+
+Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.
+Se si ha già un'istanza di Træfik in esecuzione è possibile utilizzarla direttamente, è sufficiente impostare il nome
+corretto della network esterna nel file docker-compose.yml.
+Altrimenti è possibile lanciare una nuova copia di Træfik utilizzando decommentando il container `traefik` nel file
+`docker-compose.yml`. In questo caso è necessario prima creare un certificato HTTPS:
+
+1. `cd certs`
+2. `openssl genrsa 1024 > traefik.key`
+3. `chmod 400 traefik.key`
+4. `openssl req -new -x509 -nodes -sha1 -days 365 -key traefik.key -out traefik.cert`
 
 #### Volume applicazione MacOs
 
@@ -34,20 +48,6 @@ Il sistema viene ricostruito a partire dai soli file del repository GIT mediante
 1. spostarsi nella cartella `html` ed eseguire il comando `source .aliases`
 2. eseguire il comando `build` e attendere il completamento della procedura
 
-
-#### Træfik
-
-Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.
-Se si ha già un'istanza di Træfik in esecuzione è possibile utilizzarla direttamente impostando il nome corretto della
-network esterna nel file docker-compose.yml.
-Altrimenti è possibile lanciare una nuova copia di Træfik decommentando il container `traefik` nel file
-`docker-compose.yml`. In questo caso è necessario prima creare un certificato HTTPS:
-
-1. `cd certs`
-2. `openssl genrsa 1024 > traefik.key`
-3. `chmod 400 traefik.key`
-4. `openssl req -new -x509 -nodes -sha1 -days 365 -key traefik.key -out traefik.cert`
-
 #### Tools
 
 Diversi comandi sono mappati in automatico sul container Docker php, quindi per usarli è sufficiente spostarsi nella
@@ -73,4 +73,4 @@ Sono stati definiti una serie di task Robo per automatizzare alcune operazioni:
 Su alcuni sistemi Linux il primo utente non root non è 1000 ma 1001. Le immagini di Wodby utilizzate in questo progetto
 prevedono che l'utente sul sistema host abbia UID e GUID impostati a 1000 (lo puoi scoprire con i comandi `id -u` e
 `id -g`). In questo caso è necessario sostituire l'immagine di default `wodby/drupal-php` con una custom
-`wellnetimages/wodby-drupal-php:7.1-dev` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host. 
+`wellnetimages/wodby-drupal-php:7.1-dev` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host.

@@ -1,0 +1,35 @@
+.region-navigation {
+  height: $menu-height;
+  position: relative;
+  z-index: 3;
+  nav {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    ul {
+      align-items: center;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      li {
+        margin: 0 1em;
+        a {
+          color: $color-white;
+          font-size: $font-medium;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 700;
+          transition: color 220ms ease-out;
+          &:hover {
+            color: $color-blue-light;
+          }
+          &.is-active {
+            color: $color-green;
+          }
+        }
+      }
+    }
+  }
+}

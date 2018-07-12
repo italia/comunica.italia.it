@@ -16,6 +16,29 @@
                 "href": "http:\/\/www\/user\/1?_format=hal_json",
                 "lang": "en"
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/kit\/field_kit_files": [
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_1.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_2.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_3.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_4.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_5.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_6.pdf"
+            },
+            {
+                "href": "http:\/\/www\/\/mnt\/files\/2018-07\/4%20SPID_AGG_7.pdf"
+            }
         ]
     },
     "nid": [

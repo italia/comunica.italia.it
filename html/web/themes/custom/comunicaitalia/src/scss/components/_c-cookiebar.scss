@@ -1,0 +1,44 @@
+.eu-cookie-compliance-banner.eu-cookie-compliance-banner-info {
+  padding: 1em;
+  .eu-cookie-compliance-content {
+    display: flex;
+    flex-direction: column;
+    #popup-text {
+      h2 {
+        font-size: $font-discrete;
+      }
+    }
+    #popup-buttons {
+      button {
+        background: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: none;
+        cursor: pointer;
+        font: font(titillium);
+        font-weight: 700;
+        outline: inherit;
+        text-shadow: none;
+      }
+      .agree-button {
+        background-color: $color-cyan;
+        color: $color-blue-darkest;
+        padding: .75em 1.25em;
+        text-transform: uppercase;
+        transition: backgorund-color 220ms ease-out;
+        &:hover {
+          background-color: darken($color-cyan, 30%);
+        }
+      }
+      .find-more-button {
+        color: $color-cyan;
+        text-decoration: underline;
+        transition: color 220ms ease-out;
+        &:hover {
+          color: darken($color-cyan, 30%);;
+        }
+      }
+    }
+  }
+}

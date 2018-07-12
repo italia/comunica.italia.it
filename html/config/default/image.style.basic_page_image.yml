@@ -1,0 +1,15 @@
+uuid: 1ebc83fb-5fb4-488f-af84-1a9f3d7672d6
+langcode: en
+status: true
+dependencies: {  }
+name: basic_page_image
+label: 'Basic page image'
+effects:
+  4e100d85-83ac-4936-be49-1df4a79312da:
+    uuid: 4e100d85-83ac-4936-be49-1df4a79312da
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false

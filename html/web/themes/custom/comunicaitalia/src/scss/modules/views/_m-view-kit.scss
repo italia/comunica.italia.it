@@ -1,0 +1,12 @@
+.view-kit-list.view-display-kit_block {
+  background-color: rgba($color-blue-lightest, .9);
+  padding: 2em;
+  position: relative;
+  z-index: 2;
+  .view-content {
+    @include maxWidth;
+    .views-row {
+
+    }
+  }
+}

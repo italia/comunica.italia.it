@@ -1,0 +1,45 @@
+.page-node-1 {
+  .node--type-page {
+    .main-wrapper {
+      background-color: rgba($color-green, .9);
+      margin-bottom: 12em;
+      padding: 1.5em;
+      position: relative;
+      z-index: 2;
+      .main-content {
+        @include maxWidth;
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        @include breakpoint($medium) {
+          align-items: flex-start;
+          flex-direction: row;
+        }
+        .field--name-body {
+          flex: 1;
+          max-width: 30em;
+          padding: 1em 2em;
+          p {
+            color: $color-white;
+            font-size: $font-medium;
+            font-weight: 700;
+            line-height: 1.4em;
+            text-align: justify;
+          }
+        }
+        .field--name-field-image {
+          align-items: center;
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          max-width: 30em;
+          padding: 1em 2em;
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

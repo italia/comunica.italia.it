@@ -1,0 +1,12 @@
+.node--type-page {
+  .main-wrapper {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    .main-content {
+      @include maxWidth;
+      .field--name-body {
+        text-align: justify;
+      }
+    }
+  }
+}

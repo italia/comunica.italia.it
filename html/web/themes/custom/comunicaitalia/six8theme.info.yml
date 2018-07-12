@@ -1,0 +1,26 @@
+name: six8theme
+type: theme
+base theme: false
+description: 'sixtheme base theme for drupal 8'
+
+libraries:
+  - six8theme/base
+
+regions:
+  header: 'Header'
+  branding: 'Branding'
+  navigation: 'Navigation'
+  breadcrumbs: 'Breadcrumbs'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  before_content: 'Before Content'
+  content: 'Content'
+  after_content: 'After Content'
+  sidebar_first: 'First Sidebar'
+  sidebar_second: 'Second Sidebar'
+  before_footer: 'Before Footer'
+  footer: 'Footer'
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'drupal'
