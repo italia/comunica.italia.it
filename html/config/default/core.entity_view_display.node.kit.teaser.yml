@@ -8,20 +8,22 @@ dependencies:
     - field.field.node.kit.field_icona_kit
     - field.field.node.kit.field_kit_files
     - field.field.node.kit.field_perche_utilizzare_il_kit
+    - image.style.kit_teaser
     - node.type.kit
   module:
     - ds
     - field_group
-    - file
     - image
     - text
     - user
 third_party_settings:
   field_group:
     group_text_wrapper:
-      children: {  }
+      children:
+        - body
+        - node_link
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: html_element
       format_settings:
         id: ''
@@ -51,10 +53,20 @@ third_party_settings:
     regions:
       ds_content:
         - field_icona_kit
-        - field_kit_files
-        - field_perche_utilizzare_il_kit
         - group_text_wrapper
         - body
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Vai al Kit'
+          'link class': ''
+          wrapper: ''
+          class: ''
 id: node.kit.teaser
 targetEntityType: node
 bundle: kit
@@ -63,35 +75,22 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 4
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: ds_content
   field_icona_kit:
-    type: image_url
+    type: image
     weight: 0
     region: ds_content
-    label: above
+    label: hidden
     settings:
-      image_style: ''
-    third_party_settings: {  }
-  field_kit_files:
-    type: file_table
-    weight: 1
-    region: ds_content
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-  field_perche_utilizzare_il_kit:
-    type: text_trimmed
-    weight: 2
-    region: ds_content
-    label: above
-    settings:
-      trim_length: 600
+      image_style: kit_teaser
+      image_link: ''
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  field_kit_files: true
+  field_perche_utilizzare_il_kit: true
   links: true

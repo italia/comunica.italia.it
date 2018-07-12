@@ -1,0 +1,14 @@
+uuid: a773f8a9-24ff-46d3-8640-78a443b06afd
+langcode: en
+status: true
+dependencies: {  }
+name: kit_teaser
+label: 'Kit teaser'
+effects:
+  70bed557-233d-4b50-8e08-c32933470789:
+    uuid: 70bed557-233d-4b50-8e08-c32933470789
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 320

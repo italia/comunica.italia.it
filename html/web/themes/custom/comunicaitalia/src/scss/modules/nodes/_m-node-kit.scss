@@ -1,15 +1,47 @@
 .node--type-kit {
   &.node--view-mode-teaser {
-
-    .node__content {
-      .field--name-field-icona-kit {
-        img {
-
+    display: flex;
+    .field--name-field-icona-kit {
+      flex: 2;
+      margin-right: 2em;
+      img {
+        border-radius: 2em;
+        display: block;
+      }
+    }
+    .text-wrapper {
+      display: flex;
+      flex: 3;
+      flex-direction: column;
+      .field--name-body {
+        h2 {
+          color: $color-white;
+          margin-top: 0;
+        }
+        p {
+          color: $color-white;
         }
       }
-      .text-wrapper {
-        .field--name-body {
-
+      .field-name-node_link {
+        margin-top: auto;
+        a {
+          align-items: center;
+          color: $color-white;
+          display: flex;
+          font-size: $font-medium;
+          font-weight: 700;
+          text-decoration: none;
+          &::after {
+            content: '';
+            background-image: url('../images/icons/icon-arrow-right.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            height: 1em;
+            margin-left: .5em;
+            width: 1em;
+          }
         }
       }
     }
