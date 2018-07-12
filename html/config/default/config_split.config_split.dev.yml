@@ -8,8 +8,6 @@ id: dev
 label: dev
 folder: ../config/split/dev
 module:
-  default_content: 0
-  default_content_deploy: 0
   devel: 0
   field_ui: 0
   menu_ui: 0
