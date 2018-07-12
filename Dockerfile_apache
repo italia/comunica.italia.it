@@ -1,0 +1,3 @@
+FROM wodby/php-apache:2.4-3.0.4
+
+COPY --chown=wodby:wodby ./html/web /var/www/html/web

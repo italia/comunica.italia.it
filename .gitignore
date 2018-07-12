@@ -1,4 +1,6 @@
 .idea
+._.DS_Store
+.DS_Store
 
 .env
 docker-compose.yml
@@ -14,5 +16,3 @@ html/web/sites/default/files
 html/web/sites/default/settings.php
 
 certs/*
-._.DS_Store
-.DS_Store

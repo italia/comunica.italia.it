@@ -1,0 +1,49 @@
+# Enviroment.
+environment: prod
+
+# Base Path.
+base_path: /var/www/html
+
+# Path to drush.
+drush_path: ./vendor/bin/drush
+
+# Domain used.
+domain: 'http://web.comunicaitalia.loc'
+
+# Databases Configuration.
+databases:
+  default:
+    url: 'mysql://drupal:drupal@db:3306/drupal'
+    prefix: ''
+    namespace: 'Drupal\\Core\\Database\\Driver\\mysql'
+    driver: 'mysql'
+
+# Site configuration.
+site_configuration:
+  mail: site@example.it
+  name: 'comunica italia'
+  locale: en
+  profile: comunica_italia
+  uri: www
+  sub_dir: default
+  config_dir: '../config/default'
+  root: 'web'
+  site_root: 'web'
+  tpl_settings: 'settings.local.twig'
+  trusted_host: 'web.comunicaitalia.loc'
+
+# These data will be used for the first user during installation.
+account:
+  mail: admin@example.com
+  name: admin
+  pass: admin
+
+# Redis
+redis:
+  enabled: true
+  host: redis
+
+# WebProfiler configuration.
+webprofiler:
+  ide_link_remote: /var/www/html/web
+  ide_link_local: /path/to/web/folder
