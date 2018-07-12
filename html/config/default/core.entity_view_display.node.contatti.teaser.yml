@@ -25,4 +25,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_agid_biografia: true
+  field_call_to_action_pagina: true
+  field_link: true
+  field_logo_agenzia: true

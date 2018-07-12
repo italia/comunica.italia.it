@@ -1,22 +1,22 @@
-uuid: ccdbe803-5dcc-4517-9927-9a7b0f1b1363
+uuid: 39cb8691-9a99-40e1-88e8-fc9acdf6325d
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:7765d162-12c6-4e05-becf-3d22abfb762b'
+    - 'block_content:basic:80c896f3-af0b-48d5-bc54-3324b5d73632'
   module:
     - block_content
     - system
   theme:
     - six8theme
-id: kitblock
+id: kit
 theme: six8theme
 region: content
 weight: 0
 provider: null
-plugin: 'block_content:7765d162-12c6-4e05-becf-3d22abfb762b'
+plugin: 'block_content:80c896f3-af0b-48d5-bc54-3324b5d73632'
 settings:
-  id: 'block_content:7765d162-12c6-4e05-becf-3d22abfb762b'
+  id: 'block_content:80c896f3-af0b-48d5-bc54-3324b5d73632'
   label: Kit
   provider: block_content
   label_display: visible

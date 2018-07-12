@@ -273,7 +273,7 @@ display:
       display_extenders: {  }
       display_description: ''
       path: roadmap
-      title: 'Roadmap Page'
+      title: Roadmap
       defaults:
         title: false
     cache_metadata:

@@ -12,15 +12,16 @@ dependencies:
   module:
     - ds
     - field_group
+    - file
+    - image
     - text
     - user
 third_party_settings:
   field_group:
     group_text_wrapper:
-      children:
-        - body
+      children: {  }
       parent_name: ''
-      weight: 1
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -39,18 +40,20 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        classes: {  }
         wrappers:
           ds_content: div
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
         link_custom: ''
+        classes:
+          layout_class: {  }
     regions:
       ds_content:
         - field_icona_kit
         - field_kit_files
         - field_perche_utilizzare_il_kit
+        - group_text_wrapper
         - body
 id: node.kit.teaser
 targetEntityType: node
@@ -59,15 +62,36 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 2
+    type: text_trimmed
+    weight: 4
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
+    region: ds_content
+  field_icona_kit:
+    type: image_url
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+  field_kit_files:
+    type: file_table
+    weight: 1
+    region: ds_content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_perche_utilizzare_il_kit:
+    type: text_trimmed
+    weight: 2
+    region: ds_content
+    label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
 hidden:
   content_moderation_control: true
-  field_icona_kit: true
-  field_kit_files: true
-  field_perche_utilizzare_il_kit: true
   links: true
