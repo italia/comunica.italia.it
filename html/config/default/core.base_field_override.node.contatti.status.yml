@@ -1,0 +1,22 @@
+uuid: 4fe7ebd2-0901-4079-9d08-b4c38b052939
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contatti
+id: node.contatti.status
+field_name: status
+entity_type: node
+bundle: contatti
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

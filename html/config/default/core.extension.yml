@@ -15,6 +15,8 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  default_content: 0
+  default_content_deploy: 0
   dynamic_page_cache: 0
   editor: 0
   eu_cookie_compliance: 0
@@ -28,6 +30,7 @@ module:
   image: 0
   layout_discovery: 0
   link: 0
+  menu_ui: 0
   menus_attribute: 0
   monolog: 0
   node: 0
