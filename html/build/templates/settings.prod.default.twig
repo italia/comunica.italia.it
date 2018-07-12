@@ -49,6 +49,20 @@ $settings['trusted_host_patterns'] = array(
 $settings['file_public_path'] = 'sites/default/files';
 
 /**
-* default_content_deploy config.
-*/
+ * default_content_deploy config.
+ */
 $config['content_directory'] = '../default-content';
+
+/**
+ * Temporary authentication to prevent bots to index the site.
+ */
+$username = 'comunica';
+$password = 'italia';
+
+if (!(isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER['PHP_AUTH_USER']==$username && $_SERVER['PHP_AUTH_PW']==$password))) {
+  header('WWW-Authenticate: Basic realm="This site is protected"');
+  header('HTTP/1.0 401 Unauthorized');
+  // Fallback message when the user presses cancel / escape
+  echo 'Access denied';
+  exit;
+}

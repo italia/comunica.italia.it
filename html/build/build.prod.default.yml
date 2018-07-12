@@ -1,4 +1,4 @@
-# Enviroment.
+# Environment.
 environment: prod
 
 # Base Path.
@@ -8,7 +8,7 @@ base_path: /var/www/html
 drush_path: ./vendor/bin/drush
 
 # Domain used.
-domain: 'http://web.comunicaitalia.loc'
+domain: 'http://comunica.italia.it'
 
 # Databases Configuration.
 databases:
@@ -20,7 +20,7 @@ databases:
 
 # Site configuration.
 site_configuration:
-  mail: site@example.it
+  mail: info@comunica.italia.it
   name: 'comunica italia'
   locale: en
   profile: comunica_italia
@@ -30,11 +30,11 @@ site_configuration:
   root: 'web'
   site_root: 'web'
   tpl_settings: 'settings.local.twig'
-  trusted_host: 'web.comunicaitalia.loc'
+  trusted_host: 'comunica.italia.it'
 
 # These data will be used for the first user during installation.
 account:
-  mail: admin@example.com
+  mail: info@comunica.italia.it
   name: admin
   pass: admin
 
