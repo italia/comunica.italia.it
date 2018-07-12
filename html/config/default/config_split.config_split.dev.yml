@@ -10,7 +10,6 @@ folder: ../config/split/dev
 module:
   devel: 0
   field_ui: 0
-  menu_ui: 0
   views_ui: 0
   webprofiler: 0
 theme: {  }
