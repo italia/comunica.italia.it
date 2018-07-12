@@ -1,0 +1,51 @@
+.footer {
+  background-color: $color-blue-darkest;
+  padding: 4em 3em 3em;
+  position: relative;
+  z-index: 2;
+  .footer-top {
+    .agid-logo {
+      max-width: 22em;
+    }
+    #social-footer {
+      margin-top: 2em;
+      .social-label {
+        color: $color-white;
+        font-weight: 700;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .footer-bottom {
+    border-top: 1px solid $color-blue-dark;
+    margin-top: 2.75em;
+    padding-top: 1.5em;
+    position: relative;
+    .footer-list {
+      display: flex;
+      list-style: none;
+      .footer-elem {
+        margin-right: 1.5em;
+        .footer-link {
+          color: $color-cyan;
+          font-weight: 700;
+          text-decoration: none;
+          transition: color 220ms ease-out;
+          &:hover {
+            color: darken($color-cyan, 30%);
+          }
+        }
+      }
+    }
+    .scroll-top-wrapper {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: .75em;
+      img {
+        transform: rotate(180deg);
+        width: 45px;
+      }
+    }
+  }
+}

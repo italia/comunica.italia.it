@@ -1,0 +1,10 @@
+base:
+  css:
+    theme:
+      dist/css/master.css: {}
+  js:
+    dist/js/main.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

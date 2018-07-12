@@ -1,0 +1,67 @@
+.top-menu {
+  align-items: center;
+  background-color: $color-blue;
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  position: relative;
+  z-index: 3;
+  .left-section {
+    align-items: center;
+    background-color: lighten($color-blue, 5%);
+    display: flex;
+    height: 100%;
+    padding: 0 1.75em;
+    .text-wrapper {
+      align-items: center;
+      display: flex;
+      .link-agid,
+      .link-teamdigitale,
+      .link-separator {
+        color: $color-white;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .link-separator {
+        margin: 0 .5em;
+      }
+    }
+  }
+  .right-section {
+    height: 100%;
+    .link-list {
+      display: none;
+      @include breakpoint($medium) {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        list-style: none;
+      }
+      .link-elem {
+        background-color: lighten($color-blue, 5%);
+        display: block;
+        height: 100%;
+        padding: 0 1em;
+        transition: background-color 220ms ease-out;
+        &:hover {
+          background-color: $color-blue;
+        }
+        a {
+          color: $color-white;
+          font-weight: 700;
+          line-height: $header-height;
+          text-decoration: none;
+        }
+        &.active {
+          background-color: $color-blue;
+        }
+      }
+    }
+    .social-list {
+      display: flex;
+      @include breakpoint($medium) {
+        display: none;
+      }
+    }
+  }
+}

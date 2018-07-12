@@ -1,0 +1,15 @@
+uuid: 89f817f5-c565-4a35-a0b4-be50bc41bdb0
+langcode: en
+status: true
+dependencies: {  }
+name: guidelines_teaser
+label: 'Guidelines teaser'
+effects:
+  5bbd7310-3316-415d-aa72-b2da2101b703:
+    uuid: 5bbd7310-3316-415d-aa72-b2da2101b703
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false

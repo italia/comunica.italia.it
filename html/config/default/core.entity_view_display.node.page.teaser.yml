@@ -24,9 +24,13 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+  content_moderation_control:
+    weight: -20
+    region: content
   links:
     weight: 101
     region: content
 hidden:
   field_call_to_action_page: true
+  field_image: true
   field_link: true

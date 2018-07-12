@@ -1,0 +1,22 @@
+uuid: a77cce62-a746-4f8f-9f3e-b6c17636e6de
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - six8theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: six8theme_help
+theme: six8theme
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

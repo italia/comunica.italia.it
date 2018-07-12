@@ -1,0 +1,55 @@
+#block-six8theme-views-block-roadmap-roadmap-block {
+  margin-top: 4em;
+  padding-bottom: 10em;
+  position: relative;
+  z-index: 2;
+  h2 {
+    color: $color-blue-dark;
+    font-size: $font-xxlarge;
+    font-weight: 700;
+    text-align: center;
+  }
+  .view-roadmap {
+    background-color: rgba($color-blue-lightest, .9);
+    background-image: url('../images/backgrounds/bg-roadmap.svg');
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    .view-content {
+      height: $roadmap-height;
+      padding: 1em;
+      position: relative;
+      .views-row {
+        max-width: 22em;
+        position: absolute;
+        text-align: center;
+        .views-field-title {
+          color: $color-white;
+          font-size: $font-xlarge;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        .views-field-body .field-content p {
+          color: $color-white;
+          font-size: $font-medium;
+          margin: .25em 0;
+        }
+        &:nth-child(1) {
+          left: 34.5%;
+          top: 9%;
+          transform: translateX(-50%);
+        }
+        &:nth-child(2) {
+          right: 38%;
+          top: 50%;
+          transform: translateY(-50%) translateX(135%);
+        }
+        &:nth-child(3) {
+          bottom: 9%;
+          left: 46.5%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

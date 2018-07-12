@@ -1,0 +1,22 @@
+uuid: 1de0ab2f-473d-4ddf-a70a-a67062e723ae
+langcode: en
+status: true
+dependencies:
+  theme:
+    - six8theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: six8theme_local_tasks
+theme: six8theme
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

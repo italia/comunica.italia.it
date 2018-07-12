@@ -1,0 +1,23 @@
+uuid: c8576529-92b5-453d-b783-66a45585ce0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.contatti
+  module:
+    - link
+id: node.contatti.field_link
+field_name: field_link
+entity_type: node
+bundle: contatti
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
