@@ -10,7 +10,6 @@ return array(
     '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
     '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
     '023d27dca8066ef29e6739335ea73bad' => $vendorDir . '/symfony/polyfill-php70/bootstrap.php',
-    'd5e184bb3537ab5eb44dbd1454cfd70b' => $vendorDir . '/hoa/core/Core.php',
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     'c964ee0ededf28c96ebd9db5099ef910' => $vendorDir . '/guzzlehttp/promises/src/functions_include.php',
     'a0edc8309cc5e1d60e3047b5df6b7052' => $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
@@ -27,7 +26,7 @@ return array(
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',
     '952683d815ff0a7bf322b93c0be7e4e4' => $vendorDir . '/chi-teck/drupal-code-generator/src/bootstrap.php',
     '5a12a5271c58108e0aa33355e6ac54ea' => $vendorDir . '/drupal/console-core/src/functions.php',
-    'a00a72f538bd4ee82872106169a4d37a' => $vendorDir . '/phpmetrics/phpmetrics/compatibility.php',
+    '5f0e95b8df5acf4a92c896dc3ac4bb6e' => $vendorDir . '/phpmetrics/phpmetrics/src/functions.php',
     '15db5f28ad7d06aa60739851ece0eb76' => $vendorDir . '/edgedesign/phpqa/src/report.php',
     '09ba5fd9a1738f23e8e118aaa6654171' => $vendorDir . '/edgedesign/phpqa/src/paths.php',
 );

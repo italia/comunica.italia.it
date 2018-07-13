@@ -11,7 +11,6 @@ class ComposerStaticInitDrupal8
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
-        'd5e184bb3537ab5eb44dbd1454cfd70b' => __DIR__ . '/..' . '/hoa/core/Core.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
@@ -28,7 +27,7 @@ class ComposerStaticInitDrupal8
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
-        'a00a72f538bd4ee82872106169a4d37a' => __DIR__ . '/..' . '/phpmetrics/phpmetrics/compatibility.php',
+        '5f0e95b8df5acf4a92c896dc3ac4bb6e' => __DIR__ . '/..' . '/phpmetrics/phpmetrics/src/functions.php',
         '15db5f28ad7d06aa60739851ece0eb76' => __DIR__ . '/..' . '/edgedesign/phpqa/src/report.php',
         '09ba5fd9a1738f23e8e118aaa6654171' => __DIR__ . '/..' . '/edgedesign/phpqa/src/paths.php',
     );
@@ -117,19 +116,6 @@ class ComposerStaticInitDrupal8
         'I' => 
         array (
             'Interop\\Container\\' => 18,
-        ),
-        'H' => 
-        array (
-            'Hoa\\Visitor\\' => 12,
-            'Hoa\\Ustring\\' => 12,
-            'Hoa\\Stream\\' => 11,
-            'Hoa\\Ruler\\' => 10,
-            'Hoa\\Regex\\' => 10,
-            'Hoa\\Math\\' => 9,
-            'Hoa\\Iterator\\' => 13,
-            'Hoa\\File\\' => 9,
-            'Hoa\\Core\\' => 9,
-            'Hoa\\Compiler\\' => 13,
         ),
         'G' => 
         array (
@@ -373,46 +359,6 @@ class ComposerStaticInitDrupal8
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
-        ),
-        'Hoa\\Visitor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/visitor',
-        ),
-        'Hoa\\Ustring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/ustring',
-        ),
-        'Hoa\\Stream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/stream',
-        ),
-        'Hoa\\Ruler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/ruler',
-        ),
-        'Hoa\\Regex\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/regex',
-        ),
-        'Hoa\\Math\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/math',
-        ),
-        'Hoa\\Iterator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/iterator',
-        ),
-        'Hoa\\File\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/file',
-        ),
-        'Hoa\\Core\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/core',
-        ),
-        'Hoa\\Compiler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hoa/compiler',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
