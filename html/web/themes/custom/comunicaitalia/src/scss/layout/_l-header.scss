@@ -1,5 +1,8 @@
 .region-header {
-  padding: 2em;
+  padding: 2em 2em .5em;
+  @include breakpoint($medium) {
+    padding: 2em;
+  }
   .header-top {
     display: flex;
     justify-content: space-between;
@@ -10,9 +13,18 @@
       display: block;
     }
   }
+  .icon-menu-main {
+    margin-top: 1em;
+    width: 2.25em;
+    @include breakpoint($medium) {
+      display: none;
+    }
+  }
   .text-wrapper {
     margin-top: 1em;
-    text-align: center;
+    @include breakpoint($medium) {
+      text-align: center;
+    }
     .title {
       color: $color-green;
       font-size: $font-xxlarge;

@@ -1,11 +1,19 @@
 .node--type-kit {
   &.node--view-mode-teaser {
-    display: flex;
+    @include breakpoint($small) {
+      display: flex;
+    }
     .field--name-field-icona-kit {
-      margin-right: 2em;
+      @include breakpoint($small) {
+        margin-right: 2em;
+      }
       img {
         border-radius: 2em;
         display: block;
+        margin: 0 auto 1em;
+        @include breakpoint($small) {
+          margin: 0;
+        }
       }
     }
     .text-wrapper {

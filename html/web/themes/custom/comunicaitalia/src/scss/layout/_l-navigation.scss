@@ -1,5 +1,8 @@
 .region-navigation {
-  height: $menu-height;
+  height: $menu-height-small;
+  @include breakpoint($medium) {
+    height: $menu-height;
+  }
   position: relative;
   z-index: 3;
   nav {

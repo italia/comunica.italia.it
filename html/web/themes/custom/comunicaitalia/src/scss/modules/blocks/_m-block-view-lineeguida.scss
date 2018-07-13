@@ -1,13 +1,19 @@
 #block-six8theme-views-block-linee-guida-list-block-1 {
-  padding-top: 12em;
+  padding-top: 5em;
   position: relative;
+  @include breakpoint($medium) {
+    padding-top: 12em;
+  }
   .scroll-down-wrapper {
     cursor: pointer;
     left: 50%;
     position: absolute;
-    top: 8em;
+    top: 3em;
     transform: translateX(-50%);
     width: 45px;
+    @include breakpoint($medium) {
+      top: 8em;
+    }
   }
   h2 {
     color: $color-blue-dark;
