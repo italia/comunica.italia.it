@@ -31,6 +31,9 @@
           font-size: $font-medium;
           font-weight: 700;
           text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
           &::after {
             content: '';
             background-image: url('../images/icons/icon-arrow-right.svg');
@@ -41,6 +44,101 @@
             height: 1em;
             margin-left: .5em;
             width: 1em;
+          }
+        }
+      }
+    }
+  }
+  &.node--view-mode-full {
+    .body-wrapper {
+      background-color: rgba($color-green, .9);
+      margin-bottom: 2.5em;
+      padding: 1.5em;
+      position: relative;
+      z-index: 2;
+      .field-name-body {
+        @include maxWidth;
+        padding: 1em;
+        h2 {
+          color: $color-white;
+          text-align: center;
+        }
+        p {
+          color: $color-white;
+          font-size: $font-medium;
+          line-height: 1.4em;
+          text-align: justify;
+        }
+      }
+    }
+    .why-wrapper {
+      background-color: rgba($color-blue-lightest, .9);
+      margin-bottom: 2.5em;
+      padding: 1.5em;
+      position: relative;
+      z-index: 2;
+      .field-name-field_perche_utilizzare_il_kit {
+        @include maxWidth;
+        padding: 1em;
+        .field__label {
+          color: $color-white;
+          font-size: $font-large;
+          font-weight: 700;
+          text-align: center;
+        }
+        .field__item {
+          p {
+            color: $color-white;
+            font-size: $font-medium;
+            line-height: 1.4em;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .field--name-dynamic-token-fieldnode-scarica-i-materiali-title {
+      color: $color-blue-dark;
+      font-size: $font-xxlarge;
+      font-weight: 700;
+      margin-top: 1.25em;
+      text-align: center;
+    }
+    .scroll-down-kit-wrapper {
+      cursor: pointer;
+      margin: 3em auto 1.5em;
+      width: 45px;
+    }
+    .field-name-field_kit_files {
+      background-color: rgba($color-green, .9);
+      margin: 3.5em 0 2.5em;
+      padding: 1.5em;
+      position: relative;
+      z-index: 2;
+      .field__items {
+        @include maxWidth;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1em;
+        .field__item {
+          background: $color-white;
+          display: inline-block;
+          margin: 1em 1.5% 0 1.5%;
+          padding: 1em;
+          width: 22%;
+          span {
+            display: block;
+            a {
+              color: $color-blue;
+              display: block;
+              font-size: pxrem(24);
+              font-weight: 700;
+              transition: color 220ms ease-out;
+              text-align: center;
+              text-decoration: none;
+              &:hover {
+                color: $color-blue-lightest;
+              }
+            }
           }
         }
       }

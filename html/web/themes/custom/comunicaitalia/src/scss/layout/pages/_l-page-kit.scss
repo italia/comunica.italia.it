@@ -9,7 +9,7 @@
       .main-content {
         @include maxWidth;
         .field--name-body {
-          padding: 1em 8em;
+          padding: 1em;
           p {
             color: $color-white;
             font-size: $font-medium;

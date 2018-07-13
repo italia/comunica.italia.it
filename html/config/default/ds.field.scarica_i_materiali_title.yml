@@ -1,0 +1,11 @@
+id: scarica_i_materiali_title
+label: 'Scarica i materiali title'
+ui_limit: ''
+properties:
+  content:
+    value: 'Scarica i materiali'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

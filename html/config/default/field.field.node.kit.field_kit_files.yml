@@ -11,7 +11,7 @@ id: node.kit.field_kit_files
 field_name: field_kit_files
 entity_type: node
 bundle: kit
-label: 'Kit Files'
+label: 'Scarica i materiali'
 description: ''
 required: false
 translatable: false
