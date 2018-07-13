@@ -1,0 +1,19 @@
+.user-login-form {
+  margin: 3em;
+  .form-item {
+    margin: .5em auto 1em;
+    max-width: 20em;
+    label {
+      font-weight: 700;
+    }
+    input {
+      max-width: 100%;
+    }
+  }
+  #edit-actions {
+    text-align: center;
+    .form-submit {
+      padding: .25em 1em;
+    }
+  }
+}
