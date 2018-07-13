@@ -75,6 +75,7 @@
               width: 2em;
             }
             @include breakpoint($medium) {
+              padding: 0;
               &::before {
                 display: none;
               }
