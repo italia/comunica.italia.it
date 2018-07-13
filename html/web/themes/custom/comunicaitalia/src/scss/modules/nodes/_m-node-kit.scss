@@ -2,7 +2,6 @@
   &.node--view-mode-teaser {
     display: flex;
     .field--name-field-icona-kit {
-      flex: 2;
       margin-right: 2em;
       img {
         border-radius: 2em;
@@ -16,6 +15,7 @@
       .field--name-body {
         h2 {
           color: $color-white;
+          font-size: $font-medium;
           margin-top: 0;
         }
         p {

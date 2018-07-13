@@ -4,7 +4,7 @@
   position: relative;
   z-index: 2;
   .view-content {
-    @include maxWidth($maxwidth-small);
+    @include maxWidth($maxwidth-tiny);
     .views-row {
 
     }
