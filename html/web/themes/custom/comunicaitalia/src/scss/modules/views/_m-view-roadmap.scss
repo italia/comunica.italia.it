@@ -9,7 +9,11 @@
     padding: 2em 0;
     .views-row {
       border-bottom: 1px solid $color-blue-dark;
-      margin: 0 4em;
+      margin: 0 1em;
+      @include breakpoint($small) {
+        margin: 0 4em;
+      }
+
       padding: 1em;
       text-align: center;
       .views-field-title {
