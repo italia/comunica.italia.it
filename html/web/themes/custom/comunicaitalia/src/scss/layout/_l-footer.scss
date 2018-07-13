@@ -27,12 +27,12 @@
       .footer-elem {
         margin-right: 1.5em;
         .footer-link {
-          color: $color-cyan;
+          color: $color-cyan-darkest;
           font-weight: 700;
           text-decoration: none;
           transition: color 220ms ease-out;
           &:hover {
-            color: darken($color-cyan, 30%);
+            color: $color-cyan-dark;
           }
         }
       }

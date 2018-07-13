@@ -1,20 +1,20 @@
-uuid: c8576529-92b5-453d-b783-66a45585ce0b
+uuid: bc815ce6-2a30-4387-8092-148d80f21272
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
+    - field.storage.node.field_link_agid
     - node.type.contatti
   module:
     - link
-id: node.contatti.field_link
-field_name: field_link
+id: node.contatti.field_link_agid
+field_name: field_link_agid
 entity_type: node
 bundle: contatti
-label: Media
+label: 'Link Agid'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

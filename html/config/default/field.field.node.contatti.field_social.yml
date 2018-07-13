@@ -1,23 +1,23 @@
-uuid: c8576529-92b5-453d-b783-66a45585ce0b
+uuid: 02d7e079-ea7f-47be-9a7f-4697dd1c6764
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_link
+    - field.storage.node.field_social
     - node.type.contatti
   module:
     - link
-id: node.contatti.field_link
-field_name: field_link
+id: node.contatti.field_social
+field_name: field_social
 entity_type: node
 bundle: contatti
-label: Media
+label: Social
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 17
+  link_type: 16
   title: 1
 field_type: link

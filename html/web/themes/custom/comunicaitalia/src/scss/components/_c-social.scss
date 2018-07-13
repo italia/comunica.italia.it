@@ -12,9 +12,9 @@
       background-color: $color-blue;
     }
     &.light-color {
-      background-color: $color-cyan;
+      background-color: $color-cyan-darkest;
       &:hover {
-        background-color: darken($color-cyan, 30%);
+        background-color: $color-cyan-dark;
       }
     }
     .social-link {
