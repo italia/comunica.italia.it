@@ -12,9 +12,22 @@
     display: flex;
     height: 100%;
     padding: 0 1.75em;
+    position: relative;
+    .icon-menu-top {
+      left: 1em;
+      position: absolute;
+      width: 1.75em;
+      @include breakpoint($medium) {
+        display: none;
+      }
+    }
     .text-wrapper {
       align-items: center;
       display: flex;
+      margin-left: 3em;
+      @include breakpoint($medium) {
+        margin-left: 0;
+      }
       .link-agid,
       .link-teamdigitale,
       .link-separator {
@@ -58,7 +71,11 @@
       }
     }
     .social-list {
-      display: flex;
+      display: none;
+      @include breakpoint($xsmall) {
+        display: flex;
+        margin: .5em .25em 0 0;
+      }
       @include breakpoint($medium) {
         display: none;
       }

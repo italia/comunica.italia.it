@@ -2,7 +2,11 @@
   &.node--view-mode-full {
     @include maxWidth($maxwidth-small);
     display: flex;
+    flex-direction: column;
     margin: 3em auto 4em;
+    @include breakpoint($medium) {
+      flex-direction: row;
+    }
     .left-wrapper {
       flex: 3;
       padding: 1.5em 2.5em;

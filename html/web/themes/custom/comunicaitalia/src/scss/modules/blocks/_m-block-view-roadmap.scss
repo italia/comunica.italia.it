@@ -11,43 +11,120 @@
   }
   .view-roadmap {
     background-color: rgba($color-blue-lightest, .9);
-    background-image: url('../images/backgrounds/bg-roadmap.svg');
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    background-size: 65%;
+    @include breakpoint($medium) {
+      background-image: url('../images/backgrounds/bg-roadmap.svg');
+      background-position-y: 50%;
+      background-repeat: no-repeat;
+      background-size: 65%;
+    }
     .view-content {
-      height: $roadmap-height;
+      background-color: $color-white;
+      margin: 0 auto;
+      max-width: 95%;
+      @include breakpoint($medium) {
+        background-color: transparent;
+        height: $roadmap-medium;
+        max-width: 100%;
+      }
+      @include breakpoint($large) {
+        height: $roadmap-big;
+      }
       padding: 1em;
       position: relative;
       .views-row {
-        max-width: 22em;
-        position: absolute;
+        border-bottom: 1px solid $color-blue-dark;
+        margin: 0 4em;
+        padding: 1em;
         text-align: center;
+        @include breakpoint($medium) {
+          border-bottom: none;
+          margin: 0;
+          max-width: 16em;
+          padding: 0;
+          position: absolute;
+        }
+        @include breakpoint($large) {
+          max-width: 22em;
+        }
         .views-field-title {
-          color: $color-white;
-          font-size: $font-xlarge;
+          color: $color-blue-dark;
+          font-size: $font-discrete;
           font-weight: 700;
+          line-height: 2em;
           text-decoration: none;
+          @include breakpoint($medium) {
+            color: $color-white;
+            font-size: $font-xlarge;
+            line-height: 1.2;
+            padding: 0;
+          }
+          .field-content {
+            padding-left: 2.35em;
+            position: relative;
+            &::before {
+              background-image: url('../images/icons/icon-list.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: '';
+              display: block;
+              height: 2em;
+              left: 0;
+              position: absolute;
+              top: -.2em;
+              width: 2em;
+            }
+            @include breakpoint($medium) {
+              &::before {
+                display: none;
+              }
+            }
+          }
         }
         .views-field-body .field-content p {
-          color: $color-white;
-          font-size: $font-medium;
-          margin: .25em 0;
+          color: $color-gray-dark;
+          font-size: $font-normal;
+          margin: .35em auto 0;
+          max-width: 20em;
+          @include breakpoint($medium) {
+            color: $color-white;
+            font-size: $font-medium;
+            margin: .25em 0;
+            max-width: 100%;
+          }
         }
         &:nth-child(1) {
-          left: 34.5%;
-          top: 9%;
-          transform: translateX(-50%);
+          @include breakpoint($medium) {
+            left: 34.5%;
+            top: 11%;
+            transform: translateX(-50%);
+          }
+          @include breakpoint($large) {
+            top: 9%;
+          }
         }
         &:nth-child(2) {
-          right: 38%;
-          top: 50%;
-          transform: translateY(-50%) translateX(135%);
+          @include breakpoint($medium) {
+            right: 45%;
+            transform: translateY(-50%) translateX(135%);
+            top: 50%;
+          }
+          @include breakpoint($normal) {
+            right: 38%;
+          }
+          @include breakpoint($large) {
+            top: 50%;
+          }
         }
         &:nth-child(3) {
-          bottom: 9%;
-          left: 46.5%;
-          transform: translateX(-50%);
+          @include breakpoint($medium) {
+            bottom: 11%;
+            left: 46.5%;
+            transform: translateX(-50%);
+          }
+          @include breakpoint($large) {
+            bottom: 9%;
+          }
         }
       }
     }

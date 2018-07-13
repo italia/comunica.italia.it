@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-between;
   }
+  #social-header {
+    display: none;
+    @include breakpoint($medium) {
+      display: block;
+    }
+  }
   .text-wrapper {
     margin-top: 1em;
     text-align: center;
