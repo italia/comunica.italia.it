@@ -32,6 +32,7 @@ module:
   link: 0
   menu_ui: 0
   menus_attribute: 0
+  monolog: 0
   node: 0
   options: 0
   page_cache: 0
