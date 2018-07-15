@@ -4067,6 +4067,9 @@
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
+            },
+            "patches_applied": {
+                "Set a limit to normalizer depth": "patches/monolog-fix-normalizer-depth.patch"
             }
         },
         "installation-source": "dist",

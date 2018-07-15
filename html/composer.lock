@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f6ae2bcc72c46c4722c2adb1a5a40ca",
+    "content-hash": "cc41605c70c55e96a9acda64c634db5e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3375,6 +3375,9 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.0.x-dev"
+                },
+                "patches_applied": {
+                    "Set a limit to normalizer depth": "patches/monolog-fix-normalizer-depth.patch"
                 }
             },
             "autoload": {

@@ -83,7 +83,11 @@
       "replace": false,
       "merge-extra": false
     },
-    "patches": [],
+    "patches": {
+      "monolog/monolog": {
+        "Set a limit to normalizer depth": "patches/monolog-fix-normalizer-depth.patch"
+      }
+    },
     "installer-paths": {
       "web/core": [
         "type:drupal-core"

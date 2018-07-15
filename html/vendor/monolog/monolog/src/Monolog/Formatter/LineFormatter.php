@@ -125,7 +125,7 @@ class LineFormatter extends NormalizerFormatter
         return $this->replaceNewlines($this->convertToString($value));
     }
 
-    protected function normalizeException($e)
+    protected function normalizeException($e, int $depth = 0)
     {
         // TODO 2.0 only check for Throwable
         if (!$e instanceof \Exception && !$e instanceof \Throwable) {

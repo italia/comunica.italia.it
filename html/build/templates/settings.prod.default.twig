@@ -54,6 +54,11 @@ $settings['file_public_path'] = 'sites/default/files';
 $config['content_directory'] = '../default-content';
 
 /**
+ * Include site specific services.
+ */
+$settings['container_yamls'][] = 'sites/default/build.services.yml';
+
+/**
  * Temporary authentication to prevent bots to index the site.
  */
 $username = 'comunica';
