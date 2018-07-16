@@ -93,16 +93,12 @@
   z-index: 2;
   .view-content {
     @include maxWidth;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     @include breakpoint($normal - 1) {
-      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .views-row {
-      display: flex;
-      flex-direction: column;
       padding: 1.5em;
 
       /* MARKETING */
@@ -160,7 +156,9 @@
           width: 100%;
         }
         .field-name-field_link a {
-          justify-content: center;
+          @include breakpoint($normal - 1) {
+            justify-content: center;
+          }
           &::before {
             @include plusicon;
           }

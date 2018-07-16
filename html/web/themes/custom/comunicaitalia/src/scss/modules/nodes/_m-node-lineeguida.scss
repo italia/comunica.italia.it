@@ -1,23 +1,42 @@
 .node--type-linee-guida {
   &.node--view-mode-teaser {
     display: flex;
-    @include breakpoint ($medium) {
+    flex-direction: column;
+    margin-bottom: 2em;
+    @include breakpoint($small) {
+      flex-direction: row;
+    }
+    @include breakpoint ($normal - 1) {
       display: block;
+      margin-bottom: 0;
     }
     .header-wrapper {
+      background-color: rgba($color-blue-light, .8);
+      display: flex;
       flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      position: relative;
+      @include breakpoint($normal - 1) {
+        padding-right: 0;
+      }
       @include breakpoint($normal - 1) {
         display: none;
       }
       .field-name-field_icona {
+        text-align: center;
         img {
-          background-color: rgba($color-blue-light, .8);
           padding: 1em;
         }
       }
       .field-name-node_title {
+        text-align: center;
         h2 {
           color: $color-white;
+          margin: 0;
+          padding-bottom: .75em;
           text-decoration: none;
         }
       }
@@ -26,7 +45,13 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      margin-bottom: 3.5em;
+      @include breakpoint($small) {
+        padding-left: 2em;
+      }
+      @include breakpoint($normal - 1) {
+        margin-bottom: 3.5em;
+        padding-left: 0;
+      }
       .field-name-field_link {
         .field__item {
           margin: .75em 0;
