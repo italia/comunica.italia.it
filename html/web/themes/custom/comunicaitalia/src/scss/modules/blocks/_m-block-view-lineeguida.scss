@@ -85,3 +85,105 @@
     }
   }
 }
+
+#block-six8theme-views-block-linee-guida-list-block-2 {
+  background-color: rgba($color-green, .9);
+  padding: 2em;
+  position: relative;
+  z-index: 2;
+  .view-content {
+    @include maxWidth;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include breakpoint($normal - 1) {
+      flex-direction: row;
+    }
+    .views-row {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5em;
+
+      /* MARKETING */
+      &:nth-child(3) {
+        @include breakpoint($normal - 1) {
+          flex: 1 0 0;
+          order: 1;
+        }
+        .field-name-field_link a {
+          &::before {
+            @include plusicon;
+          }
+          @include breakpoint($normal - 1) {
+            justify-content: flex-end;
+            &::after {
+              @include plusicon;
+              margin-left: .35em;
+            }
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .field-name-field_link,
+        .field-name-field_call_to_action_pagina {
+          @include breakpoint($normal - 1) {
+            justify-content: flex-end;
+          }
+        }
+      }
+
+      /* COMUNICAZIONE */
+      &:nth-child(1) {
+        @include breakpoint($normal - 1) {
+          flex: 1 0 0;
+          order: 3;
+        }
+        .field-name-field_link a {
+          &::before {
+            @include plusicon;
+          }
+        }
+        .field-name-field_link,
+        .field-name-field_call_to_action_pagina {
+          @include breakpoint($normal - 1) {
+            justify-content: flex-start;
+          }
+        }
+      }
+
+      /* STORYTELLING */
+      &:nth-child(2) {
+        @include breakpoint($normal - 1) {
+          order: 4;
+          width: 100%;
+        }
+        .field-name-field_link a {
+          justify-content: center;
+          &::before {
+            @include plusicon;
+          }
+        }
+        .field-name-field_call_to_action_pagina {
+          @include breakpoint($normal - 1) {
+            justify-content: center;
+          }
+        }
+      }
+      &.bg-image {
+        display: none;
+        @include breakpoint($normal - 1) {
+          background-image: url('../images/guidelines.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          flex: 1 0 0;
+          order: 2;
+          width: 33%;
+        }
+      }
+    }
+  }
+}

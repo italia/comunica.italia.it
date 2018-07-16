@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_call_to_action_home
     - field.storage.node.field_call_to_action_pagina
@@ -495,7 +496,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       pager:
         type: some
         options:
