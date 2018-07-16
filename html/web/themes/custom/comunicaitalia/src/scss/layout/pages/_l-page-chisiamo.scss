@@ -33,8 +33,11 @@
           display: flex;
           flex: 1;
           justify-content: center;
-          max-width: 30em;
+          max-width: 18em;
           padding: 1em 2em;
+          @include breakpoint($medium) {
+            max-width: 30em;
+          }
           img {
             display: block;
           }

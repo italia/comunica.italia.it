@@ -11,8 +11,10 @@
         border-radius: 2em;
         display: block;
         margin: 0 auto 1em;
+        max-width: 175px;
         @include breakpoint($small) {
           margin: 0;
+          max-width: 100%;
         }
       }
     }
