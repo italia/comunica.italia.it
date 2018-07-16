@@ -2,7 +2,7 @@
   padding-top: 5em;
   position: relative;
   @include breakpoint($medium) {
-    padding-top: 12em;
+    padding-top: 8em;
   }
   .scroll-down-wrapper {
     cursor: pointer;
@@ -12,7 +12,7 @@
     transform: translateX(-50%);
     width: 45px;
     @include breakpoint($medium) {
-      top: 8em;
+      top: 5em;
     }
   }
   h2 {
@@ -26,10 +26,10 @@
     padding: 1em;
     .view-content {
       @include maxWidth;
-      padding: 1.5em;
       @include breakpoint($medium) {
         display: flex;
         justify-content: space-between;
+        padding: 1.5em;
       }
       .views-row {
         align-items: center;
@@ -40,10 +40,9 @@
         max-width: 20em;
         padding: 1em;
         .views-field-field-icona {
-          .field-content {
-            img {
-
-            }
+          max-width: 150px;
+          @include breakpoint($medium) {
+            max-width: 100%;
           }
         }
         .views-field-title {
@@ -54,7 +53,9 @@
           }
         }
         .views-field-body {
-          margin-bottom: 1.5em;
+          @include breakpoint($medium) {
+            margin-bottom: 1.5em;
+          }
           .field-content {
             p {
               color: $color-white;
@@ -72,9 +73,12 @@
               display: block;
               font-size: $font-discrete;
               font-weight: 700;
-              padding: 1em 1.5em;
+              padding: .75em 1em;
               text-decoration: none;
               transition: color 220ms ease-out;
+              @include breakpoint($medium) {
+                padding: 1em 1.5em;
+              }
               &:hover {
                 color: $color-blue-dark;
               }
