@@ -1,10 +1,12 @@
 .node--type-linee-guida {
   &.node--view-mode-teaser {
+    @include maxWidth(20em);
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
     @include breakpoint($small) {
       flex-direction: row;
+      max-width: 100%;
     }
     @include breakpoint ($normal - 1) {
       display: block;
@@ -45,12 +47,16 @@
       display: flex;
       flex: 1;
       flex-direction: column;
+      justify-content: center;
       @include breakpoint($small) {
         padding-left: 2em;
+        padding-bottom: 3.5em;
+        position: relative;
       }
       @include breakpoint($normal - 1) {
         margin-bottom: 3.5em;
         padding-left: 0;
+        padding-bottom: 0;
       }
       .field-name-field_link {
         .field__item {
@@ -70,6 +76,16 @@
       }
       .field-name-field_call_to_action_pagina {
         display: flex;
+        @include breakpoint($small) {
+          bottom: 0;
+          position: absolute;
+          right: 0;
+        }
+        @include breakpoint($normal - 1) {
+          bottom: auto;
+          position: relative;
+          right: auto;
+        }
         a {
           background-color: $color-blue-lightest;
           color: $color-white;
