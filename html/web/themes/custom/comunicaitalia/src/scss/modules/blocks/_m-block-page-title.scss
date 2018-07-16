@@ -3,12 +3,18 @@
     color: $color-blue-dark;
     font-size: $font-xxlarge;
     font-weight: 700;
-    margin-top: 1.25em;
+    margin-top: .25em;
     text-align: center;
+    @include breakpoint($medium) {
+      margin-top: 1.25em;
+    }
   }
   .scroll-down-basic-wrapper {
     cursor: pointer;
     margin: 3em auto 1.5em;
     width: 45px;
+    @include breakpoint($medium) {
+      margin: 2em auto .5em;
+    }
   }
 }

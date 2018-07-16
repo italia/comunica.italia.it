@@ -2,10 +2,13 @@
   .node--type-page {
     .main-wrapper {
       background-color: rgba($color-green, .9);
-      margin-bottom: 12em;
+      margin-bottom: 5em;
       padding: 1.5em;
       position: relative;
       z-index: 2;
+      @include breakpoint($medium) {
+        margin-bottom: 12em;
+      }
       .main-content {
         @include maxWidth;
         align-items: center;
