@@ -34,12 +34,16 @@
       text-indent: -9999px;
       transition: background-image 220ms ease-out;
       width: 8em;
-      // ONLY SAFARI 10
+      // Safari 10 ONLY rules
       @media not all and (min-resolution:.001dpcm)
       {
         @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
           transition: none;
         }
+      }
+      // Safari 9 ONLY rules
+      @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+        transition: none;
       }
       @include breakpoint($small) {
         height: 12em;
