@@ -79,12 +79,12 @@
         @include breakpoint($small) {
           bottom: 0;
           position: absolute;
-          right: 0;
+          left: 2em;
         }
         @include breakpoint($normal - 1) {
           bottom: auto;
+          left: auto;
           position: relative;
-          right: auto;
         }
         a {
           background-color: $color-blue-lightest;
