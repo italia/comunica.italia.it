@@ -1,18 +1,18 @@
 #block-six8theme-views-block-linee-guida-list-block-1 {
-  padding-top: 1em;
+  // padding-top: 1em;
   position: relative;
-  @include breakpoint($medium) {
-    padding-top: 2em;
-  }
-  .scroll-down-wrapper {
-    cursor: pointer;
-    left: 50%;
-    height: 45px;
-    position: absolute;
-    top: 1em;
-    transform: translateX(-50%);
-    width: 45px;
-  }
+  // @include breakpoint($medium) {
+  //   padding-top: 2em;
+  // }
+  // .scroll-down-wrapper {
+  //   cursor: pointer;
+  //   left: 50%;
+  //   height: 45px;
+  //   position: absolute;
+  //   top: 1em;
+  //   transform: translateX(-50%);
+  //   width: 45px;
+  // }
   h2 {
     color: $color-blue-dark;
     font-size: $font-xxlarge;

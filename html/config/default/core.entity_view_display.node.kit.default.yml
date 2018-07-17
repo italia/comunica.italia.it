@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.kit.field_icona_kit
     - field.field.node.kit.field_kit_files
     - field.field.node.kit.field_perche_utilizzare_il_kit
+    - field.field.node.kit.field_sottotitolo
     - node.type.kit
   module:
     - ds
@@ -32,16 +33,23 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - group_body_wrapper
-        - body
+        - field_sottotitolo
+        - 'dynamic_token_field:node-scroll_down_arrow'
         - field_perche_utilizzare_il_kit
+        - body
+        - group_body_wrapper
         - group_why
         - 'dynamic_token_field:node-scarica_i_materiali_title'
         - field_kit_files
     fields:
       'dynamic_token_field:node-scarica_i_materiali_title':
         plugin_id: 'dynamic_token_field:node-scarica_i_materiali_title'
-        weight: 2
+        weight: 4
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-scroll_down_arrow':
+        plugin_id: 'dynamic_token_field:node-scroll_down_arrow'
+        weight: 1
         label: hidden
         formatter: default
   field_group:
@@ -49,7 +57,7 @@ third_party_settings:
       children:
         - body
       parent_name: ''
-      weight: 0
+      weight: 2
       format_type: html_element
       format_settings:
         id: ''
@@ -65,7 +73,7 @@ third_party_settings:
       children:
         - field_perche_utilizzare_il_kit
       parent_name: ''
-      weight: 1
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -90,7 +98,7 @@ content:
     third_party_settings: {  }
     region: ds_content
   field_kit_files:
-    weight: 3
+    weight: 5
     label: visually_hidden
     settings:
       use_description_as_link_text: true
@@ -100,6 +108,14 @@ content:
   field_perche_utilizzare_il_kit:
     weight: 1
     label: above
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
+    region: ds_content
+  field_sottotitolo:
+    weight: 0
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }

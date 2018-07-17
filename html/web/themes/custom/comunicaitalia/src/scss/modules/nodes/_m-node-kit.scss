@@ -60,6 +60,31 @@
     }
   }
   &.node--view-mode-full {
+    .field-name-field_sottotitolo {
+      @include maxWidth;
+      p {
+        color: $color-blue-dark;
+        font-size: $font-medium;
+        line-height: 1.4em;
+        text-align: center;
+      }
+    }
+    .field--name-dynamic-token-fieldnode-scroll-down-arrow {
+      background-image: url('../images/icons/icon-arrow-down.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 45px;
+      cursor: pointer;
+      margin: 2em auto .5em;
+      height: 45px;
+      width: 45px;
+      @include breakpoint($medium) {
+        margin: 3em auto 1.5em;
+      }
+      p {
+        text-indent: -9999px;
+      }
+    }
     .body-wrapper {
       background-color: rgba($color-green, .9);
       margin-bottom: 2.5em;
