@@ -9,7 +9,7 @@
         });
       } else if($('body').hasClass('path-roadmap')) {
         /* SCROLL DOWN FOR ROADMAP PAGE */
-        $('.scroll-down-basic-wrapper').click(function() {
+        $('.scroll-down-wrapper').click(function() {
           $("html, body").animate({scrollTop: $('footer').offset().top}, 450, 'swing');
         });
       } else if($('body').hasClass('page-node-type-kit')) {
