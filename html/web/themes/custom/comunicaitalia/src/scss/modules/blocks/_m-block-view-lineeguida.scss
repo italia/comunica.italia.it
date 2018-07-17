@@ -1,19 +1,17 @@
 #block-six8theme-views-block-linee-guida-list-block-1 {
-  padding-top: 5em;
+  padding-top: 1em;
   position: relative;
   @include breakpoint($medium) {
-    padding-top: 8em;
+    padding-top: 2em;
   }
   .scroll-down-wrapper {
     cursor: pointer;
     left: 50%;
+    height: 45px;
     position: absolute;
-    top: 3em;
+    top: 1em;
     transform: translateX(-50%);
     width: 45px;
-    @include breakpoint($medium) {
-      top: 5em;
-    }
   }
   h2 {
     color: $color-blue-dark;
@@ -39,6 +37,7 @@
         margin-right: auto;
         max-width: 20em;
         padding: 1em;
+        width: 20em;
         .views-field-field-icona {
           max-width: 150px;
           @include breakpoint($medium) {
@@ -55,6 +54,7 @@
         .views-field-body {
           @include breakpoint($medium) {
             margin-bottom: 1.5em;
+            max-width: 100%;
           }
           .field-content {
             p {

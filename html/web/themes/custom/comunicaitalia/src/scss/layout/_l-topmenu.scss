@@ -16,6 +16,8 @@
     .icon-menu-top {
       left: 1em;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       width: 1.75em;
       @include breakpoint($medium) {
         display: none;
