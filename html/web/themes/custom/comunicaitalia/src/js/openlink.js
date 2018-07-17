@@ -4,13 +4,13 @@
 
 
       if($('body').hasClass('path-roadmap')) {
-        /* SCROLL DOWN FOR ROADMAP PAGE */
+        /* TARGET BLANK FOR ROADMAP PAGE */
 
       } else if($('body').hasClass('page-node-type-kit')) {
-        /* SCROLL DOWN FOR SINGLE KIT PAGE */
+        /* TARGET BLANK FOR KIT PAGE */
 
       } else if($('body').hasClass('page-node-21')) {
-        /* SCROLL DOWN FOR GUIDELINES PAGE */
+        /* TARGET BLANK FOR GUIDELINE PAGE */
 
       } else if($('body').hasClass('page-node-26')) {
         /* TARGET BLANK FOR CONTATTI PAGE */
