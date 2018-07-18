@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.contatti.field_link_agid
     - field.field.node.contatti.field_logo_agenzia
     - field.field.node.contatti.field_social
+    - field.field.node.contatti.field_sottotitolo
     - node.type.contatti
   module:
     - ds
@@ -36,16 +37,25 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - group_left_wrapper
+        - field_sottotitolo
         - field_link
-        - group_right_wrapper
+        - 'dynamic_token_field:node-scroll_down_arrow'
+        - group_left_wrapper
         - field_logo_agenzia
+        - group_right_wrapper
+        - group_wrapper
         - field_agid_biografia
-        - body
         - field_social
+        - field_link_agid
+        - body
         - field_call_to_action_pagina
         - group_agid_wrapper
-        - field_link_agid
+    fields:
+      'dynamic_token_field:node-scroll_down_arrow':
+        plugin_id: 'dynamic_token_field:node-scroll_down_arrow'
+        weight: 1
+        label: hidden
+        formatter: default
   field_group:
     group_agid_wrapper:
       children:
@@ -54,7 +64,7 @@ third_party_settings:
         - field_social
         - field_link_agid
       parent_name: group_left_wrapper
-      weight: 7
+      weight: 11
       format_type: html_element
       format_settings:
         id: ''
@@ -71,8 +81,8 @@ third_party_settings:
         - body
         - field_call_to_action_pagina
         - group_agid_wrapper
-      parent_name: ''
-      weight: 0
+      parent_name: group_wrapper
+      weight: 2
       format_type: html_element
       format_settings:
         id: ''
@@ -87,8 +97,8 @@ third_party_settings:
     group_right_wrapper:
       children:
         - field_link
-      parent_name: ''
-      weight: 1
+      parent_name: group_wrapper
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -100,6 +110,23 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Right wrapper'
+    group_wrapper:
+      children:
+        - group_left_wrapper
+        - group_right_wrapper
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
 id: node.contatti.default
 targetEntityType: node
 bundle: contatti
@@ -108,20 +135,20 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 5
+    weight: 9
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: ds_content
   field_agid_biografia:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: ds_content
   field_call_to_action_pagina:
-    weight: 6
+    weight: 10
     label: hidden
     settings:
       trim_length: 80
@@ -166,7 +193,7 @@ content:
     type: image
     region: ds_content
   field_social:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       trim_length: 80
@@ -176,6 +203,14 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: ds_content
+  field_sottotitolo:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_trimmed
     region: ds_content
 hidden:
   links: true

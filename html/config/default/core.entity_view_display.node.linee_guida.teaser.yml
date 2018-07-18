@@ -5,36 +5,129 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.linee_guida.body
+    - field.field.node.linee_guida.field_call_to_action_home
+    - field.field.node.linee_guida.field_call_to_action_pagina
+    - field.field.node.linee_guida.field_files
+    - field.field.node.linee_guida.field_icona
+    - field.field.node.linee_guida.field_link
+    - image.style.guidelines_teaser
     - node.type.linee_guida
   module:
-    - text
+    - ds
+    - field_group
+    - image
+    - link
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_header_wrapper
+        - field_icona
+        - group_link_wrapper
+        - field_link
+        - node_title
+        - field_call_to_action_pagina
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+  field_group:
+    group_header_wrapper:
+      children:
+        - field_icona
+        - node_title
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: header-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Header wrapper'
+    group_link_wrapper:
+      children:
+        - field_link
+        - field_call_to_action_pagina
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: link-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Link wrapper'
 id: node.linee_guida.teaser
 targetEntityType: node
 bundle: linee_guida
 mode: teaser
 content:
-  body:
+  field_call_to_action_pagina:
+    type: link
+    weight: 3
+    region: ds_content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    region: content
-  content_moderation_control:
-    weight: -20
-    region: content
-  links:
-    weight: 100
-    region: content
+  field_icona:
+    type: image
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: guidelines_teaser
+      image_link: ''
+    third_party_settings: {  }
+  field_link:
+    type: link
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
 hidden:
+  body: true
+  content_moderation_control: true
   field_call_to_action: true
   field_call_to_action_home: true
-  field_call_to_action_pagina: true
   field_call_to_action_pagine: true
   field_files: true
-  field_icona: true
-  field_link: true
   field_link_guide: true
   field_link_linee_guida: true
+  links: true
