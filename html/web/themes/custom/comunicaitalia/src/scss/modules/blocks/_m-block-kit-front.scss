@@ -1,7 +1,10 @@
 #block-kit {
-  margin: 7em 0 8em;
+  margin: 5em 0 5em;
   position: relative;
   z-index: 2;
+  @include breakpoint($medium) {
+    margin: 7em 0 8em;
+  }
   h2 {
     color: $color-blue-dark;
     font-size: $font-xxlarge;
@@ -13,8 +16,11 @@
     background-color: rgba($color-green, .9);
     display: flex;
     justify-content: center;
-    height: $kit-height-small;
     padding: 2em;
+    height: $kit-height-mini;
+    @include breakpoint($small) {
+      height: $kit-height-small;
+    }
     @include breakpoint($medium) {
       height: $kit-height;
     }
@@ -24,10 +30,25 @@
       background-repeat: no-repeat;
       background-size: contain;
       display: block;
-      height: 12em;
+      height: 8em;
       text-indent: -9999px;
       transition: background-image 220ms ease-out;
-      width: 12em;
+      width: 8em;
+      // Safari 10 ONLY rules
+      @media not all and (min-resolution:.001dpcm)
+      {
+        @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+          transition: none;
+        }
+      }
+      // Safari 9 ONLY rules
+      @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+        transition: none;
+      }
+      @include breakpoint($small) {
+        height: 12em;
+        width: 12em;
+      }
       @include breakpoint($medium) {
         height: 15em;
         width: 15em;

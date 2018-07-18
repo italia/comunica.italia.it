@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.page.field_call_to_action_page
     - field.field.node.page.field_image
     - field.field.node.page.field_link
+    - field.field.node.page.field_sottotitolo
     - image.style.basic_page_image
     - node.type.page
   module:
+    - ds
     - field_group
     - image
     - link
@@ -21,7 +23,7 @@ third_party_settings:
       children:
         - group_main_content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: html_element
       format_settings:
         id: ''
@@ -50,6 +52,38 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Main content'
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_sottotitolo
+        - 'dynamic_token_field:node-scroll_down_arrow'
+        - group_main_wrapper
+        - links
+        - field_call_to_action_page
+        - field_link
+        - group_main_content
+        - body
+        - field_image
+    fields:
+      'dynamic_token_field:node-scroll_down_arrow':
+        plugin_id: 'dynamic_token_field:node-scroll_down_arrow'
+        weight: 1
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -59,17 +93,34 @@ mode: default
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_trimmed
     weight: 21
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  content_moderation_control:
-    weight: 0
-    region: content
-    settings: {  }
+    region: ds_content
+    settings:
+      trim_length: 600
     third_party_settings: {  }
   field_call_to_action_page:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+  field_image:
+    weight: 22
+    label: hidden
+    settings:
+      image_style: basic_page_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: ds_content
+  field_link:
     weight: 5
     label: hidden
     settings:
@@ -80,31 +131,18 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_image:
-    weight: 22
+    region: ds_content
+  field_sottotitolo:
+    weight: 0
     label: hidden
-    settings:
-      image_style: basic_page_image
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_link:
-    weight: 6
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  links:
-    weight: 4
-    region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+    type: text_default
+    region: ds_content
+  links:
+    weight: 3
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true

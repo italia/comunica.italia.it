@@ -1,5 +1,6 @@
 .arrows-layer {
   background-image: url('../images/backgrounds/bg-arrows.svg');
+  background-position-y: -6em;
   background-repeat: no-repeat;
   background-size: cover;
   bottom: 0;
@@ -9,4 +10,8 @@
   right: 0;
   top: 0;
   z-index: 0;
+  opacity: .4;
+  @include breakpoint($medium) {
+    opacity: .8;
+  }
 }

@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: $header-height;
   position: relative;
-  z-index: 3;
+  z-index: 5;
   .left-section {
     align-items: center;
     background-color: lighten($color-blue, 5%);
@@ -16,6 +16,8 @@
     .icon-menu-top {
       left: 1em;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       width: 1.75em;
       @include breakpoint($medium) {
         display: none;
@@ -43,30 +45,44 @@
   .right-section {
     height: 100%;
     .link-list {
-      display: none;
       @include breakpoint($medium) {
         align-items: center;
+        background-color: $color-white;
         display: flex;
         height: 100%;
         list-style: none;
+        position: relative;
+      }
+      .close-menu-top {
+        @include breakpoint($medium) {
+          display: none;
+        }
       }
       .link-elem {
-        background-color: lighten($color-blue, 5%);
-        display: block;
-        height: 100%;
-        padding: 0 1em;
-        transition: background-color 220ms ease-out;
+        @include breakpoint($medium) {
+          align-items: center;
+          background-color: lighten($color-blue, 5%);
+          display: block;
+          height: 100%;
+          padding: 0 1em;
+          transition: background-color 220ms ease-out;
+        }
         &:hover {
           background-color: $color-blue;
         }
         a {
-          color: $color-white;
-          font-weight: 700;
-          line-height: $header-height;
-          text-decoration: none;
+          @include breakpoint($medium) {
+            color: $color-white;
+            font-weight: 700;
+            line-height: $header-height;
+            text-decoration: none;
+          }
         }
         &.active {
-          background-color: $color-blue;
+          @include breakpoint($medium) {
+            background-color: $color-blue;
+            font-weight: 700;
+          }
         }
       }
     }
@@ -79,6 +95,47 @@
       @include breakpoint($medium) {
         display: none;
       }
+    }
+  }
+}
+
+/* RESPONSIVE TOP MENU */
+body > .link-list {
+  background-color: $color-white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: fixed;
+  right: 15%;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 220ms ease-out;
+  z-index: 100;
+  &.open {
+    transform: translateX(0%);
+  }
+  .close-menu-top {
+    background-color: $color-blue;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+    padding: 1em;
+    img {
+      cursor: pointer;
+      height: 25px;
+      width: 25px;
+    }
+  }
+  .link-elem {
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    display: flex;
+    height: 3.5em;
+    padding: 0 1em;
+    a {
+      text-decoration: none;
+    }
+    &.active {
+      font-weight: 700;
     }
   }
 }

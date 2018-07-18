@@ -1,5 +1,8 @@
 .region-header {
-  padding: 2em 2em .5em;
+  padding: 1.5em 1em .5em;
+  @include breakpoint($medium) {
+    padding: 2em 2em .5em;
+  }
   @include breakpoint($medium) {
     padding: 2em;
   }
@@ -29,7 +32,12 @@
       color: $color-green;
       font-size: $font-xxlarge;
       font-weight: 700;
-      margin: .35em 0;
+      line-height: 1;
+      margin: .35em 0 .2em;
+      @include breakpoint($small) {
+        line-height: 1.25;
+        margin-bottom: .35em;
+      }
     }
     .subtitle {
       color: $color-blue-dark;

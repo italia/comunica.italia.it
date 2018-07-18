@@ -1,0 +1,21 @@
+uuid: 8b534872-82c6-4c21-acf2-9c87ced5d85c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sottotitolo
+    - node.type.page
+  module:
+    - text
+id: node.page.field_sottotitolo
+field_name: field_sottotitolo
+entity_type: node
+bundle: page
+label: Sottotitolo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

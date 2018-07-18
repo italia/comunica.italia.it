@@ -1,0 +1,21 @@
+uuid: 8c0292c3-b4f3-453f-aea8-4247fac8188d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sottotitolo
+    - node.type.contatti
+  module:
+    - text
+id: node.contatti.field_sottotitolo
+field_name: field_sottotitolo
+entity_type: node
+bundle: contatti
+label: Sottotitolo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

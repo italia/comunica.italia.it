@@ -1,0 +1,105 @@
+.node--type-linee-guida {
+  &.node--view-mode-teaser {
+    @include maxWidth(20em);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    @include breakpoint($small) {
+      flex-direction: row;
+      max-width: 100%;
+    }
+    @include breakpoint ($normal - 1) {
+      display: block;
+      margin-bottom: 0;
+    }
+    .header-wrapper {
+      background-color: rgba($color-blue-light, .8);
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      position: relative;
+      @include breakpoint($normal - 1) {
+        padding-right: 0;
+      }
+      @include breakpoint($normal - 1) {
+        display: none;
+      }
+      .field-name-field_icona {
+        text-align: center;
+        img {
+          padding: 1em;
+        }
+      }
+      .field-name-node_title {
+        text-align: center;
+        h2 {
+          color: $color-white;
+          margin: 0;
+          padding-bottom: .75em;
+          text-decoration: none;
+        }
+      }
+    }
+    .link-wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      @include breakpoint($small) {
+        padding-left: 2em;
+        padding-bottom: 3.5em;
+        position: relative;
+      }
+      @include breakpoint($normal - 1) {
+        margin-bottom: 3.5em;
+        padding-left: 0;
+        padding-bottom: 0;
+      }
+      .field-name-field_link {
+        .field__item {
+          margin: .75em 0;
+          a {
+            align-items: center;
+            display: flex;
+            color: $color-white;
+            font-size: $font-medium;
+            font-weight: 700;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .field-name-field_call_to_action_pagina {
+        display: flex;
+        @include breakpoint($small) {
+          bottom: 0;
+          position: absolute;
+          left: 2em;
+        }
+        @include breakpoint($normal - 1) {
+          bottom: auto;
+          left: auto;
+          position: relative;
+        }
+        a {
+          background-color: $color-blue-lightest;
+          color: $color-white;
+          display: inline-block;
+          font-size: $font-medium;
+          font-weight: 700;
+          padding: .5em 1.75em;
+          text-decoration: none;
+          transition: background-color 220ms ease-out;
+          &:hover {
+            background-color: $color-blue;
+          }
+        }
+      }
+    }
+  }
+}

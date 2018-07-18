@@ -17,10 +17,10 @@ provider: null
 plugin: 'views_block:linee_guida_list-block_1'
 settings:
   id: 'views_block:linee_guida_list-block_1'
-  label: 'Linee guida'
+  label: 'Linee Guida'
   provider: views
   label_display: visible
-  views_label: 'Linee guida'
+  views_label: 'Linee Guida'
   items_per_page: none
 visibility:
   request_path:

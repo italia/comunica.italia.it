@@ -44,6 +44,7 @@
 #}
 <div class="layout-container">
 
+  <div class="opacity-layer"></div>
   <div class="arrows-layer"></div>
 
   <div class="top-menu">
@@ -53,12 +54,15 @@
       </div>
       <div class="text-wrapper">
         <a class="link-agid" href="https://www.agid.gov.it/" target="_blank">AgID</a>
-        <div class="link-separator">+</div>
-        <a class="link-teamdigitale" href="https://teamdigitale.governo.it" target="_blank">TeamDigitale</a>
+        <!-- <div class="link-separator">+</div>
+        <a class="link-teamdigitale" href="https://teamdigitale.governo.it" target="_blank">TeamDigitale</a> -->
       </div>
     </div>
     <div class="right-section">
       <ul class="link-list">
+        <li class="close-menu-top">
+          <img src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-close.svg" alt="Close menu top">
+        </li>
         <li class="link-elem"><a href="https://pianotriennale-ict.italia.it/" tagret="_blank">Piano Triennale</a></li>
         <li class="link-elem"><a href="https://developers.italia.it/" tagret="_blank">Developers</a></li>
         <li class="link-elem"><a href="https://designers.italia.it/" tagret="_blank">Designers</a></li>
@@ -69,17 +73,17 @@
       </ul>
       <ul class="social-list">
         <li class="social-elem">
-          <a class="social-link facebook" href="#" target="_blank">
+          <a class="social-link facebook" href="https://www.facebook.com/AgIDGovIT/" target="_blank">
             <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-facebook.svg" alt="Facebook">
           </a>
         </li>
         <li class="social-elem">
-          <a class="social-link twitter" href="#" target="_blank">
+          <a class="social-link twitter" href="https://twitter.com/agidgov" target="_blank">
             <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-twitter.svg" alt="Twitter">
           </a>
         </li>
         <li class="social-elem">
-          <a class="social-link medium" href="#" target="_blank">
+          <a class="social-link medium" href="https://medium.com/@AgidGov" target="_blank">
             <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-medium.svg" alt="Medium">
           </a>
         </li>
@@ -163,17 +167,17 @@
         <div class="social-label">Seguici su</div>
         <ul class="social-list">
           <li class="social-elem light-color">
-            <a class="social-link facebook" href="#" target="_blank">
+            <a class="social-link facebook" href="https://www.facebook.com/AgIDGovIT/" target="_blank">
               <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-facebook-blue.svg" alt="Facebook">
             </a>
           </li>
           <li class="social-elem light-color">
-            <a class="social-link twitter" href="#" target="_blank">
+            <a class="social-link twitter" href="https://twitter.com/agidgov" target="_blank">
               <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-twitter-blue.svg" alt="Twitter">
             </a>
           </li>
           <li class="social-elem light-color">
-            <a class="social-link medium" href="#" target="_blank">
+            <a class="social-link medium" href="https://medium.com/@AgidGov" target="_blank">
               <img class="social-image" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-medium-blue.svg" alt="Medium">
             </a>
           </li>
