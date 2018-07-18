@@ -11,7 +11,7 @@ id: node.linee_guida.field_call_to_action_pagina
 field_name: field_call_to_action_pagina
 entity_type: node
 bundle: linee_guida
-label: 'Call to action Pagina interna'
+label: 'Call to action pagina'
 description: ''
 required: false
 translatable: false

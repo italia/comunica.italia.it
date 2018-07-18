@@ -23,7 +23,11 @@
     position: relative;
     .footer-list {
       display: flex;
+      flex-direction: column;
       list-style: none;
+      @include breakpoint($xsmall) {
+        flex-direction: row;
+      }
       .footer-elem {
         margin-right: 1.5em;
         .footer-link {
