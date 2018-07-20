@@ -61,11 +61,12 @@
   }
   &.node--view-mode-full {
     .field-name-field_sottotitolo {
-      @include maxWidth;
+      @include maxWidth(28em);
       p {
         color: $color-blue-dark;
         font-size: $font-medium;
         line-height: 1.4em;
+        margin-top: 0;
         text-align: center;
       }
     }

@@ -13,7 +13,18 @@
   #social-header {
     display: none;
     @include breakpoint($medium) {
-      display: block;
+      align-items: center;
+      display: flex;
+      height: 37px;
+    }
+    .social-label {
+      color: $color-blue-light;
+      font-size: $font-medium;
+      font-weight: 600;
+      margin-right: .75em;
+    }
+    .social-list {
+
     }
   }
   .icon-menu-main {

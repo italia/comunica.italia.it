@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2018-07-12T15:47:25+00:00",
+            "value": "2018-07-20T13:17:29+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -67,6 +67,15 @@
     "revision_translation_affected": [
         {
             "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;Nulla vitae elit libero, a pharetra augue.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\u00a0Nulla vitae elit libero, a pharetra augue.<\/p>",
+            "summary": "",
             "lang": "en"
         }
     ],
