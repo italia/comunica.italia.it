@@ -1,5 +1,8 @@
 .region-header {
-  padding: 2em 2em .5em;
+  padding: 1.5em 1em .5em;
+  @include breakpoint($medium) {
+    padding: 2em 2em .5em;
+  }
   @include breakpoint($medium) {
     padding: 2em;
   }
@@ -10,7 +13,18 @@
   #social-header {
     display: none;
     @include breakpoint($medium) {
-      display: block;
+      align-items: center;
+      display: flex;
+      height: 37px;
+    }
+    .social-label {
+      color: $color-blue-light;
+      font-size: $font-medium;
+      font-weight: 600;
+      margin-right: .75em;
+    }
+    .social-list {
+
     }
   }
   .icon-menu-main {
@@ -29,7 +43,12 @@
       color: $color-green;
       font-size: $font-xxlarge;
       font-weight: 700;
-      margin: .35em 0;
+      line-height: 1;
+      margin: .35em 0 .2em;
+      @include breakpoint($small) {
+        line-height: 1.25;
+        margin-bottom: .35em;
+      }
     }
     .subtitle {
       color: $color-blue-dark;

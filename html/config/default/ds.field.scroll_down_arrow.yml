@@ -1,0 +1,12 @@
+id: scroll_down_arrow
+label: 'Scroll down arrow'
+ui_limit: ''
+properties:
+  content:
+    value: 'Scroll down'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  block_content: block_content
+  node: node

@@ -1,145 +1,173 @@
 .node--type-contatti {
   &.node--view-mode-full {
     @include maxWidth($maxwidth-small);
-    display: flex;
-    flex-direction: column;
-    margin: 3em auto 4em;
-    @include breakpoint($medium) {
-      flex-direction: row;
+    .field-name-field_sottotitolo {
+      @include maxWidth(28em);
+      p {
+        color: $color-blue-dark;
+        font-size: $font-medium;
+        line-height: 1.4em;
+        margin-top: 0;
+        text-align: center;
+      }
     }
-    .left-wrapper {
-      flex: 3;
-      padding: 1.5em 2.5em;
-      .field-name-body {
-        margin-bottom: 2.5em;
-        h2 {
-          color: $color-blue-darkest;
-          margin-top: 0;
-        }
-        p {
-          line-height: 1.4;
-        }
+    .field--name-dynamic-token-fieldnode-scroll-down-arrow {
+      background-image: url('../images/icons/icon-arrow-down.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 45px;
+      cursor: pointer;
+      margin: 2em auto .5em;
+      height: 45px;
+      width: 45px;
+      @include breakpoint($medium) {
+        margin: 1.5em auto 1.5em;
       }
-      .field-name-field_call_to_action_pagina {
-        a {
-          background-color: $color-cyan-darkest;
-          border: 1px solid $color-cyan-darkest;
-          border-radius: 4px;
-          box-shadow: 0 2px 4px 0 #BDBDBD;
-          color: $color-gray-dark;
-          font-weight: 600;
-          padding: 1em;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: background-color 220ms ease-out;
-          &:hover {
-            background-color: $color-cyan-dark;
-          }
-        }
+      p {
+        text-indent: -9999px;
       }
-      .agid-wrapper {
-        margin-top: 6em;
-        .field-name-field_logo_agenzia {
-          img {
-
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 3em auto 4em;
+      @include breakpoint($medium) {
+        flex-direction: row;
+      }
+      .left-wrapper {
+        flex: 3;
+        padding: 1.5em 2.5em;
+        .field-name-body {
+          margin-bottom: 2.5em;
+          h2 {
+            color: $color-blue-darkest;
+            margin-top: 0;
           }
-        }
-        .field-name-field_agid_biografia {
           p {
             line-height: 1.4;
           }
         }
-        .field-name-field_social {
-          display: flex;
-          margin-top: 1.75em;
-          .field__item {
-            margin: 0 .75em 0 0;
-            a {
-              background-color: $color-cyan-darkest;
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: 65%;
-              border-radius: 50%;
-              cursor: pointer;
-              display: block;
-              height: 2.25em;
-              padding: .5em;
-              text-indent: -9999px;
-              transition: background-color 250ms ease-out;
-              width: 2.25em;
-              &:hover {
-                background-color: $color-cyan-dark;
-              }
-              &[href*="facebook"] {
-                background-image: url('../images/icons/icon-facebook-blue.svg');
-              }
-              &[href*="twitter"] {
-                background-image: url('../images/icons/icon-twitter-blue.svg');
-              }
-              &[href*="medium"] {
-                background-image: url('../images/icons/icon-medium-blue.svg');
-              }
+        .field-name-field_call_to_action_pagina {
+          a {
+            background-color: $color-cyan-darkest;
+            border: 1px solid $color-cyan-darkest;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px 0 #BDBDBD;
+            color: $color-gray-dark;
+            font-weight: 600;
+            padding: 1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 220ms ease-out;
+            &:hover {
+              background-color: $color-cyan-dark;
             }
           }
         }
-        .field-name-field_link_agid {
-          a {
-            align-items: center;
-            color: $color-gray-dark;
+        .agid-wrapper {
+          margin-top: 6em;
+          .field-name-field_logo_agenzia {
+            img {
+
+            }
+          }
+          .field-name-field_agid_biografia {
+            p {
+              line-height: 1.4;
+            }
+          }
+          .field-name-field_social {
             display: flex;
-            font-weight: 700;
-            margin-top: 1em;
-            text-decoration: none;
-            &::before {
-              content: '';
-              background-image: url('../images/icons/icon-arrow-right-gray.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-              display: block;
-              height: 1em;
-              margin-right: .5em;
-              width: 1em;
+            margin-top: 1.75em;
+            .field__item {
+              margin: 0 .75em 0 0;
+              a {
+                background-color: $color-cyan-darkest;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 65%;
+                border-radius: 50%;
+                cursor: pointer;
+                display: block;
+                height: 2.25em;
+                padding: .5em;
+                text-indent: -9999px;
+                transition: background-color 250ms ease-out;
+                width: 2.25em;
+                &:hover {
+                  background-color: $color-cyan-dark;
+                }
+                &[href*="facebook"] {
+                  background-image: url('../images/icons/icon-facebook-blue.svg');
+                }
+                &[href*="twitter"] {
+                  background-image: url('../images/icons/icon-twitter-blue.svg');
+                }
+                &[href*="medium"] {
+                  background-image: url('../images/icons/icon-medium-blue.svg');
+                }
+              }
+            }
+          }
+          .field-name-field_link_agid {
+            a {
+              align-items: center;
+              color: $color-gray-dark;
+              display: flex;
+              font-weight: 700;
+              margin-top: 1em;
+              text-decoration: none;
+              &::before {
+                content: '';
+                background-image: url('../images/icons/icon-arrow-right-gray.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                height: 1em;
+                margin-right: .5em;
+                width: 1em;
+              }
             }
           }
         }
       }
-    }
-    .right-wrapper {
-      flex: 2;
-      padding: 1.5em 2.5em;
-      .field-name-field_link {
-        .field__label {
-          color: $color-blue-darkest;
-          font-size: pxrem(24);
-          font-weight: 700;
-        }
-        .field__items {
-          margin-top: 2em;
-          .field__item {
-            border-bottom: 1px solid rgba($color-gray, .7);
-            a {
-              align-items: center;
-              color: $color-blue;
-              display: flex;
-              font-weight: 600;
-              justify-content: space-between;
-              text-decoration: none;
-              margin: 1.25em 0;
-              transition: color 220ms ease-out;
-              &:hover {
-                color: $color-blue-darkest;
-              }
-              &::after {
-                background-image: url('../images/icons/icon-arrow-down.svg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                content: '';
-                display: block;
-                height: 1em;
-                transform: rotate(-90deg);
-                width: 1em;
+      .right-wrapper {
+        flex: 2;
+        padding: 1.5em 2.5em;
+        .field-name-field_link {
+          .field__label {
+            color: $color-blue-darkest;
+            font-size: pxrem(24);
+            font-weight: 700;
+          }
+          .field__items {
+            margin-top: 2em;
+            .field__item {
+              border-bottom: 1px solid rgba($color-gray, .7);
+              a {
+                align-items: center;
+                color: $color-blue;
+                display: flex;
+                font-weight: 600;
+                justify-content: space-between;
+                text-decoration: none;
+                margin: 1.25em 0;
+                transition: color 220ms ease-out;
+                &:hover {
+                  color: $color-blue-darkest;
+                }
+                &::after {
+                  background-image: url('../images/icons/icon-arrow-down.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  content: '';
+                  display: block;
+                  height: 1em;
+                  transform: rotate(-90deg);
+                  width: 1em;
+                }
               }
             }
           }

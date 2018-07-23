@@ -2,15 +2,19 @@
   Drupal.behaviors.comunicaitalia_openlink = {
     attach: function (context, settings) {
 
-
-      if($('body').hasClass('path-roadmap')) {
-        /* SCROLL DOWN FOR ROADMAP PAGE */
+      if($('body').hasClass('path-frontpage')) {
+        /* TARGET BLANK FOR FRONTPAGE PAGE */
+        openBlank('.view-linee-guida-list .views-field-field-call-to-action-pagina a');
+      } else if($('body').hasClass('path-roadmap')) {
+        /* TARGET BLANK FOR ROADMAP PAGE */
 
       } else if($('body').hasClass('page-node-type-kit')) {
-        /* SCROLL DOWN FOR SINGLE KIT PAGE */
+        /* TARGET BLANK FOR KIT PAGE */
 
       } else if($('body').hasClass('page-node-21')) {
-        /* SCROLL DOWN FOR GUIDELINES PAGE */
+        /* TARGET BLANK FOR GUIDELINE PAGE */
+        openBlank('.view-linee-guida-list .field-name-field_link a');
+        openBlank('.view-linee-guida-list .field-name-field_call_to_action_pagina a');
 
       } else if($('body').hasClass('page-node-26')) {
         /* TARGET BLANK FOR CONTATTI PAGE */
