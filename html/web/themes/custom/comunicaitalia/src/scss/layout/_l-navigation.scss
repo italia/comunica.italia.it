@@ -4,6 +4,7 @@
   z-index: 5a;
   @include breakpoint($medium) {
     height: $menu-height;
+    margin-top: -2.5em;
     z-index: 3;
   }
   .block-id-six8theme_main_menu {

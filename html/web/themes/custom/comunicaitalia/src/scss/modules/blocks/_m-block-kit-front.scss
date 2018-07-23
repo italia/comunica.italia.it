@@ -11,6 +11,17 @@
     font-weight: 700;
     text-align: center;
   }
+  .field--name-body {
+    background-color: rgba($color-green, .9);
+    p {
+      @include maxWidth(40em);
+      color: $color-white;
+      font-size: $font-discrete;
+      margin: 0 auto;
+      padding-top: 2em;
+      text-align: center;
+    }
+  }
   .field-name-field_link {
     align-items: center;
     background-color: rgba($color-green, .9);
@@ -46,12 +57,12 @@
         transition: none;
       }
       @include breakpoint($small) {
-        height: 12em;
-        width: 12em;
+        height: 7em;
+        width: 7em;
       }
       @include breakpoint($medium) {
-        height: 15em;
-        width: 15em;
+        height: 12em;
+        width: 12em;
       }
       &:hover {
         background-image: url('../images/toolkit-blue.svg');

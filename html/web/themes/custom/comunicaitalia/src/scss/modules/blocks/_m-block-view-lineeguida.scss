@@ -1,18 +1,5 @@
 #block-six8theme-views-block-linee-guida-list-block-1 {
-  // padding-top: 1em;
   position: relative;
-  // @include breakpoint($medium) {
-  //   padding-top: 2em;
-  // }
-  // .scroll-down-wrapper {
-  //   cursor: pointer;
-  //   left: 50%;
-  //   height: 45px;
-  //   position: absolute;
-  //   top: 1em;
-  //   transform: translateX(-50%);
-  //   width: 45px;
-  // }
   h2 {
     color: $color-blue-dark;
     font-size: $font-xxlarge;
@@ -172,9 +159,15 @@
           order: 4;
           width: 100%;
         }
+        .node--type-linee-guida {
+          @include breakpoint($normal - 1) {
+            margin: 0 auto;
+            width: 33%;
+          }
+        }
         .field-name-field_link a {
           @include breakpoint($normal - 1) {
-            justify-content: center;
+            justify-content: flex-start;
           }
           &::before {
             @include plusicon;
@@ -182,7 +175,7 @@
         }
         .field-name-field_call_to_action_pagina {
           @include breakpoint($normal - 1) {
-            justify-content: center;
+            justify-content: flex-start;
           }
         }
       }

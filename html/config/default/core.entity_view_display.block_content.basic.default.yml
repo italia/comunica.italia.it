@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.basic.field_link
   module:
     - link
+    - text
 _core:
   default_config_hash: orJpHUlAc_wiQLMUjIgEJXGeiqylGHMPcmNRjGtct-M
 id: block_content.basic.default
@@ -15,8 +16,15 @@ targetEntityType: block_content
 bundle: basic
 mode: default
 content:
-  field_link:
+  body:
+    type: text_default
     weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 1
     label: hidden
     settings:
       trim_length: 80
@@ -27,5 +35,4 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-hidden:
-  body: true
+hidden: {  }
