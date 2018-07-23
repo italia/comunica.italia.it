@@ -19,7 +19,7 @@
     height: 45px;
     width: 45px;
     @include breakpoint($medium) {
-      margin: 3em auto 1.5em;
+      margin: 1.5em auto 1.5em;
     }
     p {
       text-indent: -9999px;
