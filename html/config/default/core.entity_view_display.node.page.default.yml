@@ -93,10 +93,11 @@ mode: default
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_trimmed
     weight: 21
     region: ds_content
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
   field_call_to_action_page:
     weight: 4
