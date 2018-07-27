@@ -1,0 +1,24 @@
+#block-views-block-team-block-1 {
+  @include maxWidth;
+  padding-top: 3em;
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    .views-row {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 2em;
+      width: 90%;
+      @include breakpoint($small) {
+        margin: 0 0 2em;
+        width: 50%;
+      }
+      @include breakpoint($normal - 1) {
+        width: 33%;
+        &:nth-child(3n+2) {
+          margin-top: 3em;
+        }
+      }
+    }
+  }
+}

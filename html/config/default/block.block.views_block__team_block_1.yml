@@ -1,0 +1,30 @@
+uuid: 896f02be-118b-47b7-a8f5-eafdcbb86d5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.team
+  module:
+    - system
+    - views
+  theme:
+    - six8theme
+id: views_block__team_block_1
+theme: six8theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:team-block_1'
+settings:
+  id: 'views_block:team-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/1
+    negate: false
+    context_mapping: {  }

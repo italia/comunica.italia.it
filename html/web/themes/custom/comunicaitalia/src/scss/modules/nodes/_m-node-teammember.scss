@@ -1,0 +1,110 @@
+.node--type-team-member {
+  &.node--view-mode-teaser {
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    display: flex;
+    height: 295px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 295px;
+    .text-wrapper {
+      align-self: flex-end;
+      background-color: white;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      flex-shrink: 1;
+      padding-bottom: .65em;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      &::before {
+        background-image: url('../images/halfcircle-white.svg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 14px;
+        position: absolute;
+        top: -13px;
+        width: 100%;
+      }
+      .field-name-node_title {
+        h2 {
+          font-size: $font-normal;
+          font-weight: 600;
+          margin: .2em;
+        }
+      }
+      .field-name-field_titolo {
+        color: #5A6772;
+        font-size: pxrem(15);
+        font-weight: 400;
+
+      }
+      .field-name-field_social_link {
+        margin-top: .5em;
+        .field__item {
+          display: inline-block;
+          margin: 0 .1em;
+          a {
+            background-color: $color-blue-light;
+            border-radius: 50%;
+            display: inline-block;
+            height: 30px;
+            position: relative;
+            text-indent: -9999px;
+            transition: background-color 250ms ease-out;
+            width: 30px;
+            &:hover {
+              background-color: $color-blue;
+            }
+            &::after {
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: '';
+              display: block;
+              left: 50%;
+              position: absolute;
+              height: 16px;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 16px;
+            }
+            &[href*='behance'] {
+              &::after {
+                background-image: url('../images/icons/icon-behance.svg');
+              }
+            }
+            &[href*='facebook'] {
+              &::after {
+                background-image: url('../images/icons/icon-facebook.svg');
+              }
+            }
+            &[href*='plus.google'] {
+              &::after {
+                background-image: url('../images/icons/icon-google.svg');
+              }
+            }
+            &[href*='linkedin'] {
+              &::after {
+                background-image: url('../images/icons/icon-linkedin.svg');
+              }
+            }
+            &[href*='medium'] {
+              &::after {
+                background-image: url('../images/icons/icon-medium.svg');
+              }
+            }
+            &[href*='twitter'] {
+              &::after {
+                background-image: url('../images/icons/icon-twitter.svg');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+uuid: f20f9f2c-1dbd-44ec-8dfe-12a450dd0a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.team_member.body
+    - field.field.node.team_member.field_foto
+    - field.field.node.team_member.field_social_link
+    - field.field.node.team_member.field_titolo
+    - image.style.team_member
+    - node.type.team_member
+  module:
+    - bg_image_formatter
+    - ds
+    - field_group
+    - link
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_foto
+        - node_title
+        - group_text_
+        - field_titolo
+        - field_social_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_text_:
+      children:
+        - node_title
+        - field_titolo
+        - field_social_link
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: text-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Text wrapper'
+id: node.team_member.teaser
+targetEntityType: node
+bundle: team_member
+mode: teaser
+content:
+  field_foto:
+    type: bg_image_formatter
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: team_member
+      css_settings:
+        bg_image_selector: '.node--type-team-member[data-history-node-id="[node:nid]"]'
+        bg_image_z_index: auto
+        bg_image_color: '#FFFFFF'
+        bg_image_x: top
+        bg_image_y: center
+        bg_image_attachment: scroll
+        bg_image_repeat: no-repeat
+        bg_image_background_size: cover
+        bg_image_media_query: all
+        bg_image_path_format: absolute
+        bg_image_background_size_ie8: 0
+        bg_image_important: '0'
+    third_party_settings: {  }
+  field_social_link:
+    type: link
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_titolo:
+    type: string
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  links: true

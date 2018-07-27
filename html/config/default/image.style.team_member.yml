@@ -1,0 +1,14 @@
+uuid: 264fa3f1-fa47-4aca-bd5b-0be3d895d010
+langcode: en
+status: true
+dependencies: {  }
+name: team_member
+label: 'Team member'
+effects:
+  3b7d2eb2-ab05-4eb7-878a-e68edaa2c875:
+    uuid: 3b7d2eb2-ab05-4eb7-878a-e68edaa2c875
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 295
+      height: 295

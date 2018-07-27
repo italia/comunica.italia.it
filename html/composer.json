@@ -25,7 +25,8 @@
     "drush/drush": "9.3.0",
     "wikimedia/composer-merge-plugin": "v1.4.1",
     "drupal/field_group": "^1.0",
-    "drupal/ds": "^3.1"
+    "drupal/ds": "^3.1",
+    "drupal/bg_image_formatter": "^1.2"
   },
   "require-dev": {
     "components/highlightjs": "9.7.0",

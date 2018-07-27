@@ -1,0 +1,104 @@
+uuid: d572a42d-ecf0-4b6d-9232-bcdfd24c33a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team_member.body
+    - field.field.node.team_member.field_foto
+    - field.field.node.team_member.field_social_link
+    - field.field.node.team_member.field_titolo
+    - image.style.team_member
+    - node.type.team_member
+  module:
+    - ds
+    - field_group
+    - image
+    - link
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_foto
+        - node_title
+        - group_text_w
+        - field_titolo
+        - field_social_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+  field_group:
+    group_text_w:
+      children:
+        - node_title
+        - field_titolo
+        - field_social_link
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: text-wrapper
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Text wrapper'
+id: node.team_member.default
+targetEntityType: node
+bundle: team_member
+mode: default
+content:
+  field_foto:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: team_member
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: ds_content
+  field_social_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: link
+    region: ds_content
+  field_titolo:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  body: true
+  links: true

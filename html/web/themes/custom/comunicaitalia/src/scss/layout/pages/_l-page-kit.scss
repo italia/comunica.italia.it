@@ -2,7 +2,6 @@
   .node--type-page {
     .main-wrapper {
       background-color: rgba($color-green, .9);
-      margin-bottom: 3em;
       padding: .75em;
       position: relative;
       z-index: 2;
@@ -12,6 +11,7 @@
       .main-content {
         @include maxWidth;
         .field--name-body {
+          @include maxWidth(35em);
           padding: 1em;
           p {
             color: $color-white;

@@ -96,7 +96,9 @@
   background-size: contain;
   content: '';
   display: block;
-  height: .85em;
+  height: 15px;
   margin-right: .25em;
-  width: .85em;
+  position: absolute;
+  top: .25em;
+  width: 15px;
 }

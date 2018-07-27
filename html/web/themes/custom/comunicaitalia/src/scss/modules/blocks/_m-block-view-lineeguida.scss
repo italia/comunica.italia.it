@@ -1,20 +1,22 @@
 #block-six8theme-views-block-linee-guida-list-block-1 {
+  background-color: rgba($color-blue-lightest, .9);
+  padding-top: 1.5em;
   position: relative;
   h2 {
     color: $color-blue-dark;
     font-size: $font-xxlarge;
     font-weight: 700;
+    margin: 0;
     text-align: center;
   }
   .view-linee-guida-list {
-    background-color: rgba($color-blue-lightest, .9);
-    padding: 1em;
+    padding: 0 1em 1em 1em;
     .view-content {
       @include maxWidth;
       @include breakpoint($medium) {
         display: flex;
         justify-content: space-between;
-        padding: 1.5em;
+        padding: 0 1.5em 1.5em 1.5em;
       }
       .views-row {
         align-items: center;
@@ -104,7 +106,9 @@
     }
     .views-row {
       padding: 1.5em;
-
+      .field-name-field_link .field__item {
+        position: relative;
+      }
       /* MARKETING */
       &:nth-child(3) {
         @include breakpoint($normal - 1) {
@@ -112,13 +116,19 @@
           order: 1;
         }
         .field-name-field_link a {
+          padding-left: 25px;
           &::before {
             @include plusicon;
+            left: 0;
+            margin-left: .35em;
           }
           @include breakpoint($normal - 1) {
             justify-content: flex-end;
+            padding-left: 0;
+            padding-right: 25px;
             &::after {
               @include plusicon;
+              right: 0;
               margin-left: .35em;
             }
             &::before {
@@ -141,8 +151,10 @@
           order: 3;
         }
         .field-name-field_link a {
+          padding-left: 25px;
           &::before {
             @include plusicon;
+            left: 0;
           }
         }
         .field-name-field_link,
@@ -162,15 +174,17 @@
         .node--type-linee-guida {
           @include breakpoint($normal - 1) {
             margin: 0 auto;
-            width: 33%;
+            width: 30%;
           }
         }
         .field-name-field_link a {
+          padding-left: 25px;
           @include breakpoint($normal - 1) {
             justify-content: flex-start;
           }
           &::before {
             @include plusicon;
+            left: 0;
           }
         }
         .field-name-field_call_to_action_pagina {

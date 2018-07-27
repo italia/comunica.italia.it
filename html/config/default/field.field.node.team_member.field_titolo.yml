@@ -1,0 +1,19 @@
+uuid: 5a16e1eb-39cb-47ff-9104-4e8b247de032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titolo
+    - node.type.team_member
+id: node.team_member.field_titolo
+field_name: field_titolo
+entity_type: node
+bundle: team_member
+label: Ruolo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

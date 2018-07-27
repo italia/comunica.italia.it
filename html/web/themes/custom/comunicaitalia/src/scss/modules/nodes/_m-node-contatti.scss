@@ -27,10 +27,18 @@
         text-indent: -9999px;
       }
     }
+    .field-name-node_title {
+      h1 {
+        color: $color-blue-darkest;
+        font-size: $font-xxlarge;
+        margin-bottom: 0;
+        padding-left: .85em;
+      }
+    }
     .wrapper {
       display: flex;
       flex-direction: column;
-      margin: 3em auto 4em;
+      margin: 0 auto 4em;
       @include breakpoint($medium) {
         flex-direction: row;
       }
@@ -67,9 +75,7 @@
         .agid-wrapper {
           margin-top: 6em;
           .field-name-field_logo_agenzia {
-            img {
-
-            }
+            cursor: pointer;
           }
           .field-name-field_agid_biografia {
             p {
