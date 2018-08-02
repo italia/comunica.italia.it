@@ -1,0 +1,23 @@
+uuid: 51207d6b-866f-443e-a345-e921b4ab4d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order
+    - node.type.team_member
+id: node.team_member.field_order
+field_name: field_order
+entity_type: node
+bundle: team_member
+label: Order
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

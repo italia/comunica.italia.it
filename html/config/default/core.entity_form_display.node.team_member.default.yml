@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.team_member.body
     - field.field.node.team_member.field_foto
+    - field.field.node.team_member.field_order
     - field.field.node.team_member.field_social_link
     - field.field.node.team_member.field_titolo
     - image.style.thumbnail
@@ -32,6 +33,13 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_order:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_social_link:
     weight: 11
