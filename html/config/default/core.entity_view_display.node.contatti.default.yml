@@ -37,28 +37,17 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
-        - field_link
         - group_wrapper
+        - field_link
         - field_logo_agenzia
         - body
         - group_left_wrapper
-        - field_call_to_action_pagina
-        - group_right_wrapper
         - field_agid_biografia
-        - field_social
+        - group_right_wrapper
+        - field_call_to_action_pagina
         - group_agid_wrapper
+        - field_social
         - field_link_agid
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          wrapper: h1
-          class: ''
-          link: false
   field_group:
     group_agid_wrapper:
       children:
@@ -118,7 +107,7 @@ third_party_settings:
         - group_left_wrapper
         - group_right_wrapper
       parent_name: ''
-      weight: 1
+      weight: 0
       format_type: html_element
       format_settings:
         id: ''

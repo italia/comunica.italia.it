@@ -88,7 +88,6 @@
     }
     .body-wrapper {
       background-color: rgba($color-green, .9);
-      margin-bottom: 2.5em;
       padding: 1.5em;
       position: relative;
       z-index: 2;
@@ -131,7 +130,7 @@
             color: $color-white;
             font-size: $font-medium;
             line-height: 1.4em;
-            text-align: center;
+            text-align: justify;
           }
         }
       }

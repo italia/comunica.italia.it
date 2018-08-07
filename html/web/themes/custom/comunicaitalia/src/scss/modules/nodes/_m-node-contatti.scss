@@ -29,7 +29,7 @@
     }
     .field-name-node_title {
       h1 {
-        color: $color-blue-darkest;
+        color: $color-blue-dark;
         font-size: $font-xxlarge;
         margin-bottom: 0;
         padding-left: .85em;
@@ -38,7 +38,7 @@
     .wrapper {
       display: flex;
       flex-direction: column;
-      margin: 0 auto 4em;
+      margin: 2em auto 4em;
       @include breakpoint($medium) {
         flex-direction: row;
       }
@@ -48,7 +48,8 @@
         .field-name-body {
           margin-bottom: 2.5em;
           h2 {
-            color: $color-blue-darkest;
+            color: $color-blue-dark;
+            font-size: $font-xxlarge;
             margin-top: 0;
           }
           p {
@@ -143,7 +144,7 @@
         padding: 1.5em 2.5em;
         .field-name-field_link {
           .field__label {
-            color: $color-blue-darkest;
+            color: $color-blue-dark;
             font-size: pxrem(24);
             font-weight: 700;
           }
