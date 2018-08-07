@@ -16,28 +16,16 @@
           flex-direction: row;
         }
         .field--name-body {
-          max-width: 35em;
+          letter-spacing: .015em;
+          max-width: 50em;
           padding: 1em 2em;
           p {
             color: $color-white;
             font-size: $font-medium;
-            line-height: 1.4em;
-            text-align: left;
+            line-height: 1.5em;
+            text-align: justify;
           }
         }
-        // .field--name-field-image {
-        //   align-items: center;
-        //   display: flex;
-        //   justify-content: center;
-        //   max-width: 18em;
-        //   padding: 1em 2em;
-        //   @include breakpoint($medium) {
-        //     max-width: 30em;
-        //   }
-        //   img {
-        //     display: block;
-        //   }
-        // }
       }
     }
   }

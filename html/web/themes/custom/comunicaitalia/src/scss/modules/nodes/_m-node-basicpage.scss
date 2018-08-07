@@ -31,6 +31,22 @@
       @include maxWidth;
       .field--name-body {
         text-align: justify;
+        ol,
+        ul {
+          margin-left: 2.25em;
+        }
+        h3 {
+          font-size: pxrem(36);
+          &::after {
+            border-top: 1px solid rgba(lighten($color-gray, 10%), .6);
+            content: '';
+            display: block;
+            height: 1px;
+            margin-left: .05em;
+            margin-top: .25em;
+            width: 2.75em;
+          }
+        }
       }
     }
   }
