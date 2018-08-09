@@ -181,14 +181,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <ul class="footer-list">
-        <li class="footer-elem">
-          <a class="footer-link" href="{{ url('entity.node.canonical', {'node': 20}) }}">Privacy policy</a>
-        </li>
-        <li class="footer-elem">
-          <a class="footer-link" href="{{ url('entity.node.canonical', {'node': 27}) }}">Note legali</a>
-        </li>
-      </ul>
+     
+      {% if page.footer_link%}
+          {{ page.footer_link }}
+      {% endif %}
       <div class="scroll-top-wrapper">
         <img class="scroll-top" src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-arrow-circle-down.svg" alt="Scroll to top icon">
       </div>
