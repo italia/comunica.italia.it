@@ -20,6 +20,7 @@ regions:
   sidebar_second: 'Second Sidebar'
   before_footer: 'Before Footer'
   footer: 'Footer'
+  footer_link: 'Footer link'
 
 version: '8.x-1.0'
 core: '8.x'
