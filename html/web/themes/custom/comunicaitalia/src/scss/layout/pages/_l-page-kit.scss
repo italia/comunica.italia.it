@@ -11,7 +11,7 @@
       .main-content {
         @include maxWidth;
         .field--name-body {
-          @include maxWidth(35em);
+          @include maxWidth(38em);
           padding: 1em;
           p {
             color: $color-white;

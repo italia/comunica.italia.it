@@ -16,9 +16,9 @@
           flex-direction: row;
         }
         .field--name-body {
+          @include maxWidth(38em);
           letter-spacing: .015em;
-          max-width: 50em;
-          padding: 1em 2em;
+          padding: 1em;
           p {
             color: $color-white;
             font-size: $font-medium;
