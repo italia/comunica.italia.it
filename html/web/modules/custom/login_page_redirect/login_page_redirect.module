@@ -1,0 +1,19 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function login_page_redirect_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_login_form':
+      $form['#submit'][] = '_login_page_redirect_user_login_form_submit';
+      break;
+  }
+}
+/**
+ * Custom submit for login form.
+ */
+function _login_page_redirect_user_login_form_submit($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('system.admin_content');
+}

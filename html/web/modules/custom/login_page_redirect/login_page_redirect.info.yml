@@ -1,0 +1,5 @@
+name: Login Page Redirect
+description: 'Redirect user after login to admin/content'
+package: AgID
+type: module
+core: '8.x'

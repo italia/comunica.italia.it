@@ -37,17 +37,24 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - group_wrapper
+        - 'dynamic_token_field:node-scroll_down_arrow'
         - field_link
-        - field_logo_agenzia
-        - body
         - group_left_wrapper
-        - field_agid_biografia
+        - body
+        - group_wrapper
         - group_right_wrapper
         - field_call_to_action_pagina
+        - field_logo_agenzia
         - group_agid_wrapper
+        - field_agid_biografia
         - field_social
         - field_link_agid
+    fields:
+      'dynamic_token_field:node-scroll_down_arrow':
+        plugin_id: 'dynamic_token_field:node-scroll_down_arrow'
+        weight: 0
+        label: hidden
+        formatter: default
   field_group:
     group_agid_wrapper:
       children:
@@ -56,7 +63,7 @@ third_party_settings:
         - field_social
         - field_link_agid
       parent_name: group_left_wrapper
-      weight: 6
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -74,7 +81,7 @@ third_party_settings:
         - field_call_to_action_pagina
         - group_agid_wrapper
       parent_name: group_wrapper
-      weight: 4
+      weight: 1
       format_type: html_element
       format_settings:
         id: ''
@@ -90,7 +97,7 @@ third_party_settings:
       children:
         - field_link
       parent_name: group_wrapper
-      weight: 5
+      weight: 2
       format_type: html_element
       format_settings:
         id: ''
@@ -107,7 +114,7 @@ third_party_settings:
         - group_left_wrapper
         - group_right_wrapper
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: html_element
       format_settings:
         id: ''
@@ -127,7 +134,7 @@ content:
   body:
     label: hidden
     type: text_trimmed
-    weight: 4
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
@@ -140,7 +147,7 @@ content:
     type: text_default
     region: ds_content
   field_call_to_action_pagina:
-    weight: 5
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
