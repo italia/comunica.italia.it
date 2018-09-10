@@ -9,27 +9,25 @@
     justify-content: space-between;
     .agid-logo {
       margin-top: 1em;
-      max-width: 22em;
-      width: 22em;
-    }
-    #social-footer {
-      .social-label {
-        color: $color-white;
-        font-weight: 700;
-        margin-bottom: 1em;
-        text-align: right;
+      @include breakpoint($medium) {
+        display: flex;
+        width: 100%;
       }
-      .social-list {
-        justify-content: flex-end;
-        .social-elem:last-child {
-          margin-right: 0;
+      .col {
+        display: inline-block;
+        width: 100%;
+        margin: .5em 0;
+        text-align: center;
+
+        img {
+          max-width: 230px;
         }
       }
     }
   }
   .footer-bottom {
     border-top: 1px solid $color-blue-dark;
-    margin-top: 2.75em;
+    margin-top: 5em;
     padding-top: 1.5em;
     position: relative;
     .footer-list {
@@ -61,6 +59,30 @@
         transform: rotate(180deg);
         width: 45px;
       }
+    }
+  }
+}
+
+#social-footer {
+  .social-label {
+    color: $color-white;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    float: right;
+    text-align: right;
+    letter-spacing: .01em;
+    line-height: 1.55;
+    margin-right: 1em;
+    display: none;
+    @include breakpoint($medium) {
+      display: inline;
+    }
+  }
+  .social-list {
+    justify-content: flex-end;
+    .social-elem:last-child {
+      margin-right: 0;
     }
   }
 }

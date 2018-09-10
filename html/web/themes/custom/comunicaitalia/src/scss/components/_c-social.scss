@@ -1,6 +1,7 @@
 .social-list {
-  display: flex;
+  display: inline;
   list-style: none;
+  float: right;
   .social-elem {
     background-color: $color-blue-light;
     border-radius: 50%;
@@ -8,6 +9,7 @@
     margin: 0 .25em;
     padding: .5em;
     transition: background-color 250ms ease-out;
+    float: left;
     &:hover {
       background-color: $color-blue;
     }
