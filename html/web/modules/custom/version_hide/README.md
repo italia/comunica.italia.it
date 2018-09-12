@@ -11,3 +11,7 @@ RedirectMatch 403 ^/themes/custom/<THEME_NAME>/package.json$
 RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* - [F]
 ```
+
+In the Apache configuration set `ServerTokens` to `Prod`. In the Wodby wodby/apache image simply set
+the `APACHE_SERVER_TOKENS` to `Prod`. This removes the Apache version and extensions details from the
+`Server` HTTP response header.

@@ -11,6 +11,7 @@ services:
       APACHE_BACKEND_HOST: php
       APACHE_DOCUMENT_ROOT: "${CONTAINER_DIR}/web"
       APACHE_VHOST_PRESET: php
+      APACHE_SERVER_TOKENS: Prod
     volumes:
       - "${SOURCE_DIR}:${CONTAINER_DIR}"
 #      - "data:${CONTAINER_DIR}" # MacOs nfs version
