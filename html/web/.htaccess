@@ -154,6 +154,14 @@ AddEncoding gzip svgz
   # Specifically, disallow autoload.php from being served directly.
   RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]
 
+  # 403 For Development confguration fle
+  RedirectMatch 403 ^/themes/custom/comunicaitalia/gulpfile.js$
+  RedirectMatch 403 ^/themes/custom/comunicaitalia/package.json$
+
+  # Disable method TRACE and TRACK method - Http methods
+  RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+  RewriteRule .* - [F]
+
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.
   <IfModule mod_headers.c>

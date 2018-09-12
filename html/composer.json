@@ -20,6 +20,7 @@
     "drupal/menus_attribute": "1.1",
     "drupal/metatag": "1.4",
     "drupal/monolog": "1.0",
+    "drupal/login_security": "1.5",
     "drupal/redis": "1.0",
     "drupal/webform": "5.0-rc14",
     "drush/drush": "9.3.0",
