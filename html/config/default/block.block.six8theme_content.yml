@@ -11,7 +11,7 @@ _core:
 id: six8theme_content
 theme: six8theme
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: system_main_block
 settings:

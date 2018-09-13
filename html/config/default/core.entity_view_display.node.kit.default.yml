@@ -124,4 +124,5 @@ content:
 hidden:
   content_moderation_control: true
   field_icona_kit: true
+  langcode: true
   links: true

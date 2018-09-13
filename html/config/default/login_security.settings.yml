@@ -3,8 +3,8 @@ user_wrong_count: 0
 host_wrong_count: 0
 host_wrong_count_hard: 0
 activity_threshold: 5
-disable_core_login_error: 1
-notice_attempts_available: 0
+disable_core_login_error: 0
+notice_attempts_available: 1
 last_login_timestamp: 0
 last_access_timestamp: 0
 user_blocked_notification_emails: comunicaitalia@agid.gov.it

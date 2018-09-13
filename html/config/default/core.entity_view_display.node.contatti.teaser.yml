@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.contatti.body
+    - field.field.node.contatti.field_agid_biografia
+    - field.field.node.contatti.field_call_to_action_pagina
+    - field.field.node.contatti.field_link
+    - field.field.node.contatti.field_link_agid
+    - field.field.node.contatti.field_logo_agenzia
+    - field.field.node.contatti.field_social
+    - field.field.node.contatti.field_sottotitolo
     - node.type.contatti
   module:
     - text
@@ -29,4 +36,8 @@ hidden:
   field_agid_biografia: true
   field_call_to_action_pagina: true
   field_link: true
+  field_link_agid: true
   field_logo_agenzia: true
+  field_social: true
+  field_sottotitolo: true
+  langcode: true

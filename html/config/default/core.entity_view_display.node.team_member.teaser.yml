@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.team_member.body
     - field.field.node.team_member.field_foto
+    - field.field.node.team_member.field_order
     - field.field.node.team_member.field_social_link
     - field.field.node.team_member.field_titolo
     - image.style.team_member
@@ -114,4 +115,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_order: true
+  langcode: true
   links: true

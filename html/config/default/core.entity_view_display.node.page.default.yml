@@ -133,3 +133,4 @@ content:
 hidden:
   content_moderation_control: true
   field_image: true
+  langcode: true

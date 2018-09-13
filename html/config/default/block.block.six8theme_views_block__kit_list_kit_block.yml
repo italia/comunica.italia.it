@@ -12,7 +12,7 @@ dependencies:
 id: six8theme_views_block__kit_list_kit_block
 theme: six8theme
 region: content
-weight: -1
+weight: -3
 provider: null
 plugin: 'views_block:kit_list-kit_block'
 settings:

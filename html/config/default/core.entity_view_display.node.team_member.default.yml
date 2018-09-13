@@ -111,4 +111,5 @@ content:
     region: ds_content
 hidden:
   body: true
+  langcode: true
   links: true

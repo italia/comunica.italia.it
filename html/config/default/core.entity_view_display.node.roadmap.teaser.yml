@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.roadmap.body
+    - field.field.node.roadmap.field_files
+    - field.field.node.roadmap.field_peso
     - node.type.roadmap
   module:
     - text
@@ -31,3 +33,4 @@ content:
 hidden:
   field_files: true
   field_peso: true
+  langcode: true

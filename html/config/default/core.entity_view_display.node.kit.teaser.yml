@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.kit.field_icona_kit
     - field.field.node.kit.field_kit_files
     - field.field.node.kit.field_perche_utilizzare_il_kit
+    - field.field.node.kit.field_sottotitolo
     - image.style.kit_teaser
     - node.type.kit
   module:
@@ -93,4 +94,6 @@ hidden:
   content_moderation_control: true
   field_kit_files: true
   field_perche_utilizzare_il_kit: true
+  field_sottotitolo: true
+  langcode: true
   links: true

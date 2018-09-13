@@ -1,19 +1,8 @@
 parameters:
   session.storage.options:
     cookie_domain: '{{ site_configuration.cookie_domain }}'
-  monolog.channel_handlers:
-    default: ['rotating_file_debug', 'rotating_file_error']
-    php: ['rotating_file_debug']
-  monolog.processors: ['message_placeholder', 'current_user', 'request_uri', 'ip', 'referer']
 
 services:
-  monolog.handler.rotating_file_debug:
-    class: Monolog\Handler\RotatingFileHandler
-    arguments: ['public://logs/debug.log', 10, 'debug']
-  monolog.handler.rotating_file_error:
-    class: Monolog\Handler\RotatingFileHandler
-    arguments: ['public://logs/error.log', 10, 'error']
-
   cache_tags.invalidator.checksum:
     class: Drupal\redis\Cache\RedisCacheTagsChecksum
     arguments: ['@redis.factory']

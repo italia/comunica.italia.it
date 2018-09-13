@@ -130,4 +130,5 @@ hidden:
   field_files: true
   field_link_guide: true
   field_link_linee_guida: true
+  langcode: true
   links: true

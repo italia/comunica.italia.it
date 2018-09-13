@@ -205,4 +205,5 @@ content:
     region: ds_content
 hidden:
   field_sottotitolo: true
+  langcode: true
   links: true

@@ -12,7 +12,7 @@ dependencies:
 id: kit
 theme: six8theme
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'block_content:80c896f3-af0b-48d5-bc54-3324b5d73632'
 settings:
