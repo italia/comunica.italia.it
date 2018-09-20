@@ -1,0 +1,13 @@
+name: Default content import moderation state
+type: module
+description: Import content moderation states from default_content_deploy exported nodes.
+package: Custom
+# core: 8.x
+dependencies:
+  - default_content:default_content
+
+# Information added by Drupal.org packaging script on 2018-09-20
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'default_content_moderation'
+datestamp: 1537457591

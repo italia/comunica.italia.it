@@ -487,6 +487,10 @@ class RoboFile extends \Robo\Tasks {
     $this->getDrushWithUri()
       ->drush('default-content-deploy:import')
       ->run();
+
+    $this->getDrushWithUri()
+      ->drush('default-content-moderation-import')
+      ->run();
   }
 
   /**
