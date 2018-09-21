@@ -1,0 +1,14 @@
+uuid: f9aa8a08-0720-43dc-ade6-4412db2af767
+langcode: en
+status: true
+dependencies: {  }
+name: kit
+label: 'Kit Background'
+effects:
+  429e080c-3d2e-43f6-83d1-d7718ce9fb66:
+    uuid: 429e080c-3d2e-43f6-83d1-d7718ce9fb66
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 400

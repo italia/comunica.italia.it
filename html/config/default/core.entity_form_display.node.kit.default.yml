@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.field.node.kit.body
     - field.field.node.kit.field_icona_kit
+    - field.field.node.kit.field_image
     - field.field.node.kit.field_kit_files
-    - field.field.node.kit.field_perche_utilizzare_il_kit
     - field.field.node.kit.field_sottotitolo
     - image.style.thumbnail
     - node.type.kit
@@ -23,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 11
     settings:
       rows: 9
       summary_rows: 3
@@ -32,12 +32,20 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_icona_kit:
-    weight: 11
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image:
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -45,22 +53,14 @@ content:
     type: image_image
     region: content
   field_kit_files:
-    weight: 12
+    weight: 14
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_perche_utilizzare_il_kit:
-    weight: 10
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_sottotitolo:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -69,20 +69,20 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 7
+    weight: 9
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -90,21 +90,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -117,7 +117,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60

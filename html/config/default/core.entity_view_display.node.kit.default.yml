@@ -5,86 +5,17 @@ dependencies:
   config:
     - field.field.node.kit.body
     - field.field.node.kit.field_icona_kit
+    - field.field.node.kit.field_image
     - field.field.node.kit.field_kit_files
-    - field.field.node.kit.field_perche_utilizzare_il_kit
     - field.field.node.kit.field_sottotitolo
+    - image.style.kit
     - node.type.kit
   module:
-    - ds
-    - field_group
+    - bg_image_formatter
     - file
+    - image
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-    regions:
-      ds_content:
-        - field_sottotitolo
-        - 'dynamic_token_field:node-scroll_down_arrow'
-        - field_perche_utilizzare_il_kit
-        - body
-        - group_body_wrapper
-        - group_why
-        - 'dynamic_token_field:node-scarica_i_materiali_title'
-        - field_kit_files
-    fields:
-      'dynamic_token_field:node-scarica_i_materiali_title':
-        plugin_id: 'dynamic_token_field:node-scarica_i_materiali_title'
-        weight: 4
-        label: hidden
-        formatter: default
-      'dynamic_token_field:node-scroll_down_arrow':
-        plugin_id: 'dynamic_token_field:node-scroll_down_arrow'
-        weight: 1
-        label: hidden
-        formatter: default
-  field_group:
-    group_body_wrapper:
-      children:
-        - body
-      parent_name: ''
-      weight: 2
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: body-wrapper
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: 'Body wrapper'
-    group_why:
-      children:
-        - field_perche_utilizzare_il_kit
-      parent_name: ''
-      weight: 3
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: why-wrapper
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: 'Why wrapper'
 id: node.kit.default
 targetEntityType: node
 bundle: kit
@@ -93,36 +24,56 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 3
     settings: {  }
     third_party_settings: {  }
-    region: ds_content
+    region: content
+  field_icona_kit:
+    type: bg_image_formatter
+    weight: 0
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      css_settings:
+        bg_image_selector: body
+        bg_image_color: '#FFFFFF'
+        bg_image_x: left
+        bg_image_y: top
+        bg_image_attachment: scroll
+        bg_image_repeat: no-repeat
+        bg_image_background_size: ''
+        bg_image_background_size_ie8: 0
+        bg_image_media_query: all
+        bg_image_important: '1'
+        bg_image_z_index: auto
+        bg_image_path_format: absolute
+    third_party_settings: {  }
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: kit
+    third_party_settings: {  }
+    type: image_url
+    region: content
   field_kit_files:
-    weight: 5
+    weight: 4
     label: visually_hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
-    region: ds_content
-  field_perche_utilizzare_il_kit:
-    weight: 1
-    label: above
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    type: text_trimmed
-    region: ds_content
+    region: content
   field_sottotitolo:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
     type: text_trimmed
-    region: ds_content
+    region: content
 hidden:
   content_moderation_control: true
-  field_icona_kit: true
   langcode: true
   links: true
