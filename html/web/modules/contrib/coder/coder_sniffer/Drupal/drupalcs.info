@@ -2,9 +2,8 @@
 ; version information for downloadable releases.
 name = Drupal Code Sniffer
 
-; Information added by Drupal.org packaging script on 2017-03-18
-version = "8.x-2.12"
+; Information added by Drupal.org packaging script on 2018-09-19
+version = "8.x-3.0"
 core = "8.x"
 project = "coder"
-datestamp = "1489834087"
-
+datestamp = "1537351985"

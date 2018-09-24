@@ -285,7 +285,7 @@ abstract class Tokenizer
                     || substr($commentTextLower, 0, 7) === '@phpcs:'
                 ) {
                     // If the @phpcs: syntax is being used, strip the @ to make
-                    // comparisions easier.
+                    // comparisons easier.
                     if ($commentText[0] === '@') {
                         $commentText      = substr($commentText, 1);
                         $commentTextLower = strtolower($commentText);
@@ -743,7 +743,7 @@ abstract class Tokenizer
                 }
                 break;
             default:
-                continue;
+                continue 2;
             }//end switch
         }//end for
 

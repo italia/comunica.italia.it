@@ -7,10 +7,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace SebastianBergmann\PHPCPD;
 
-final class CodeCloneMap implements \Countable, \Iterator
+final class CodeCloneMap implements \Countable, \IteratorAggregate
 {
     /**
      * @var CodeClone[]
@@ -25,17 +24,17 @@ final class CodeCloneMap implements \Countable, \Iterator
     /**
      * @var int
      */
-    private $position = 0;
-
-    /**
-     * @var int
-     */
     private $numberOfDuplicatedLines = 0;
 
     /**
      * @var int
      */
     private $numLines = 0;
+
+    /**
+     * @var int
+     */
+    private $largestCloneSize = 0;
 
     /**
      * @var array
@@ -64,6 +63,8 @@ final class CodeCloneMap implements \Countable, \Iterator
                 $this->filesWithClones[$file->getName()] = true;
             }
         }
+
+        $this->largestCloneSize = \max($this->largestCloneSize, $clone->getSize());
     }
 
     /**
@@ -110,28 +111,23 @@ final class CodeCloneMap implements \Countable, \Iterator
         return $this->numberOfDuplicatedLines;
     }
 
-    public function rewind(): void
+    public function getIterator(): CodeCloneMapIterator
     {
-        $this->position = 0;
+        return new CodeCloneMapIterator($this);
     }
 
-    public function valid(): bool
+    public function isEmpty(): bool
     {
-        return $this->position < \count($this->clones);
+        return empty($this->clones);
     }
 
-    public function key(): int
+    public function getAverageSize(): int
     {
-        return $this->position;
+        return $this->getNumberOfDuplicatedLines() / $this->count();
     }
 
-    public function current(): CodeClone
+    public function getLargestSize(): int
     {
-        return $this->clones[$this->position];
-    }
-
-    public function next(): void
-    {
-        $this->position++;
+        return $this->largestCloneSize;
     }
 }

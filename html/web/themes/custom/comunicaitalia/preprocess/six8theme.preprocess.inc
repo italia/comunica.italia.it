@@ -42,8 +42,6 @@ function six8theme_preprocess_views_view(&$variables, &$suggestions) {
   $variables['attributes']['class'][] = 'view-display-' . $variables['view']->current_display;
 }
 
-
-
 /**
  * Implements template_preprocess_block().
  */

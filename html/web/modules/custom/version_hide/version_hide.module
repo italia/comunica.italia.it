@@ -1,11 +1,17 @@
 <?php
 
-use \Drupal\Core\Asset\AttachedAssetsInterface;
+/**
+ * @file
+ * Module for site security.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
 
 /**
  * Implements hook_page_attachments_alter().
  *
- * Hides the meta name Generator on the site to avoid showing the current version of Drupal.
+ * Hides the meta name Generator on the site to avoid showing the current
+ * version of Drupal.
  */
 function version_hide_page_attachments_alter(array &$attachments) {
   foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
@@ -16,10 +22,10 @@ function version_hide_page_attachments_alter(array &$attachments) {
 }
 
 /**
- * Implement hook_js_alter().
+ * Implements hook_js_alter().
  *
  * Removes the version of Drupal from the query string of core libraries.
- * 
+ *
  * @see \Drupal\Core\Asset\JsCollectionRenderer.php::render()
  */
 function version_hide_js_alter(&$javascript, AttachedAssetsInterface $assets) {

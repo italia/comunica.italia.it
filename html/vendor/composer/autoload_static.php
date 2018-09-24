@@ -145,7 +145,6 @@ class ComposerStaticInitDrupal8
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
-            'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 55,
         ),
         'C' => 
         array (
@@ -439,10 +438,9 @@ class ComposerStaticInitDrupal8
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
-        ),
-        'Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dealerdirect/phpcodesniffer-composer-installer/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
         'Consolidation\\OutputFormatters\\' => 
         array (
@@ -583,6 +581,7 @@ class ComposerStaticInitDrupal8
         'SebastianBergmann\\PHPCPD\\CodeClone' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeClone.php',
         'SebastianBergmann\\PHPCPD\\CodeCloneFile' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneFile.php',
         'SebastianBergmann\\PHPCPD\\CodeCloneMap' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneMap.php',
+        'SebastianBergmann\\PHPCPD\\CodeCloneMapIterator' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneMapIterator.php',
         'SebastianBergmann\\PHPCPD\\Detector\\Detector' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Detector.php',
         'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\AbstractStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/AbstractStrategy.php',
         'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\DefaultStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/DefaultStrategy.php',

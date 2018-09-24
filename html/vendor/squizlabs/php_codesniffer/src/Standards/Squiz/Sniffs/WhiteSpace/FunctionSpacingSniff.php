@@ -1,6 +1,6 @@
 <?php
 /**
- * Checks the separation between methods in a class or interface.
+ * Checks the separation between functions and methods.
  *
  * @author    Greg Sherwood <gsherwood@squiz.net>
  * @copyright 2006-2015 Squiz Pty Ltd (ABN 77 084 670 600)
@@ -68,7 +68,17 @@ class FunctionSpacingSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        // If the ruleset has only overriden the spacing property, use
+        $tokens           = $phpcsFile->getTokens();
+        $previousNonEmpty = $phpcsFile->findPrevious(Tokens::$emptyTokens, ($stackPtr - 1), null, true);
+        if ($previousNonEmpty !== false
+            && $tokens[$previousNonEmpty]['code'] === T_OPEN_TAG
+            && $tokens[$previousNonEmpty]['line'] !== 1
+        ) {
+            // Ignore functions at the start of an embedded PHP block.
+            return;
+        }
+
+        // If the ruleset has only overridden the spacing property, use
         // that value for all spacing rules.
         if ($this->rulesetProperties === null) {
             $this->rulesetProperties = [];
@@ -88,8 +98,7 @@ class FunctionSpacingSniff implements Sniff
             }
         }
 
-        $tokens        = $phpcsFile->getTokens();
-        $this->spacing = (int) $this->spacing;
+        $this->spacing            = (int) $this->spacing;
         $this->spacingBeforeFirst = (int) $this->spacingBeforeFirst;
         $this->spacingAfterLast   = (int) $this->spacingAfterLast;
 
@@ -293,15 +302,19 @@ class FunctionSpacingSniff implements Sniff
 
                 if ($foundLines < $requiredSpacing) {
                     $padding = str_repeat($phpcsFile->eolChar, ($requiredSpacing - $foundLines));
-                    $phpcsFile->fixer->addContent($nextSpace, $padding);
+                    $phpcsFile->fixer->addContentBefore($nextSpace, $padding);
                 } else {
                     $nextContent = $phpcsFile->findNext(T_WHITESPACE, ($nextSpace + 1), null, true);
                     $phpcsFile->fixer->beginChangeset();
-                    for ($i = $nextSpace; $i < ($nextContent - 1); $i++) {
+                    for ($i = $nextSpace; $i < $nextContent; $i++) {
+                        if ($tokens[$i]['line'] === $tokens[$nextContent]['line']) {
+                            $phpcsFile->fixer->addContentBefore($i, str_repeat($phpcsFile->eolChar, $requiredSpacing));
+                            break;
+                        }
+
                         $phpcsFile->fixer->replaceToken($i, '');
                     }
 
-                    $phpcsFile->fixer->replaceToken($i, str_repeat($phpcsFile->eolChar, $requiredSpacing));
                     $phpcsFile->fixer->endChangeset();
                 }
             }//end if

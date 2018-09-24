@@ -50,7 +50,7 @@ class File
     /**
      * If TRUE, the entire file is being ignored.
      *
-     * @var string
+     * @var boolean
      */
     public $ignored = false;
 
@@ -74,6 +74,13 @@ class File
      * @var \PHP_CodeSniffer\Tokenizers\Tokenizer
      */
     public $tokenizer = null;
+
+    /**
+     * The name of the tokenizer being used for this file.
+     *
+     * @var string
+     */
+    public $tokenizerType = 'PHP';
 
     /**
      * Was the file loaded from cache?
@@ -381,7 +388,7 @@ class File
                     || substr($commentTextLower, 0, 10) === '@phpcs:set'
                 ) {
                     // If the @phpcs: syntax is being used, strip the @ to make
-                    // comparisions easier.
+                    // comparisons easier.
                     if ($commentText[0] === '@') {
                         $commentText = substr($commentText, 1);
                     }
@@ -1401,7 +1408,7 @@ class File
                 // If it's null, then there must be no parameters for this
                 // method.
                 if ($currVar === null) {
-                    continue;
+                    continue 2;
                 }
 
                 $vars[$paramCount]            = [];
@@ -1598,7 +1605,7 @@ class File
      * <code>
      *   array(
      *    'scope'           => 'public', // public protected or protected.
-     *    'scope_specified' => false,    // true if the scope was explicitely specified.
+     *    'scope_specified' => false,    // true if the scope was explicitly specified.
      *    'is_static'       => false,    // true if the static keyword was found.
      *   );
      * </code>
@@ -2370,12 +2377,12 @@ class File
             return false;
         }
 
-        if (isset($this->tokens[$stackPtr]['scope_closer']) === false) {
+        if (isset($this->tokens[$stackPtr]['scope_opener']) === false) {
             return false;
         }
 
-        $classCloserIndex = $this->tokens[$stackPtr]['scope_closer'];
-        $extendsIndex     = $this->findNext(T_EXTENDS, $stackPtr, $classCloserIndex);
+        $classOpenerIndex = $this->tokens[$stackPtr]['scope_opener'];
+        $extendsIndex     = $this->findNext(T_EXTENDS, $stackPtr, $classOpenerIndex);
         if (false === $extendsIndex) {
             return false;
         }
@@ -2386,7 +2393,7 @@ class File
             T_WHITESPACE,
         ];
 
-        $end  = $this->findNext($find, ($extendsIndex + 1), $classCloserIndex, true);
+        $end  = $this->findNext($find, ($extendsIndex + 1), ($classOpenerIndex + 1), true);
         $name = $this->getTokensAsString(($extendsIndex + 1), ($end - $extendsIndex - 1));
         $name = trim($name);
 
