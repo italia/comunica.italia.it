@@ -21,7 +21,7 @@ third_party_settings:
   field_group:
     group_text_wrapper:
       children:
-        - body
+        - field_sottotitolo
         - node_link
       parent_name: ''
       weight: 1
@@ -55,12 +55,12 @@ third_party_settings:
       ds_content:
         - field_icona_kit
         - group_text_wrapper
-        - body
+        - field_sottotitolo
         - node_link
     fields:
       node_link:
         plugin_id: node_link
-        weight: 3
+        weight: 4
         label: hidden
         formatter: default
         settings:
@@ -73,14 +73,6 @@ targetEntityType: node
 bundle: kit
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_trimmed
-    weight: 2
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: ds_content
   field_icona_kit:
     type: image
     weight: 0
@@ -90,10 +82,18 @@ content:
       image_style: kit_teaser
       image_link: ''
     third_party_settings: {  }
+  field_sottotitolo:
+    type: text_trimmed
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
 hidden:
+  body: true
   content_moderation_control: true
   field_image: true
   field_kit_files: true
-  field_sottotitolo: true
   langcode: true
   links: true
