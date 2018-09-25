@@ -118,7 +118,7 @@ class MyClass
 {
 
     /**
-     * The tag that this element represents (omiting the @ symbol).
+     * The tag that this element represents (omitting the @ symbol).
      *
      * @var string
      */
@@ -355,3 +355,59 @@ $util->setLogger(new class {
     private function b(){}
     protected function c(){}
 });
+
+?>
+
+<?php
+function functionInEmbeddedPHP() {
+
+}
+
+// Make sure the indentation for the function comment does not get removed.
+class MyClass
+{
+
+    protected $tag = '';
+
+
+
+    /**
+     * Function comment.
+     *
+     * @return boolean
+     */
+    function func1() {}
+
+}//end class
+
+class MyClass
+{
+
+
+
+    /**
+     * Function comment.
+     *
+     * @return boolean
+     */
+    function func1() {}
+
+}//end class
+
+class MyClass
+{
+    // Unrelated comment.
+    /**
+     * Function comment.
+     *
+     * @return boolean
+     */
+    function func1() {}
+    // phpcs:disable Standard.Category.Sniff -- for reasons.
+    /**
+     * Function comment.
+     *
+     * @return boolean
+     */
+    function func2() {}
+}//end class

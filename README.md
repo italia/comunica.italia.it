@@ -40,6 +40,7 @@ decommentare le righe relative al volume nel file `docker-compose.yml`:
     * 127.0.0.1 web.comunicaitalia.loc
     * 127.0.0.1 mailhog.comunicaitalia.loc
 4. avviare lo stack Docker con il comando `make up`
+5. configurare gli hook di git con il comando `make hooks`
 
 #### Build
 

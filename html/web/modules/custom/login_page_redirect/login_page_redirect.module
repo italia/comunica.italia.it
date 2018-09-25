@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @file
+ * Redirect user after login to admin/content.
+ */
+
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -11,6 +17,7 @@ function login_page_redirect_form_alter(&$form, FormStateInterface $form_state, 
       break;
   }
 }
+
 /**
  * Custom submit for login form.
  */

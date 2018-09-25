@@ -1119,7 +1119,7 @@ class PHP extends Tokenizer
 
                         // Any T_ARRAY tokens we find between here and the next
                         // token that can't be part of the return type need to be
-                        // coverted to T_STRING tokens.
+                        // converted to T_STRING tokens.
                         for ($x; $x < $numTokens; $x++) {
                             if (is_array($tokens[$x]) === false || isset($allowed[$tokens[$x][0]]) === false) {
                                 break;
@@ -1202,64 +1202,6 @@ class PHP extends Tokenizer
                     $stackPtr++;
                     continue;
                 }
-            }//end if
-
-            /*
-                HHVM 3.5 tokenizes "else[\s]+if" as a T_ELSEIF token while PHP
-                proper only tokenizes "elseif" as a T_ELSEIF token. So split
-                up the HHVM token to make it looks like proper PHP.
-            */
-
-            if ($tokenIsArray === true
-                && $token[0] === T_ELSEIF
-                && strtolower($token[1]) !== 'elseif'
-            ) {
-                $finalTokens[$newStackPtr] = [
-                    'content' => substr($token[1], 0, 4),
-                    'code'    => T_ELSE,
-                    'type'    => 'T_ELSE',
-                ];
-
-                $newStackPtr++;
-                $finalTokens[$newStackPtr] = [
-                    'content' => substr($token[1], 4, -2),
-                    'code'    => T_WHITESPACE,
-                    'type'    => 'T_WHITESPACE',
-                ];
-
-                $newStackPtr++;
-                $finalTokens[$newStackPtr] = [
-                    'content' => substr($token[1], -2),
-                    'code'    => T_IF,
-                    'type'    => 'T_IF',
-                ];
-
-                if (PHP_CODESNIFFER_VERBOSITY > 1) {
-                    echo "\t\t* token $stackPtr changed from T_ELSEIF to T_ELSE/T_WHITESPACE/T_IF".PHP_EOL;
-                }
-
-                $newStackPtr++;
-                continue;
-            }//end if
-
-            /*
-                HHVM 3.5 and 3.6 tokenize a hashbang line such as #!/usr/bin/php
-                as T_HASHBANG while PHP proper uses T_INLINE_HTML.
-            */
-
-            if ($tokenIsArray === true && defined('T_HASHBANG') === true && $token[0] === T_HASHBANG) {
-                $finalTokens[$newStackPtr] = [
-                    'content' => $token[1],
-                    'code'    => T_INLINE_HTML,
-                    'type'    => 'T_INLINE_HTML',
-                ];
-
-                if (PHP_CODESNIFFER_VERBOSITY > 1) {
-                    echo "\t\t* token $stackPtr changed from T_HASHBANG to T_INLINE_HTML".PHP_EOL;
-                }
-
-                $newStackPtr++;
-                continue;
             }//end if
 
             /*
@@ -1371,9 +1313,15 @@ class PHP extends Tokenizer
                     }
 
                     if ($tokens[$i] === ')') {
+                        $parenCount = 1;
                         for ($i--; $i > 0; $i--) {
                             if ($tokens[$i] === '(') {
-                                break;
+                                $parenCount--;
+                                if ($parenCount === 0) {
+                                    break;
+                                }
+                            } else if ($tokens[$i] === ')') {
+                                $parenCount++;
                             }
                         }
 
@@ -1430,7 +1378,7 @@ class PHP extends Tokenizer
                 // where "class" should be T_STRING instead of T_CLASS.
                 if (($newToken['code'] === T_CLASS
                     || $newToken['code'] === T_FUNCTION)
-                    && $finalTokens[($newStackPtr - 1)]['code'] === T_DOUBLE_COLON
+                    && $finalTokens[$lastNotEmptyToken]['code'] === T_DOUBLE_COLON
                 ) {
                     $newToken['code'] = T_STRING;
                     $newToken['type'] = 'T_STRING';
@@ -1650,15 +1598,6 @@ class PHP extends Tokenizer
                 }
 
                 continue;
-            } else if ($this->tokens[$i]['code'] === T_ECHO && $this->tokens[$i]['content'] === '<?=') {
-                // HHVM tokenizes <?= as T_ECHO but it should be T_OPEN_TAG_WITH_ECHO.
-                $this->tokens[$i]['code'] = T_OPEN_TAG_WITH_ECHO;
-                $this->tokens[$i]['type'] = 'T_OPEN_TAG_WITH_ECHO';
-
-                if (PHP_CODESNIFFER_VERBOSITY > 1) {
-                    $line = $this->tokens[$i]['line'];
-                    echo "\t* token $i on line $line changed from T_ECHO to T_OPEN_TAG_WITH_ECHO".PHP_EOL;
-                }
             } else if ($this->tokens[$i]['code'] === T_TRUE
                 || $this->tokens[$i]['code'] === T_FALSE
                 || $this->tokens[$i]['code'] === T_NULL

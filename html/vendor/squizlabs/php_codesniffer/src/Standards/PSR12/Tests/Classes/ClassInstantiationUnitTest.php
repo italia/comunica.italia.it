@@ -37,6 +37,10 @@ class ClassInstantiationUnitTest extends AbstractSniffUnitTest
             22 => 1,
             24 => 1,
             25 => 1,
+            30 => 1,
+            32 => 1,
+            33 => 1,
+            34 => 1,
         ];
 
     }//end getErrorList()

@@ -32,6 +32,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_agid_biografia: true
   field_call_to_action_pagina: true

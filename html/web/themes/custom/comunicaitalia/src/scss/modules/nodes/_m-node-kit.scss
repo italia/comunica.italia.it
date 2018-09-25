@@ -22,7 +22,7 @@
       display: flex;
       flex: 3;
       flex-direction: column;
-      .field--name-body {
+      .field--name-field-sottotitolo {
         h2 {
           color: $color-white;
           font-size: $font-medium;
@@ -186,14 +186,16 @@
       }
 
       ul {
-        list-style-type: disc;
+        list-style-type: none;
         margin-left: 1.5rem;
-        @include breakpoint($medium) {
-          margin-left: 3.2rem;
-        }
 
         li {
-          line-height: 1.55;
+          line-height: 1.80;
+          background-image: url('../images/icons/icon-arrow-right-gray.svg');
+          background-repeat: no-repeat;
+          background-position: left center;
+          background-size: 20px;
+          padding-left: 30px;
         }
       }
 

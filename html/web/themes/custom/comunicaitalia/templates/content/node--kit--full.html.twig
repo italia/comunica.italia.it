@@ -92,7 +92,7 @@
   {{ title_suffix }}
   <div class="scroll-down-arrow"></div>
 
-  <div class="body-wrapper clearfix" {% if content.field_image|render %} style="background-image: url({{ content.field_image|render|striptags|trim }}); background-size:cover; " {% endif %}>
+  <div class="body-wrapper clearfix" {% if content.field_image|render|striptags|trim is not empty %} style="background-image: url({{ content.field_image|render|striptags|trim }}); background-size:cover; " {% endif %}>
     {{ content.field_sottotitolo }}
     <div class="share-link">
       <p>{{ 'Share on'|t }}</p>
@@ -109,7 +109,7 @@
         </li>
       </ul>
 
-      {% if content.field_kit_files|render %}
+      {% if content.field_kit_files|render|striptags|trim is not empty %}
         <a href="#downloadkit" class="download--kit">
             {{ 'Download the Kit'|t }}
             <span class="arrow arrow--down"></span>
@@ -122,7 +122,7 @@
     {{ content|without('field_image', 'field_sottotitolo', 'field_kit_files') }}
   </div>
 
-  {% if content.field_kit_files|render %}
+  {% if content.field_kit_files|render|striptags|trim is not empty %}
     <div id="downloadkit">
       <h2 class="scarica-materiali--title">{{ 'Scarica i materiali'|t }}</h2>
       <div class="scroll-down-arrow"></div>

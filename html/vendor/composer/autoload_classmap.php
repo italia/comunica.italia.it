@@ -26,6 +26,7 @@ return array(
     'SebastianBergmann\\PHPCPD\\CodeClone' => $vendorDir . '/sebastian/phpcpd/src/CodeClone.php',
     'SebastianBergmann\\PHPCPD\\CodeCloneFile' => $vendorDir . '/sebastian/phpcpd/src/CodeCloneFile.php',
     'SebastianBergmann\\PHPCPD\\CodeCloneMap' => $vendorDir . '/sebastian/phpcpd/src/CodeCloneMap.php',
+    'SebastianBergmann\\PHPCPD\\CodeCloneMapIterator' => $vendorDir . '/sebastian/phpcpd/src/CodeCloneMapIterator.php',
     'SebastianBergmann\\PHPCPD\\Detector\\Detector' => $vendorDir . '/sebastian/phpcpd/src/Detector/Detector.php',
     'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\AbstractStrategy' => $vendorDir . '/sebastian/phpcpd/src/Detector/Strategy/AbstractStrategy.php',
     'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\DefaultStrategy' => $vendorDir . '/sebastian/phpcpd/src/Detector/Strategy/DefaultStrategy.php',

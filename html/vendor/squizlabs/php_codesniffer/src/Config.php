@@ -23,7 +23,7 @@ class Config
      *
      * @var string
      */
-    const VERSION = '3.3.0';
+    const VERSION = '3.3.2';
 
     /**
      * Package stability; either stable, beta or alpha.
@@ -393,12 +393,6 @@ class Config
                 self::$overriddenDefaults['stdinContent'] = true;
             }
         }//end if
-
-        if (defined('PHP_CODESNIFFER_IN_TESTS') === true && defined('HHVM_VERSION') === true) {
-            // HHVM 3.25+ wont let us re-open STDIN after it is closed.
-            // So don't close it.
-            return;
-        }
 
         fclose($handle);
 
@@ -1298,6 +1292,8 @@ class Config
             $error .= $this->printShortUsage(true);
             throw new DeepExitException($error, 3);
         } else {
+            // Can't modify the files array directly because it's not a real
+            // class member, so need to use this little get/modify/set trick.
             $files       = $this->files;
             $files[]     = $file;
             $this->files = $files;
@@ -1518,6 +1514,11 @@ class Config
         $data = self::getConfigData($name.'_path');
         if ($data !== null) {
             return $data;
+        }
+
+        if ($name === "php") {
+            // For php, we know the executable path. There's no need to look it up.
+            return PHP_BINARY;
         }
 
         if (array_key_exists($name, self::$executablePaths) === true) {

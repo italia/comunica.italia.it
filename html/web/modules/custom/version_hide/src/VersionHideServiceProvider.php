@@ -11,12 +11,13 @@ use Drupal\Core\DependencyInjection\ServiceProviderBase;
 class VersionHideServiceProvider extends ServiceProviderBase {
 
   /**
-   * Removes the X-Generator HTTP Header to hide the current
-   * version of Drupal.
+   * Removes the X-Generator HTTP Header to hide the current version of Drupal.
    *
    * @param \Drupal\Core\DependencyInjection\ContainerBuilder $container
+   *   The ContainerBuilder.
    */
   public function alter(ContainerBuilder $container) {
     $container->removeDefinition('response_generator_subscriber');
   }
+
 }

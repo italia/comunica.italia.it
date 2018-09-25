@@ -44,18 +44,36 @@ class ClassInstantiationSniff implements Sniff
 
         // Find the class name.
         $allowed = [
-            T_STRING,
-            T_NS_SEPARATOR,
-            T_SELF,
-            T_STATIC,
-            T_VARIABLE,
-            T_DOLLAR,
+            T_STRING          => T_STRING,
+            T_NS_SEPARATOR    => T_NS_SEPARATOR,
+            T_SELF            => T_SELF,
+            T_STATIC          => T_STATIC,
+            T_VARIABLE        => T_VARIABLE,
+            T_DOLLAR          => T_DOLLAR,
+            T_OBJECT_OPERATOR => T_OBJECT_OPERATOR,
+            T_DOUBLE_COLON    => T_DOUBLE_COLON,
         ];
 
         $allowed += Tokens::$emptyTokens;
 
-        $classNameEnd = $phpcsFile->findNext($allowed, ($stackPtr + 1), null, true);
-        if ($classNameEnd === false) {
+        $classNameEnd = null;
+        for ($i = ($stackPtr + 1); $i < $phpcsFile->numTokens; $i++) {
+            if (isset($allowed[$tokens[$i]['code']]) === true) {
+                continue;
+            }
+
+            if ($tokens[$i]['code'] === T_OPEN_SQUARE_BRACKET
+                || $tokens[$i]['code'] === T_OPEN_CURLY_BRACKET
+            ) {
+                $i = $tokens[$i]['bracket_closer'];
+                continue;
+            }
+
+            $classNameEnd = $i;
+            break;
+        }
+
+        if ($classNameEnd === null) {
             return;
         }
 

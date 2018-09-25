@@ -14,6 +14,7 @@ services:
       APACHE_SERVER_TOKENS: Prod
     volumes:
       - "${SOURCE_DIR}:${CONTAINER_DIR}"
+      - "./httpd.conf.tmpl:/etc/gotpl/httpd.conf.tmpl"
 #      - "data:${CONTAINER_DIR}" # MacOs nfs version
     labels:
       - 'traefik.enable=true'
