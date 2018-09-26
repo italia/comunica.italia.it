@@ -108,7 +108,7 @@
   </div>
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content|without('field_image', 'field_sottotitolo', 'field_kit_files') }}
+    {{ content|without('field_image', 'field_sottotitolo', 'field_kit_files', 'field_testo_fascia') }}
   </div>
 
   {% if content.field_kit_files|render|striptags|trim is not empty %}

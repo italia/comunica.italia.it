@@ -31,6 +31,12 @@
       @include maxWidth;
       .field--name-body {
         text-align: justify;
+        @include maxWidth;
+        @include breakpoint($medium) {
+          padding: 1em;
+          @include maxWidth(38em);
+        }
+
         ol,
         ul {
           margin-left: 2.25em;

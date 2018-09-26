@@ -93,7 +93,7 @@
       padding: 1.5em;
       position: relative;
       z-index: 2;
-      min-height: 450px;
+      min-height: 300px;
 
       .field-name-field_testo_fascia {
         @include maxWidth(28em);
@@ -111,15 +111,6 @@
           font-size: $font-discrete;
           line-height: 1.4em;
           text-align: justify;
-        }
-
-        &:after {
-          margin: 1.6rem auto .7em;
-          width: 20em;
-          height: 1px;
-          background: $color-white;
-          content: " ";
-          display: block;
         }
       }
 
@@ -219,6 +210,10 @@
         line-height: 1.2;
         font-weight: 700;
         color: $color-blue;
+      }
+
+      a {
+        color: $color-blue-dark;
       }
     }
 

@@ -23,6 +23,21 @@
       text-decoration: none;
       color: $color-white;
       text-align: center;
+
+      background: $color-blue-dark;
+      padding: .8rem;
+
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      margin: .6rem 0;
+      font-size: $font-medium;
+
+      @include breakpoint($medium) {
+        display: inline-block;
+        width: 12em;
+        margin: 1.6em .6rem 0 0;
+      }
     }
   }
   .field-name-field_link {
