@@ -90,15 +90,13 @@
 // =============================================================================
 
 @mixin plusicon {
-  background-image: url('../images/icons/icon-plus.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  border: solid 1px white;
+  background: white;
   content: '';
   display: block;
-  height: 15px;
+  height: 10px;
   margin-right: .25em;
   position: absolute;
   top: .25em;
-  width: 15px;
+  width: 10px;
 }

@@ -32,6 +32,9 @@ function six8theme_preprocess_page(&$variables) {
 function six8theme_preprocess_region(&$variables) {
   global $base_url;
   $variables['base_url'] = $base_url;
+
+  $variables['cta_linee_guida'] = theme_get_setting('cta_linee_guida','six8theme');
+  $variables['cta_kit'] = theme_get_setting('cta_kit','six8theme');
 }
 
 /**
@@ -125,4 +128,35 @@ function six8theme_node_base_classes(array &$variables) {
       $variables['attributes']['class'] = $classes;
     }
   }
+}
+
+/**
+ * Implement hook_form_system_theme_settings_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+
+function six8theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['six8theme_settings']['cta_header']['cta_linee_guida'] = [
+    '#type' => 'entity_autocomplete',
+    '#title' => t('Link for Linee Guida'),
+    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_linee_guida', 'six8theme')),
+    '#target_type' => 'node',
+    '#selection_handler' => 'default',
+    '#selection_settings' => [
+      'target_bundles' => ['page'],
+    ],
+  ];
+
+  $form['six8theme_settings']['cta_header']['cta_kit'] = [
+    '#type' => 'entity_autocomplete',
+    '#title' => t('Link for KIT'),
+    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_kit', 'six8theme')),
+    '#target_type' => 'node',
+    '#selection_handler' => 'default',
+    '#selection_settings' => [
+      'target_bundles' => ['page'],
+    ],
+  ];
 }

@@ -19,6 +19,11 @@
       padding-top: 1em;
       text-align: center;
     }
+    a {
+      text-decoration: none;
+      color: $color-white;
+      text-align: center;
+    }
   }
   .field-name-field_link {
     align-items: center;

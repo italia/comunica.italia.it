@@ -22,7 +22,7 @@
       display: flex;
       flex: 3;
       flex-direction: column;
-      .field--name-field-sottotitolo {
+      .field-name-field_testo_fascia {
         h2 {
           color: $color-white;
           font-size: $font-medium;
@@ -76,6 +76,18 @@
         text-indent: -9999px;
       }
     }
+
+    .field-name-field_sottotitolo {
+      @include maxWidth(28em);
+      p {
+        color: $color-blue-dark;
+        font-size: $font-medium;
+        line-height: 1.4em;
+        margin-top: 0;
+        text-align: center;
+      }
+    }
+
     .body-wrapper {
       background-color: rgba($color-green, .9);
       padding: 1.5em;
@@ -83,7 +95,7 @@
       z-index: 2;
       min-height: 450px;
 
-      .field-name-field_sottotitolo {
+      .field-name-field_testo_fascia {
         @include maxWidth(28em);
 
         @include breakpoint($medium) {
@@ -93,7 +105,6 @@
 
         h2 {
           color: $color-white;
-          text-align: center;
         }
         p {
           color: $color-white;

@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.kit.field_image
     - field.field.node.kit.field_kit_files
     - field.field.node.kit.field_sottotitolo
+    - field.field.node.kit.field_testo_fascia
     - image.style.kit_teaser
     - node.type.kit
   module:
@@ -21,7 +22,7 @@ third_party_settings:
   field_group:
     group_text_wrapper:
       children:
-        - field_sottotitolo
+        - field_testo_fascia
         - node_link
       parent_name: ''
       weight: 1
@@ -54,13 +55,13 @@ third_party_settings:
     regions:
       ds_content:
         - field_icona_kit
+        - field_testo_fascia
         - group_text_wrapper
-        - field_sottotitolo
         - node_link
     fields:
       node_link:
         plugin_id: node_link
-        weight: 4
+        weight: 2
         label: hidden
         formatter: default
         settings:
@@ -82,9 +83,9 @@ content:
       image_style: kit_teaser
       image_link: ''
     third_party_settings: {  }
-  field_sottotitolo:
+  field_testo_fascia:
     type: text_trimmed
-    weight: 3
+    weight: 0
     region: ds_content
     label: hidden
     settings:
@@ -95,5 +96,6 @@ hidden:
   content_moderation_control: true
   field_image: true
   field_kit_files: true
+  field_sottotitolo: true
   langcode: true
   links: true

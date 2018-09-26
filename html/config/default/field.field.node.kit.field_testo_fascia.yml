@@ -1,0 +1,22 @@
+uuid: bee47a6d-0f3f-4e56-8ecb-d2bc0bcd19d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testo_fascia
+    - node.type.kit
+  module:
+    - text
+id: node.kit.field_testo_fascia
+field_name: field_testo_fascia
+entity_type: node
+bundle: kit
+label: 'Testo fascia'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

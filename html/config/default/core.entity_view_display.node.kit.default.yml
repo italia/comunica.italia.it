@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.kit.field_image
     - field.field.node.kit.field_kit_files
     - field.field.node.kit.field_sottotitolo
+    - field.field.node.kit.field_testo_fascia
     - image.style.kit
     - node.type.kit
   module:
@@ -23,7 +24,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -36,7 +37,7 @@ content:
     type: image_url
     region: content
   field_kit_files:
-    weight: 3
+    weight: 4
     label: visually_hidden
     settings:
       use_description_as_link_text: true
@@ -50,6 +51,13 @@ content:
       trim_length: 600
     third_party_settings: {  }
     type: text_trimmed
+    region: content
+  field_testo_fascia:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden:
   content_moderation_control: true

@@ -90,25 +90,14 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
+
+  {{ content.field_sottotitolo }}
+
   <div class="scroll-down-arrow"></div>
 
   <div class="body-wrapper clearfix" {% if content.field_image|render|striptags|trim is not empty %} style="background-image: url({{ content.field_image|render|striptags|trim }}); background-size:cover; " {% endif %}>
-    {{ content.field_sottotitolo }}
+    {{ content.field_testo_fascia }}
     <div class="share-link">
-      <p>{{ 'Share on'|t }}</p>
-      <ul>
-        <li class="share-link--element">
-          <a href="https://twitter.com/intent/tweet?url={{ url('<current>') }}" target="_blank">
-            <img src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-twitter-blue.svg" alt="Twitter">
-          </a>
-        </li>
-        <li class="share-link--element">
-          <a href="https://www.facebook.com/sharer.php?p[url]={{ url('<current>') }}" target="_blank">
-            <img src="{{ base_url ~ '/' ~ base_path ~ directory }}/dist/images/icons/icon-facebook-blue.svg" alt="Facebook">
-          </a>
-        </li>
-      </ul>
-
       {% if content.field_kit_files|render|striptags|trim is not empty %}
         <a href="#downloadkit" class="download--kit">
             {{ 'Download the Kit'|t }}
