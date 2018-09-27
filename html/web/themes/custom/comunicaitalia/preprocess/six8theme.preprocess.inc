@@ -35,6 +35,15 @@ function six8theme_preprocess_region(&$variables) {
 
   $variables['cta_linee_guida'] = theme_get_setting('cta_linee_guida','six8theme');
   $variables['cta_kit'] = theme_get_setting('cta_kit','six8theme');
+
+  // An exception might be thrown.
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    // If the database is not yet available, set the default value.
+    $variables['is_front'] = FALSE;
+  }
 }
 
 /**
