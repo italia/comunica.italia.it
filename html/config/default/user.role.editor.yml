@@ -12,6 +12,7 @@ permissions:
   - 'access toolbar'
   - 'administer node display'
   - 'administer nodes'
+  - 'administer themes'
   - 'create contatti content'
   - 'create kit content'
   - 'create linee_guida content'

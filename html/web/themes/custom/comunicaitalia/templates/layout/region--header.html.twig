@@ -48,13 +48,26 @@
     </div>
 
     <div class="text-wrapper">
-      <h1 class="title">Comunichiamo come comunicare</h1>
-      <div class="subtitle">i servizi digitali</div>
-      <p>Guide, consigli e kit per le strategie di comunicazione, marketing e storytelling per le Pubbliche Amministrazioni</p>
+      {%  if header_site_title  %}
+        <h1 class="title">{{ header_site_title }}</h1>
+      {% endif %}
+
+      {% if header_site_sottotitolo %}
+        <div class="subtitle">{{ header_site_sottotitolo }}</div>
+      {% endif %}
+
+      {% if header_site_occhiello %}
+        <p>{{ header_site_occhiello }}</p>
+      {% endif %}
 
       {% if is_front %}
-        <a href="{{ path('entity.node.canonical', {'node': cta_linee_guida }) }}#block-six8theme-page-title" class="btn--link">Leggi le Linee Guida</a>
-        <a href="{{ path('entity.node.canonical', {'node': cta_kit }) }}#block-six8theme-page-title" class="btn--link">Vai al Kit</a>
+        {% if cta_text_1 %}
+          <a href="{{ path('entity.node.canonical', {'node': cta_link_1 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_1 }}</a>
+        {% endif %}
+
+        {% if cta_text_2 %}
+          <a href="{{ path('entity.node.canonical', {'node': cta_link_2 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_2 }}</a>
+        {% endif %}
       {% endif %}
     </div>
 

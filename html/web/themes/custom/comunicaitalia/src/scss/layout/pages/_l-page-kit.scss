@@ -18,6 +18,11 @@
             font-size: $font-medium;
             line-height: 1.4em;
           }
+
+          a {
+            color: $color-white;
+            font-weight: 700;
+          }
         }
       }
     }

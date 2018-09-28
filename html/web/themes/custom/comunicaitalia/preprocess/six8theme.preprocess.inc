@@ -33,14 +33,22 @@ function six8theme_preprocess_region(&$variables) {
   global $base_url;
   $variables['base_url'] = $base_url;
 
-  $variables['cta_linee_guida'] = theme_get_setting('cta_linee_guida','six8theme');
-  $variables['cta_kit'] = theme_get_setting('cta_kit','six8theme');
+  $variables['header_site_title'] = theme_get_setting('site_title', 'six8theme');
+  $variables['header_site_sottotitolo'] = theme_get_setting('site_sottotitolo', 'six8theme');
+  $variables['header_site_occhiello'] = theme_get_setting('site_occhiello', 'six8theme');
+
+  // Link for call to action
+  $variables['cta_link_1'] = theme_get_setting('cta_link_1', 'six8theme');
+  $variables['cta_link_2'] = theme_get_setting('cta_link_2', 'six8theme');
+
+  // Button text for call to action
+  $variables['cta_text_1'] = theme_get_setting('cta_text_1', 'six8theme');
+  $variables['cta_text_2'] = theme_get_setting('cta_text_2', 'six8theme');
 
   // An exception might be thrown.
   try {
     $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
-  }
-  catch (Exception $e) {
+  } catch (Exception $e) {
     // If the database is not yet available, set the default value.
     $variables['is_front'] = FALSE;
   }
@@ -147,10 +155,40 @@ function six8theme_node_base_classes(array &$variables) {
  */
 
 function six8theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
-  $form['six8theme_settings']['cta_header']['cta_linee_guida'] = [
+
+  $form['six8theme_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Comunica Italia Themes Configuration'),
+    '#description' => t('Configuration header themes'),
+    '#weight' => -1000,
+    '#open' => TRUE,
+  ];
+
+  $form['six8theme_settings']['header']['site_title'] = [
+    '#type' => 'textfield',
+    '#title' => t('Titolo del sito'),
+    '#description' => 'Edit ' . theme_get_setting('site_title', 'six8theme'),
+    '#default_value' => theme_get_setting('site_title', 'six8theme'),
+  ];
+
+  $form['six8theme_settings']['header']['site_sottotitolo'] = [
+    '#type' => 'textfield',
+    '#title' => t('Sottotitolo'),
+    '#description' => 'Edit ' . theme_get_setting('site_sottotitolo', 'six8theme'),
+    '#default_value' => theme_get_setting('site_sottotitolo', 'six8theme'),
+  ];
+
+  $form['six8theme_settings']['header']['site_occhiello'] = [
+    '#type' => 'textarea',
+    '#title' => t('Occhiello'),
+    '#description' => 'Edit ' . theme_get_setting('site_occhiello', 'six8theme'),
+    '#default_value' => theme_get_setting('site_occhiello', 'six8theme'),
+  ];
+
+  $form['six8theme_settings']['cta_header']['cta_link_1'] = [
     '#type' => 'entity_autocomplete',
-    '#title' => t('Link for Linee Guida'),
-    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_linee_guida', 'six8theme')),
+    '#title' => t('Bottone #1 Link'),
+    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_link_1', 'six8theme')),
     '#target_type' => 'node',
     '#selection_handler' => 'default',
     '#selection_settings' => [
@@ -158,14 +196,26 @@ function six8theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\For
     ],
   ];
 
-  $form['six8theme_settings']['cta_header']['cta_kit'] = [
+  $form['six8theme_settings']['cta_header']['cta_text_1'] = [
+    '#type' => 'textfield',
+    '#title' => t('Bottone #1 Testo'),
+    '#default_value' => theme_get_setting('cta_text_1', 'six8theme'),
+  ];
+
+  $form['six8theme_settings']['cta_header']['cta_link_2'] = [
     '#type' => 'entity_autocomplete',
-    '#title' => t('Link for KIT'),
-    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_kit', 'six8theme')),
+    '#title' => t('Bottone #2 Link'),
+    '#default_value' => \Drupal\node\Entity\Node::load(theme_get_setting('cta_link_2', 'six8theme')),
     '#target_type' => 'node',
     '#selection_handler' => 'default',
     '#selection_settings' => [
       'target_bundles' => ['page'],
     ],
+  ];
+
+  $form['six8theme_settings']['cta_header']['cta_text_2'] = [
+    '#type' => 'textfield',
+    '#title' => t('Bottone #2 Testo'),
+    '#default_value' => theme_get_setting('cta_text_2', 'six8theme'),
   ];
 }

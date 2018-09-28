@@ -7,5 +7,10 @@ logo:
   use_default: 1
 favicon:
   use_default: 1
-cta_linee_guida: '21'
-cta_kit: '8'
+site_title: 'Comunichiamo come comunicare'
+site_sottotitolo: 'i servizi digitali'
+site_occhiello: 'Guide, consigli e kit per le strategie di comunicazione, marketing e storytelling per le Pubbliche Amministrazioni'
+cta_link_1: '21'
+cta_text_1: 'Leggi le linee guida'
+cta_link_2: '8'
+cta_text_2: 'Vai al kit'
