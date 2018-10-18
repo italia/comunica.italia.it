@@ -16,6 +16,7 @@ function six8theme_preprocess_html(&$variables) {
     }
   }
   $variables['base_url'] = $base_url;
+  $variables['html_attributes']['lang'] = 'it';
 }
 
 /**

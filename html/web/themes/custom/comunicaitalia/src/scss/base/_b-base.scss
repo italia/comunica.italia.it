@@ -40,3 +40,12 @@ a:hover {
 .clearboth {
   clear: both;
 }
+
+*:focus {
+  box-shadow: inset 0 0 0 3px $color-orange;
+  padding: 5px;
+}
+
+.focus--mouse {
+  box-shadow: none;
+}
