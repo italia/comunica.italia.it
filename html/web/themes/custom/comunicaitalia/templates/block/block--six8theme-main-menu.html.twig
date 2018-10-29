@@ -36,7 +36,7 @@
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes|without('role', 'aria-labelledby') }}>
   <div class="close-menu-main">
-    <img src="{{ theme_path }}/dist/images/icons/icon-close.svg" alt="Close menu main">
+    <img src="{{ directory }}/dist/images/icons/icon-close.svg" alt="Close menu main">
   </div>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}

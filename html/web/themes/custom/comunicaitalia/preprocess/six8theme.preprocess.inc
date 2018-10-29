@@ -14,22 +14,13 @@ function six8theme_preprocess_html(&$variables) {
       $variables['attributes']['class'][] = 'page-node-' . $node->id();
     }
   }
-  $variables['theme_path'] = base_path() . $variables['directory'];
   $variables['html_attributes']['lang'] = 'it';
-}
-
-/**
- * Implements template_preprocess_page.
- */
-function six8theme_preprocess_page(&$variables) {
-  $variables['theme_path'] = base_path() . $variables['directory'];
 }
 
 /**
  * Implements template_preprocess_region.
  */
 function six8theme_preprocess_region(&$variables) {
-  $variables['theme_path'] = base_path() . $variables['directory'];
   $variables['header_site_title'] = theme_get_setting('site_title', 'six8theme');
   $variables['header_site_sottotitolo'] = theme_get_setting('site_sottotitolo', 'six8theme');
   $variables['header_site_occhiello'] = theme_get_setting('site_occhiello', 'six8theme');
@@ -66,7 +57,6 @@ function six8theme_preprocess_block(&$variables) {
   if (isset($variables['elements']['#id'])) {
     $variables['attributes']['class'][] = 'block-id-' . $variables['elements']['#id'];
   }
-  $variables['theme_path'] = base_path() . $variables['directory'];
 }
 
 /**
