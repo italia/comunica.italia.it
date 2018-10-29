@@ -3,7 +3,6 @@
 .DS_Store
 
 .env
-docker-compose.yml
 html/build/build.local.default.yml
 
 html/build/backups/*.sql

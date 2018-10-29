@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  apache:
+    environment:
+      APACHE_LOG_LEVEL: error
+    labels:
+      - 'traefik.frontend.rule=Host:comunica.italia.it'
+    restart: always
+
+  db:
+    restart: always
+
+  php:
+    restart: always
+
+  redis:
+    restart: always
+
+  traefik:
+    restart: always
+
+# SPC Cloud machines have MTU 1400, and docker-compose does not automatically pick
+# the host daemon MTU.
+# https://github.com/moby/moby/issues/22297
+# https://github.com/docker/compose/issues/3438
+networks:
+  default:
+    driver_opts:
+      com.docker.network.driver.mtu: 1400

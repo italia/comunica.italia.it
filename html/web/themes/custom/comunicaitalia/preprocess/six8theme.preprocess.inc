@@ -9,13 +9,12 @@
  * Implements template_preprocess_html().
  */
 function six8theme_preprocess_html(&$variables) {
-  global $base_url;
   if (isset($variables["node_type"])) {
     if ($node = \Drupal::request()->attributes->get('node')) {
       $variables['attributes']['class'][] = 'page-node-' . $node->id();
     }
   }
-  $variables['base_url'] = $base_url;
+  $variables['theme_path'] = base_path() . $variables['directory'];
   $variables['html_attributes']['lang'] = 'it';
 }
 
@@ -23,17 +22,14 @@ function six8theme_preprocess_html(&$variables) {
  * Implements template_preprocess_page.
  */
 function six8theme_preprocess_page(&$variables) {
-  global $base_url;
-  $variables['base_url'] = $base_url;
+  $variables['theme_path'] = base_path() . $variables['directory'];
 }
 
 /**
  * Implements template_preprocess_region.
  */
 function six8theme_preprocess_region(&$variables) {
-  global $base_url;
-  $variables['base_url'] = $base_url;
-
+  $variables['theme_path'] = base_path() . $variables['directory'];
   $variables['header_site_title'] = theme_get_setting('site_title', 'six8theme');
   $variables['header_site_sottotitolo'] = theme_get_setting('site_sottotitolo', 'six8theme');
   $variables['header_site_occhiello'] = theme_get_setting('site_occhiello', 'six8theme');
@@ -67,11 +63,10 @@ function six8theme_preprocess_views_view(&$variables, &$suggestions) {
  * Implements template_preprocess_block().
  */
 function six8theme_preprocess_block(&$variables) {
-  global $base_url;
   if (isset($variables['elements']['#id'])) {
     $variables['attributes']['class'][] = 'block-id-' . $variables['elements']['#id'];
   }
-  $variables['base_url'] = $base_url;
+  $variables['theme_path'] = base_path() . $variables['directory'];
 }
 
 /**
@@ -156,7 +151,6 @@ function six8theme_node_base_classes(array &$variables) {
  */
 
 function six8theme_form_system_theme_settings_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state) {
-
   $form['six8theme_settings'] = [
     '#type' => 'details',
     '#title' => t('Comunica Italia Themes Configuration'),

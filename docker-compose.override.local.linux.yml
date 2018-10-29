@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  apache:
+    environment:
+      APACHE_LOG_LEVEL: debug
+
+  php:
+    image: wellnetimages/wodby-php:$PHP_DEV_TAG
+    environment:
+      ENV_TYPE: 'LOC'
+      PHP_IDE_CONFIG: serverName=my-ide
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
+      #PHP_XDEBUG: 1
+      #PHP_XDEBUG_DEFAULT_ENABLE: 1
+      PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
+      PHP_XDEBUG_REMOTE_HOST: host.docker.internal
+
+  traefik:
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8080:8080'

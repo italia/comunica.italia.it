@@ -12,15 +12,6 @@
 #### Taefik
 
 Il routing interno verso le immagini e la terminazione HTTPS sono gestite da `Træfik`.
-Se si ha già un'istanza di Træfik in esecuzione è possibile utilizzarla direttamente, è sufficiente impostare il nome
-corretto della network esterna nel file docker-compose.yml.
-Altrimenti è possibile lanciare una nuova copia di Træfik utilizzando decommentando il container `traefik` nel file
-`docker-compose.yml`. In questo caso è necessario prima creare un certificato HTTPS:
-
-1. `cd certs`
-2. `openssl genrsa 1024 > traefik.key`
-3. `chmod 400 traefik.key`
-4. `openssl req -new -x509 -nodes -sha1 -days 365 -key traefik.key -out traefik.cert`
 
 #### Volume applicazione MacOs
 
@@ -36,11 +27,7 @@ decommentare le righe relative al volume nel file `docker-compose.yml`:
 1. copiare il file `.env.example` in un nuovo file `.env` e personalizzare le voci nella sezione `LOCAL SETTINGS`
 2. copiare il file `docker-compose.yml.example` in un nuovo file `docker-compose.yml`
 2. copiare il file `html/build/build.local.default.yml.example` in un nuovo file `html/build/build.local.default.yml`
-3. aggiungere i seguenti path al file `/etc/hosts`:
-    * 127.0.0.1 web.comunicaitalia.loc
-    * 127.0.0.1 mailhog.comunicaitalia.loc
-4. avviare lo stack Docker con il comando `make up`
-5. configurare gli hook di git con il comando `make hooks`
+3. avviare lo stack Docker con il comando `make up`
 
 #### Build
 
@@ -74,4 +61,4 @@ Sono stati definiti una serie di task Robo per automatizzare alcune operazioni:
 Su alcuni sistemi Linux il primo utente non root non è 1000 ma 1001. Le immagini di Wodby utilizzate in questo progetto
 prevedono che l'utente sul sistema host abbia UID e GUID impostati a 1000 (lo puoi scoprire con i comandi `id -u` e
 `id -g`). In questo caso è necessario sostituire l'immagine di default `wodby/drupal-php` con una custom
-`wellnetimages/wodby-drupal-php:7.1-dev` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host.
+`wellnetimages/wodby-drupal-php` dentro alla quale l'utente `wodby` è mappato sull'utente 1001 dell'host.
