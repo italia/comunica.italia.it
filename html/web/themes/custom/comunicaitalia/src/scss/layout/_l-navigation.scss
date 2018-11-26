@@ -40,17 +40,19 @@
         a {
           @include breakpoint($medium) {
             color: $color-white;
-            font-size: $font-medium;
+            font-size: $font-discrete;
             font-weight: 700;
             transition: color 220ms ease-out;
             text-decoration: none;
             text-transform: uppercase;
             &:hover {
               color: $color-blue-light;
+              font-size: 1.30rem;
             }
           }
           &.is-active {
             color: $color-green;
+            font-size: 1.30rem;
           }
         }
       }

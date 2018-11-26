@@ -4,7 +4,7 @@
   position: relative;
   z-index: 2;
   h2 {
-    color: $color-blue-dark;
+    color: $color-white;
     font-size: $font-xxlarge;
     font-weight: 700;
     margin: 0;
@@ -14,7 +14,7 @@
     p {
       @include maxWidth(40em);
       color: $color-white;
-      font-size: $font-discrete;
+      font-size: $font-desktop;
       margin: 0 auto;
       padding-top: 1em;
       text-align: center;
