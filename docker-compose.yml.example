@@ -1,0 +1,56 @@
+version: "2"
+
+services:
+  apache:
+    image: wodby/apache:$APACHE_TAG
+    container_name: "${PROJECT_NAME}_apache"
+    depends_on:
+      - php
+    environment:
+      APACHE_LOG_LEVEL: debug
+      APACHE_BACKEND_HOST: php
+      APACHE_DOCUMENT_ROOT: "${CONTAINER_DIR}/web"
+      APACHE_VHOST_PRESET: php
+      APACHE_SERVER_TOKENS: Prod
+    volumes:
+      - "${SOURCE_DIR}:${CONTAINER_DIR}"
+      - "./httpd.conf.tmpl:/etc/gotpl/httpd.conf.tmpl"
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.backend=apache'
+      - 'traefik.port=80'
+      - 'traefik.frontend.rule=Host:web.${PROJECT_BASE_URL}'
+
+  db:
+    image: wodby/mariadb:$MARIADB_TAG
+    container_name: "${PROJECT_NAME}_mariadb"
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+
+  php:
+    image: wellnetimages/wodby-drupal-php:7.1
+    container_name: "${PROJECT_NAME}_php"
+    environment:
+      PHP_FPM_CLEAR_ENV: "no"
+    volumes:
+      - "${SOURCE_DIR}:${CONTAINER_DIR}"
+
+  redis:
+    container_name: "${PROJECT_NAME}_redis"
+    image: wodby/redis:$REDIS_TAG
+
+  traefik:
+    image: traefik:1.7.3-alpine
+    command: --configFile=/etc/traefik/conf/traefik.toml
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+      - './traefik.toml:/etc/traefik/conf/traefik.toml:ro'
+      - './acme.json:/etc/traefik/conf/acme.json:rw'
