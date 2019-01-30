@@ -6,7 +6,7 @@
   .view-content {
     @include maxWidth($maxwidth-tiny);
     .views-row {
-
+      margin: 15px 0;
     }
   }
 }
