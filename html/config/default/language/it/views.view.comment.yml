@@ -1,0 +1,97 @@
+label: Commenti
+display:
+  default:
+    display_title: Principale
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Applica
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+      pager:
+        options:
+          tags:
+            previous: '‹ precedente'
+            next: 'seguente ›'
+            first: '« prima'
+            last: 'ultima »'
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+      fields:
+        comment_bulk_form:
+          action_title: Azione
+        subject:
+          label: Oggetto
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autore
+          separator: ', '
+        entity_id:
+          label: 'Inserito in'
+          separator: ', '
+        changed:
+          label: Aggiornato
+          separator: ', '
+        operations:
+          label: Operazioni
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: Oggetto
+        combine:
+          expose:
+            label: 'Nome dell''autore'
+        langcode:
+          expose:
+            label: Lingua
+      title: Commenti
+      empty:
+        area_text_custom:
+          content: 'Nessun commento disponibile.'
+      use_more_text: altro
+  page_published:
+    display_title: 'Commenti pubblicati'
+    display_options:
+      menu:
+        title: Commenti
+  page_unapproved:
+    display_title: 'Commenti non approvati'
+    display_options:
+      menu:
+        title: 'Commenti non approvati'
+      filters:
+        subject:
+          expose:
+            label: Oggetto
+        langcode:
+          expose:
+            label: Lingua
+      fields:
+        comment_bulk_form:
+          action_title: Azione
+        subject:
+          label: Oggetto
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autore
+          separator: ', '
+        entity_id:
+          label: 'Inserito in'
+          separator: ', '
+        changed:
+          label: Aggiornato
+          separator: ', '
+        operations:
+          label: Operazioni
+        name_1:
+          separator: ', '

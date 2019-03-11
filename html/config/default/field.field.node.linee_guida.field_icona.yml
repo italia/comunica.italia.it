@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_icona
     - node.type.linee_guida
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.linee_guida.field_icona
 field_name: field_icona
 entity_type: node
@@ -14,7 +21,7 @@ bundle: linee_guida
 label: Icon
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

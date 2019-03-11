@@ -1,0 +1,20 @@
+uuid: 3daa5874-5979-45be-89cc-1cd09cf2c0c4
+langcode: it
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - six8theme
+id: languageswitcher
+theme: six8theme
+region: toolbar
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

@@ -7,6 +7,7 @@ libraries:
   - six8theme/base
 
 regions:
+  toolbar: 'Toolbar sites'
   header: 'Header'
   branding: 'Branding'
   navigation: 'Navigation'

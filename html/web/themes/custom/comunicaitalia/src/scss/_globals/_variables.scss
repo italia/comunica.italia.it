@@ -65,6 +65,7 @@ $color-orange:      #ff8c00;
 // =============================================================================
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 $font-titillium: 'Titillium Web', sans-serif;
+$font-ita: 'Ita', sans-serif;
 
 $fonts: (
   titillium: $font-titillium
@@ -81,3 +82,9 @@ $font-large:      pxrem(28);
 $font-xlarge:     pxrem(30);
 $font-xxlarge:    pxrem(42);
 $font-biglarge:   pxrem(46);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../../' !default;

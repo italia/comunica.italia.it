@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_foto
     - node.type.team_member
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.team_member.field_foto
 field_name: field_foto
 entity_type: node
@@ -14,7 +21,7 @@ bundle: team_member
 label: Foto
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

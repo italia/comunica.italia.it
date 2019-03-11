@@ -1,0 +1,65 @@
+.region-toolbar {
+  float: right;
+}
+
+.language-switcher-language-url {
+  display: inline-flex;
+  ul {
+    list-style-type: none;
+    position: relative;
+    li {
+      padding: 0 1em;
+      position: relative;
+
+      &:not(.is-active) {
+        display: none;
+        padding: .56rem 1rem;
+        position: absolute;
+        margin-left: -25px;
+
+        &:before {
+          position: absolute;
+          content: "\25b2";
+          left: 50%;
+          transform: translateX(-50%);
+          top: -11px;
+          color: $color-blue-topmenu;
+          font-size: 27px;
+        }
+
+        a {
+          background-color: $color-white;
+          color: $color-blue-topmenu;
+          box-shadow: -1px 0px 5px 0px #BBBBBB;
+          padding: .56rem 1rem;
+          border-radius: 5px;
+          line-height: 3.5em;
+          font-weight: 700;
+        }
+      }
+
+      a {
+        color: $color-white;
+        line-height: 3.5em;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.language__arrow {
+  font-family: $font-ita;
+  display: inline-block;
+  line-height: 3.5em;
+  cursor: pointer;
+  font-size: 1.05rem;
+  margin: 0 20px -5px 0;
+
+  &:after {
+    content: "\23f6";
+    display: block;
+    color: $color-white;
+  }
+}
+

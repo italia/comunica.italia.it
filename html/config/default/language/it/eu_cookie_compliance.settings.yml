@@ -1,0 +1,7 @@
+popup_agreed:
+  value: '<h2>Grazie per aver accettato i cookie.</h2><p>Se vuoi puoi chiudere questo messaggio oppure puoi approfondire l''argomento sulla nostra informativa.</p>'
+popup_agree_button_message: 'Si, accetto'
+popup_find_more_button_message: 'Maggiori informazioni'
+popup_hide_button_message: Nascondi
+popup_info:
+  value: '<h2>Questo sito utilizza i cookie per migliorare la tua esperienza.</h2><p>Cliccando su qualsiasi link in questa pagina, dai il tuo consenso al loro utilizzo.</p>'

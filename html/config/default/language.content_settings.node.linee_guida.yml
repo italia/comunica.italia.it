@@ -1,0 +1,18 @@
+uuid: 314eeb98-6c29-4372-bde5-ddb567bf2d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.linee_guida
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: node.linee_guida
+target_entity_type_id: node
+target_bundle: linee_guida
+default_langcode: site_default
+language_alterable: true

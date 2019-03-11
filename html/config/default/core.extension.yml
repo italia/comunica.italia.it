@@ -12,6 +12,7 @@ module:
   config: 0
   config_filter: 0
   config_split: 0
+  config_translation: 0
   contact: 0
   content_moderation: 0
   contextual: 0
@@ -59,6 +60,7 @@ module:
   workflows: 0
   ds: 1
   menu_link_content: 1
+  content_translation: 10
   views: 10
   comunica_italia: 1000
 theme:

@@ -49,24 +49,24 @@
 
     <div class="text-wrapper">
       {%  if header_site_title  %}
-        <h1 class="title">{{ header_site_title }}</h1>
+        <h1 class="title">{{ header_site_title|t }}</h1>
       {% endif %}
 
       {% if header_site_sottotitolo %}
-        <div class="subtitle">{{ header_site_sottotitolo }}</div>
+        <div class="subtitle">{{ header_site_sottotitolo|t }}</div>
       {% endif %}
 
       {% if header_site_occhiello %}
-        <p>{{ header_site_occhiello }}</p>
+        <p>{{ header_site_occhiello|t }}</p>
       {% endif %}
 
       {% if is_front %}
         {% if cta_text_1 %}
-          <a href="{{ path('entity.node.canonical', {'node': cta_link_1 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_1 }}</a>
+          <a href="{{ path('entity.node.canonical', {'node': cta_link_1 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_1|t }}</a>
         {% endif %}
 
         {% if cta_text_2 %}
-          <a href="{{ path('entity.node.canonical', {'node': cta_link_2 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_2 }}</a>
+          <a href="{{ path('entity.node.canonical', {'node': cta_link_2 }) }}#block-six8theme-page-title" class="btn--link">{{ cta_text_2|t }}</a>
         {% endif %}
       {% endif %}
     </div>

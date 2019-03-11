@@ -2,7 +2,15 @@
 @import "breakpoint";
 
 // Import.
-@import '/_globals/*';
+@import
+'_globals/variables',
+'_globals/normalize',
+'_globals/functions',
+'_globals/mixins',
+'_globals/helpers',
+'_globals/fonts';
+
+
 @import '/base/*';
 @import '/components/*';
 @import '/layout/*';

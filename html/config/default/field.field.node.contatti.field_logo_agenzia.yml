@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_logo_agenzia
     - node.type.contatti
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.contatti.field_logo_agenzia
 field_name: field_logo_agenzia
 entity_type: node
@@ -14,7 +21,7 @@ bundle: contatti
 label: 'Logo Agenzia per l''Italia Digitale'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

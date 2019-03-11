@@ -98,6 +98,9 @@
     "patches": {
       "monolog/monolog": {
         "Set a limit to normalizer depth": "patches/monolog-fix-normalizer-depth.patch"
+      },
+      "drupal/core": {
+        "Programmatically created translatable content type returns SQL error on content creation": "patches/2599228-104-8.6.x.patch"
       }
     },
     "installer-paths": {

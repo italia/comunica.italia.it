@@ -12,7 +12,7 @@ bundle: roadmap
 label: Peso
 description: 'Questo campo determina l''ordinamento degli elementi di tipo Roadmap'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

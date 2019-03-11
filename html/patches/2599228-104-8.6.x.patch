@@ -1,0 +1,453 @@
+From 64057310cbca271a001058067b5fbfcc5d250b93 Mon Sep 17 00:00:00 2001
+From: GoZ <goz@226961.no-reply.drupal.org>
+Date: Thu, 6 Dec 2018 16:41:28 +0100
+Subject: [PATCH] Issue #2599228 by tstoeckler, Poornachandran, catch, johan.s,
+ hchonov, tim.plunkett, Voidtek, neetu morwani, vacho: Programmatically
+ created translatable content type returns SQL error on content creation
+
+---
+ .../content_translation.module                | 72 +++++++++++++++
+ .../content_translation.services.yml          |  5 +-
+ .../d7_entity_translation_settings.yml        |  5 --
+ .../migrations/d7_node_translation.yml        |  2 -
+ .../src/ContentTranslationManager.php         | 14 +--
+ .../src/ContentTranslationUpdatesManager.php  | 51 ++---------
+ .../entity_test.entity_test_bundle.test.yml   |  6 ++
+ ..._settings.entity_test_with_bundle.test.yml | 17 ++++
+ .../ContentTranslationModuleInstallTest.php   | 88 +++++++++++++++++++
+ .../d6_language_content_settings.yml          |  2 -
+ .../d7_language_content_settings.yml          |  2 -
+ .../src/Entity/EntityTestWithBundle.php       |  2 +
+ 12 files changed, 196 insertions(+), 70 deletions(-)
+ create mode 100644 core/modules/content_translation/tests/modules/content_translation_test/config/install/entity_test.entity_test_bundle.test.yml
+ create mode 100644 core/modules/content_translation/tests/modules/content_translation_test/config/install/language.content_settings.entity_test_with_bundle.test.yml
+ create mode 100644 core/modules/content_translation/tests/src/Kernel/ContentTranslationModuleInstallTest.php
+
+diff --git a/core/modules/content_translation/content_translation.module b/core/modules/content_translation/content_translation.module
+index 0ab227b789..48e1cf3460 100644
+--- a/core/modules/content_translation/content_translation.module
++++ b/core/modules/content_translation/content_translation.module
+@@ -16,6 +16,7 @@
+ use Drupal\Core\Language\LanguageInterface;
+ use Drupal\Core\Routing\RouteMatchInterface;
+ use Drupal\Core\StringTranslation\TranslatableMarkup;
++use Drupal\language\ContentLanguageSettingsInterface;
+ 
+ /**
+  * Implements hook_help().
+@@ -169,6 +170,77 @@ function content_translation_entity_type_alter(array &$entity_types) {
+   }
+ }
+ 
++/**
++  * Implements hook_ENTITY_TYPE_insert().
++  *
++  * Installs Content Translation's field storage definitions for the target
++  * entity type, if required.
++  *
++  * Also clears the bundle information cache so that the bundle's translatability
++  * will be set properly.
++  *
++  * @see content_translation_entity_bundle_info_alter()
++  */
++function content_translation_language_content_settings_insert(ContentLanguageSettingsInterface $settings) {
++  // @see \Drupal\content_translation\ContentTranslationManager::isEnabled()
++  if ($settings->getThirdPartySetting('content_translation', 'enabled', FALSE)) {
++    _content_translation_install_field_storage_definitions($settings->getTargetEntityTypeId());
++  }
++
++  \Drupal::service('entity_type.bundle.info')->clearCachedBundles();
++}
++ /**
++  * Implements hook_ENTITY_TYPE_update().
++  *
++  * Installs Content Translation's field storage definitions for the target
++  * entity type, if required.
++  *
++  * Also clears the bundle information cache so that the bundle's translatability
++  * will be changed properly.
++  *
++  * @see content_translation_entity_bundle_info_alter()
++  */
++function content_translation_language_content_settings_update(ContentLanguageSettingsInterface $settings) {
++  /** @var \Drupal\language\ContentLanguageSettingsInterface $original_settings */
++  $original_settings = $settings->original;
++  // @see \Drupal\content_translation\ContentTranslationManager::isEnabled()
++  if ($settings->getThirdPartySetting('content_translation', 'enabled', FALSE)
++    && !$original_settings->getThirdPartySetting('content_translation', 'enabled', FALSE)
++  ) {
++    _content_translation_install_field_storage_definitions($settings->getTargetEntityTypeId());
++  }
++
++       \Drupal::service('entity_type.bundle.info')->clearCachedBundles();
++     }
++
++/**
++ * Installs Content Translation's fields for a given entity type.
++ *
++ * @param string $entity_type_id
++ *   The entity type ID.
++ *
++ * @todo Generalize this code in https://www.drupal.org/node/2346013.
++ */
++function _content_translation_install_field_storage_definitions($entity_type_id) {
++  /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $field_manager */
++  $field_manager = \Drupal::service('entity_field.manager');
++  /** @var \Drupal\Core\Entity\EntityLastInstalledSchemaRepositoryInterface $schema_repository */
++  $schema_repository = \Drupal::service('entity.last_installed_schema.repository');
++  $definition_update_manager = \Drupal::entityDefinitionUpdateManager();
++
++  $field_manager->useCaches(FALSE);
++  $storage_definitions = $field_manager->getFieldStorageDefinitions($entity_type_id);
++  $field_manager->useCaches(TRUE);
++  $installed_storage_definitions = $schema_repository->getLastInstalledFieldStorageDefinitions($entity_type_id);
++  foreach (array_diff_key($storage_definitions, $installed_storage_definitions) as $storage_definition) {
++    /** @var $storage_definition \Drupal\Core\Field\FieldStorageDefinitionInterface */
++    if ($storage_definition->getProvider() == 'content_translation') {
++      $definition_update_manager->installFieldStorageDefinition($storage_definition->getName(), $entity_type_id, 'content_translation', $storage_definition);
++    }
++  }
++}
++
++
+ /**
+  * Implements hook_entity_bundle_info_alter().
+  */
+diff --git a/core/modules/content_translation/content_translation.services.yml b/core/modules/content_translation/content_translation.services.yml
+index 9a3ba9c042..75de1997ac 100644
+--- a/core/modules/content_translation/content_translation.services.yml
++++ b/core/modules/content_translation/content_translation.services.yml
+@@ -29,10 +29,9 @@ services:
+ 
+   content_translation.manager:
+     class: Drupal\content_translation\ContentTranslationManager
+-    arguments: ['@entity.manager', '@content_translation.updates_manager']
++    arguments: ['@entity.manager']
+ 
+   content_translation.updates_manager:
+     class: Drupal\content_translation\ContentTranslationUpdatesManager
+     arguments: ['@entity.manager', '@entity.definition_update_manager']
+-    tags:
+-      - { name: event_subscriber }
++    deprecated: The "%service_id%" service is deprecated. Definitions are updated automatically now so no replacement is needed. See https://www.drupal.org/node/2973222.
+diff --git a/core/modules/content_translation/migrations/d7_entity_translation_settings.yml b/core/modules/content_translation/migrations/d7_entity_translation_settings.yml
+index bd82446339..7ea34a390d 100644
+--- a/core/modules/content_translation/migrations/d7_entity_translation_settings.yml
++++ b/core/modules/content_translation/migrations/d7_entity_translation_settings.yml
+@@ -25,11 +25,6 @@ process:
+   third_party_settings/content_translation/bundle_settings/untranslatable_fields_hide: untranslatable_fields_hide
+ destination:
+   plugin: entity:language_content_settings
+-  content_translation_update_definitions:
+-    - comment
+-    - node
+-    - taxonomy_term
+-    - user
+ migration_dependencies:
+   optional:
+     - d7_comment_type
+diff --git a/core/modules/content_translation/migrations/d7_node_translation.yml b/core/modules/content_translation/migrations/d7_node_translation.yml
+index 90a101fec1..6e89fb827e 100644
+--- a/core/modules/content_translation/migrations/d7_node_translation.yml
++++ b/core/modules/content_translation/migrations/d7_node_translation.yml
+@@ -33,8 +33,6 @@ process:
+ destination:
+   plugin: entity:node
+   translations: true
+-  content_translation_update_definitions:
+-    - node
+   destination_module: content_translation
+ migration_dependencies:
+   required:
+diff --git a/core/modules/content_translation/src/ContentTranslationManager.php b/core/modules/content_translation/src/ContentTranslationManager.php
+index e16cf168b8..45e831928d 100644
+--- a/core/modules/content_translation/src/ContentTranslationManager.php
++++ b/core/modules/content_translation/src/ContentTranslationManager.php
+@@ -18,24 +18,14 @@ class ContentTranslationManager implements ContentTranslationManagerInterface, B
+    */
+   protected $entityManager;
+ 
+-  /**
+-   * The updates manager.
+-   *
+-   * @var \Drupal\content_translation\ContentTranslationUpdatesManager
+-   */
+-  protected $updatesManager;
+-
+   /**
+    * Constructs a ContentTranslationManageAccessCheck object.
+    *
+    * @param \Drupal\Core\Entity\EntityManagerInterface $manager
+    *   The entity type manager.
+-   * @param \Drupal\content_translation\ContentTranslationUpdatesManager $updates_manager
+-   *   The updates manager.
+    */
+-  public function __construct(EntityManagerInterface $manager, ContentTranslationUpdatesManager $updates_manager) {
++  public function __construct(EntityManagerInterface $manager) {
+     $this->entityManager = $manager;
+-    $this->updatesManager = $updates_manager;
+   }
+ 
+   /**
+@@ -82,8 +72,6 @@ public function getSupportedEntityTypes() {
+   public function setEnabled($entity_type_id, $bundle, $value) {
+     $config = $this->loadContentLanguageSettings($entity_type_id, $bundle);
+     $config->setThirdPartySetting('content_translation', 'enabled', $value)->save();
+-    $entity_type = $this->entityManager->getDefinition($entity_type_id);
+-    $this->updatesManager->updateDefinitions([$entity_type_id => $entity_type]);
+   }
+ 
+   /**
+diff --git a/core/modules/content_translation/src/ContentTranslationUpdatesManager.php b/core/modules/content_translation/src/ContentTranslationUpdatesManager.php
+index 4fa54f3eef..1baf398ca5 100644
+--- a/core/modules/content_translation/src/ContentTranslationUpdatesManager.php
++++ b/core/modules/content_translation/src/ContentTranslationUpdatesManager.php
+@@ -2,19 +2,20 @@
+ 
+ namespace Drupal\content_translation;
+ 
+-use Drupal\Component\Utility\NestedArray;
+-use Drupal\Core\Config\ConfigEvents;
+ use Drupal\Core\Entity\EntityDefinitionUpdateManagerInterface;
+ use Drupal\Core\Entity\EntityManagerInterface;
+-use Drupal\Core\Entity\EntityTypeInterface;
+-use Drupal\migrate\Event\MigrateEvents;
+-use Drupal\migrate\Event\MigrateImportEvent;
+-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++
++@trigger_error('\Drupal\content_translation\ContentTranslationUpdatesManager is scheduled for removal in Drupal 9.0.0. Definitions are updated automatically now so no replacement is needed. See https://www.drupal.org/node/2973222.', E_USER_DEPRECATED);
+ 
+ /**
+  * Provides the logic needed to update field storage definitions when needed.
++ *
++ * @deprecated in Drupal 8.6.x, to be removed before Drupal 9.0.0.
++ *   Definitions are updated automatically now so no replacement is needed.
++ *
++ * @see https://www.drupal.org/node/2973222
+  */
+-class ContentTranslationUpdatesManager implements EventSubscriberInterface {
++class ContentTranslationUpdatesManager {
+ 
+   /**
+    * The entity manager.
+@@ -51,8 +52,6 @@ public function __construct(EntityManagerInterface $entity_manager, EntityDefini
+    */
+   public function updateDefinitions(array $entity_types) {
+     // Handle field storage definition creation, if needed.
+-    // @todo Generalize this code in https://www.drupal.org/node/2346013.
+-    // @todo Handle initial values in https://www.drupal.org/node/2346019.
+     if ($this->updateManager->needsUpdates()) {
+       foreach ($entity_types as $entity_type_id => $entity_type) {
+         $storage_definitions = $this->entityManager->getFieldStorageDefinitions($entity_type_id);
+@@ -67,38 +66,4 @@ public function updateDefinitions(array $entity_types) {
+     }
+   }
+ 
+-  /**
+-   * Listener for the ConfigImporter import event.
+-   */
+-  public function onConfigImporterImport() {
+-    $entity_types = array_filter($this->entityManager->getDefinitions(), function (EntityTypeInterface $entity_type) {
+-      return $entity_type->isTranslatable();
+-    });
+-    $this->updateDefinitions($entity_types);
+-  }
+-
+-  /**
+-   * Listener for migration imports.
+-   */
+-  public function onMigrateImport(MigrateImportEvent $event) {
+-    $migration = $event->getMigration();
+-    $configuration = $migration->getDestinationConfiguration();
+-    $entity_types = NestedArray::getValue($configuration, ['content_translation_update_definitions']);
+-    if ($entity_types) {
+-      $entity_types = array_intersect_key($this->entityManager->getDefinitions(), array_flip($entity_types));
+-      $this->updateDefinitions($entity_types);
+-    }
+-  }
+-
+-  /**
+-   * {@inheritdoc}
+-   */
+-  public static function getSubscribedEvents() {
+-    $events[ConfigEvents::IMPORT][] = ['onConfigImporterImport', 60];
+-    if (class_exists('\Drupal\migrate\Event\MigrateEvents')) {
+-      $events[MigrateEvents::POST_IMPORT][] = ['onMigrateImport'];
+-    }
+-    return $events;
+-  }
+-
+ }
+diff --git a/core/modules/content_translation/tests/modules/content_translation_test/config/install/entity_test.entity_test_bundle.test.yml b/core/modules/content_translation/tests/modules/content_translation_test/config/install/entity_test.entity_test_bundle.test.yml
+new file mode 100644
+index 0000000000..83720bb8b8
+--- /dev/null
++++ b/core/modules/content_translation/tests/modules/content_translation_test/config/install/entity_test.entity_test_bundle.test.yml
+@@ -0,0 +1,6 @@
++langcode: en
++status: true
++dependencies: {  }
++id: test
++label: null
++description: null
+diff --git a/core/modules/content_translation/tests/modules/content_translation_test/config/install/language.content_settings.entity_test_with_bundle.test.yml b/core/modules/content_translation/tests/modules/content_translation_test/config/install/language.content_settings.entity_test_with_bundle.test.yml
+new file mode 100644
+index 0000000000..da9f0355d8
+--- /dev/null
++++ b/core/modules/content_translation/tests/modules/content_translation_test/config/install/language.content_settings.entity_test_with_bundle.test.yml
+@@ -0,0 +1,17 @@
++langcode: en
++status: true
++dependencies:
++  config:
++    - entity_test.entity_test_bundle.test
++  module:
++    - content_translation
++third_party_settings:
++  content_translation:
++    enabled: true
++    bundle_settings:
++      untranslatable_fields_hide: '0'
++id: entity_test_with_bundle.test
++target_entity_type_id: entity_test_with_bundle
++target_bundle: test
++default_langcode: site_default
++language_alterable: true
+diff --git a/core/modules/content_translation/tests/src/Kernel/ContentTranslationModuleInstallTest.php b/core/modules/content_translation/tests/src/Kernel/ContentTranslationModuleInstallTest.php
+new file mode 100644
+index 0000000000..9caca99fe9
+--- /dev/null
++++ b/core/modules/content_translation/tests/src/Kernel/ContentTranslationModuleInstallTest.php
+@@ -0,0 +1,88 @@
++<?php
++
++namespace Drupal\Tests\content_translation\Kernel;
++
++use Drupal\entity_test\Entity\EntityTestWithBundle;
++use Drupal\KernelTests\KernelTestBase;
++use Drupal\language\Entity\ConfigurableLanguage;
++
++/**
++ * Tests content translation for modules that provide translatable bundles.
++ *
++ * @group content_translation
++ */
++class ContentTranslationModuleInstallTest extends KernelTestBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  protected static $modules = [
++    'content_translation',
++    'content_translation_test',
++    'entity_test',
++    'language',
++    'user',
++  ];
++
++  /**
++   * The content translation manager.
++   *
++   * @var \Drupal\content_translation\ContentTranslationManagerInterface
++   */
++  protected $contentTranslationManager;
++
++  /**
++   * The language code of the source language for this test.
++   *
++   * @var string
++   */
++  protected $sourceLangcode = 'en';
++
++  /**
++   * The language code of the translation language for this test.
++   *
++   * @var string
++   */
++  protected $translationLangcode = 'af';
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function setUp() {
++    parent::setUp();
++
++    $this->installEntitySchema('entity_test_with_bundle');
++    ConfigurableLanguage::createFromLangcode($this->translationLangcode)->save();
++
++    $this->contentTranslationManager = $this->container->get('content_translation.manager');
++  }
++
++  /**
++   * Test that content translation fields are created upon module installation.
++   */
++  public function testFieldUpdates() {
++    // The module ships a translatable bundle of the 'entity_test_with_bundle'
++    // entity type.
++    $this->installConfig(['content_translation_test']);
++
++    $entity = EntityTestWithBundle::create([
++      'type' => 'test',
++      'langcode' => $this->sourceLangcode,
++    ]);
++    $entity->save();
++
++    // Add a translation with some translation metadata.
++    $translation = $entity->addTranslation($this->translationLangcode);
++    $translation_metadata = $this->contentTranslationManager->getTranslationMetadata($translation);
++    $translation_metadata->setSource($this->sourceLangcode)->setOutdated(TRUE);
++    $translation->save();
++
++    // Make sure the translation metadata has been saved correctly.
++    $entity = EntityTestWithBundle::load($entity->id());
++    $translation = $entity->getTranslation($this->translationLangcode);
++    $translation_metadata = $this->contentTranslationManager->getTranslationMetadata($translation);
++    $this->assertSame($this->sourceLangcode, $translation_metadata->getSource());
++    $this->assertSame(TRUE, $translation_metadata->isOutdated());
++  }
++
++}
+diff --git a/core/modules/language/migrations/d6_language_content_settings.yml b/core/modules/language/migrations/d6_language_content_settings.yml
+index 6d9171ae32..0eb7bbecbc 100644
+--- a/core/modules/language/migrations/d6_language_content_settings.yml
++++ b/core/modules/language/migrations/d6_language_content_settings.yml
+@@ -40,8 +40,6 @@ process:
+       2: true
+ destination:
+   plugin: entity:language_content_settings
+-  content_translation_update_definitions:
+-    - node
+ migration_dependencies:
+   required:
+     - d6_node_type
+diff --git a/core/modules/language/migrations/d7_language_content_settings.yml b/core/modules/language/migrations/d7_language_content_settings.yml
+index 9428f42d4d..58e547ae5f 100644
+--- a/core/modules/language/migrations/d7_language_content_settings.yml
++++ b/core/modules/language/migrations/d7_language_content_settings.yml
+@@ -43,8 +43,6 @@ process:
+       4: true
+ destination:
+   plugin: entity:language_content_settings
+-  content_translation_update_definitions:
+-    - node
+ migration_dependencies:
+   required:
+     - d7_node_type
+diff --git a/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestWithBundle.php b/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestWithBundle.php
+index e6cb5428b9..42d26e0e0a 100644
+--- a/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestWithBundle.php
++++ b/core/modules/system/tests/modules/entity_test/src/Entity/EntityTestWithBundle.php
+@@ -25,8 +25,10 @@
+  *     },
+  *   },
+  *   base_table = "entity_test_with_bundle",
++ *   data_table = "entity_test_with_bundle_field_data",
+  *   admin_permission = "administer entity_test_with_bundle content",
+  *   persistent_cache = FALSE,
++ *   translatable = TRUE,
+  *   entity_keys = {
+  *     "id" = "id",
+  *     "uuid" = "uuid",
+-- 
+2.18.0
+

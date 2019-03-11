@@ -1,0 +1,18 @@
+uuid: fa6ee33c-4807-4b27-8f7c-e0e21d88647a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.roadmap
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: node.roadmap
+target_entity_type_id: node
+target_bundle: roadmap
+default_langcode: site_default
+language_alterable: true

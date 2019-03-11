@@ -50,7 +50,7 @@
   <div class="top-menu">
     <div class="left-section">
       <div class="icon-menu-top">
-        <img src="{{ directory }}/dist/images/icons/icon-menu-top.svg" alt="Burger top menu">
+        <img src="/{{ directory }}/dist/images/icons/icon-menu-top.svg" alt="Burger top menu">
       </div>
       <div class="text-wrapper">
         <a class="link-agid" href="https://www.agid.gov.it/" target="_blank">Agenzia per l'Italia Digitale</a>
@@ -59,28 +59,32 @@
     <div class="right-section">
       <ul class="link-list">
         <li class="close-menu-top">
-          <img src="{{ directory }}/dist/images/icons/icon-close.svg" alt="Close menu top">
+          <img src="/{{ directory }}/dist/images/icons/icon-close.svg" alt="Close menu top">
         </li>
         <li class="link-elem"><a href="https://docs.developers.italia.it/" tagret="_blank">Docs</a></li>
-        <li class="link-elem"><a href="https://pianotriennale-ict.italia.it/" tagret="_blank">Piano Triennale</a></li>
+        <li class="link-elem"><a href="https://pianotriennale-ict.italia.it/" tagret="_blank">{{ 'The Three-Year Plan'|t }}</a></li>
         <li class="link-elem"><a href="https://ia.italia.it/" tagret="_blank">IA</a></li>
-        <li class="link-elem"><a href="https://avanzamentodigitale.italia.it/it" tagret="_blank">Avanzamento digitale</a></li>
+        <li class="link-elem"><a href="https://avanzamentodigitale.italia.it/it" tagret="_blank">{{ 'Digital progression'|t }}</a></li>
         <li class="link-elem"><a href="https://www.dati.gov.it/" tagret="_blank">Dati</a></li>
       </ul>
+      {% if page.toolbar%}
+          {{ page.toolbar }}
+      {% endif %}
+
       <ul class="social-list">
         <li class="social-elem">
           <a class="social-link facebook" href="https://www.facebook.com/AgIDGovIT/" target="_blank">
-            <img class="social-image" src="{{ directory }}/dist/images/icons/icon-facebook.svg" alt="Facebook">
+            <img class="social-image" src="/{{ directory }}/dist/images/icons/icon-facebook.svg" alt="Facebook">
           </a>
         </li>
         <li class="social-elem">
           <a class="social-link twitter" href="https://twitter.com/agidgov" target="_blank">
-            <img class="social-image" src="{{ directory }}/dist/images/icons/icon-twitter.svg" alt="Twitter">
+            <img class="social-image" src="/{{ directory }}/dist/images/icons/icon-twitter.svg" alt="Twitter">
           </a>
         </li>
         <li class="social-elem">
           <a class="social-link medium" href="https://medium.com/@AgidGov" target="_blank">
-            <img class="social-image" src="{{ directory }}/dist/images/icons/icon-medium.svg" alt="Medium">
+            <img class="social-image" src="/{{ directory }}/dist/images/icons/icon-medium.svg" alt="Medium">
           </a>
         </li>
       </ul>

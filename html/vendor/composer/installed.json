@@ -2661,9 +2661,12 @@
                 "recurse": false,
                 "replace": false,
                 "merge-extra": false
+            },
+            "patches_applied": {
+                "Programmatically created translatable content type returns SQL error on content creation": "patches/2599228-104-8.6.x.patch"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Drupal\\Core\\": "lib/Drupal/Core",
