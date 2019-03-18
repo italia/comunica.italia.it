@@ -42,8 +42,3 @@ account:
 redis:
   enabled: true
   host: redis
-
-# WebProfiler configuration.
-webprofiler:
-  ide_link_remote: /var/www/html/web
-  ide_link_local: /path/to/web/folder

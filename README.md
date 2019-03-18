@@ -26,15 +26,18 @@ utilizzare il driver `nfs`, per abilitarlo eseguire lo script `file-setup_native
       1. `/html/build/build.local.default.yml` qui modificare anche la property `domain`
       2. `/html/build/build.prod.default.yml` qui modificare anche la property `domain`
       3. `/html/web/sites/default/settings.php` qui la property si chiama `trusted_host_patterns`
-2. copiare il file `docker-compose.yml.example` in un nuovo file `docker-compose.yml`
-3. copiare il file `html/build/build.local.default.yml.example` in un nuovo file `html/build/build.local.default.yml`
-4. modificare la configurazione di `WebProfiler` in `html/build/build.local.default.yml`. In particolare il path deve terminare 
+2. copiare il file `html/build/build.local.default.yml.example` in un nuovo file `html/build/build.local.default.yml`
+3. modificare la configurazione di `WebProfiler` in `html/build/build.local.default.yml`. In particolare il path deve terminare 
 con la cartella `/web`
-5. scaricare i moduli `Monolog` e `Devel` e copiarne il contenuto nelle rispettive cartelle:
-   1. `/html/web/modules/contrib/monolog`
-   2. `/html/web/modules/contrib/devel`
-6. spegnere eventuali servizi che potrebbero occupare le porte dello stack di questo progetto e avviare lo stack Docker con il comando `make up`
-7. configurare il proprio `/etc/hosts` inserendo l'indirizzo del progetto `web.comunicaitalia.loc` o altro indirizzo come da punto 1.
+4. scaricare i moduli Monolog e Devel e copiarne il contenuto nelle rispettive cartelle:
+
+[Monolog](https://ftp.drupal.org/files/projects/monolog-8.x-1.0.tar.gz)
+/html/web/modules/contrib/monolog
+
+[Devel](https://ftp.drupal.org/files/projects/devel-8.x-1.2.tar.gz)
+/html/web/modules/contrib/devel
+5. spegnere eventuali servizi che potrebbero occupare le porte dello stack di questo progetto e avviare lo stack Docker con il comando `make up`
+6. configurare il proprio `/etc/hosts` inserendo l'indirizzo del progetto `web.comunicaitalia.loc` o altro indirizzo come da punto 1.
 
 #### Build
 
